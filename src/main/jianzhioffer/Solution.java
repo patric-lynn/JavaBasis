@@ -10,7 +10,7 @@ public class Solution {
      * @param array
      * @return  是否存在
      */
-    public boolean Find(int target, int [][] array) {
+    public static boolean Find(int target, int [][] array) {
         for (int i=0; i<array.length;i++){
             for (int j=0;j<array[0].length;j++){
                 if(array[i][j]==target){
@@ -24,7 +24,7 @@ public class Solution {
     /**
      * 从左下角找
      */
-    public boolean Find2(int target, int [][] array) {
+    public static boolean Find2(int target, int [][] array) {
         int rows = array.length;
         if(rows == 0){
             return false;
@@ -46,6 +46,41 @@ public class Solution {
             }
         }
         return false;
+    }
+
+    /**
+     * 从右上角找
+     * @param
+     */
+    public static boolean Find3(int target, int [][] array) {
+        int rows = array.length;
+        if(rows == 0){
+            return false;
+        }
+        int cols = array[0].length;
+        if(cols == 0){
+            return false;
+        }
+        // 右上
+        int row = 0;   //注意
+        int col = cols-1;    //注意
+        while(row<rows && col>=0){    //注意
+            if(array[row][col] < target){
+                row++;        //注意
+            }else if(array[row][col] > target){
+                col--;      //注意
+            }else{
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int[][] a= new int[][]{{1,2,3},{2,3,4},{4,5,6}};
+        System.out.println(Find(6,a));
+        System.out.println(Find2(6,a));
+        System.out.println(Find3(6,a));
     }
 
 

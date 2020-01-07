@@ -17,7 +17,7 @@ public class reverse {
     }
 
     /**
-     * 取得当前字符并和之前的字符append起来
+     * 取得当前字符并和之前的字符append起来，相当于不断前插
      * @param s
      * @return
      */

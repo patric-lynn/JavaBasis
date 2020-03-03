@@ -1,5 +1,7 @@
 import java.util.Stack;
 
+//字符串逆置代码
+
 public class reverse {
     /**
      * 二分递归地将后面的字符和前面的字符连接起来。

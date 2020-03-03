@@ -1,7 +1,22 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class basic {
+
+    //排序函数定义
+    public static void Sort(int[] a) {
+        Arrays.sort(a);
+        Stack<Integer> stack= new Stack<Integer>();
+    }
+
+    //测试数组
+    public static void shuzu(int[] box){
+        int[] bo = box;
+        System.out.println(bo.length);
+    }
+
+
 
     public static void main(String[] args) {
         //流式输入对象
@@ -26,16 +41,12 @@ public class basic {
         int[] a ={5,7,2,6,1,9,3,4,8,0};
         Sort(a);
         for (int j:a) {
-            System.out.print(a[j]);
+            System.out.println(a[j]);
         }
+
+        int[] b = {1,2,3};
+        shuzu(b);
         return;
     }
-
-
-    //排序函数定义
-    public static void Sort(int[] a){
-        Arrays.sort(a);
-    }
-
 }
 

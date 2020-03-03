@@ -1,4 +1,6 @@
-public class zuichanghuiwenzichuan {
+package leetCode;
+
+public class StringRelatedQuestions {
     /**
      * 暴力法
      * @param s

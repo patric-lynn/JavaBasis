@@ -1,13 +1,17 @@
-import java.util.ArrayList;
+package jianzhioffer;
 
-public class Solution {
+/**
+ * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
+ * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+ * @return  是否存在
+ */
+public class ArrayRelatedQuestions {
+    int[][] a= new int[][]{{1,2,3},{2,3,4},{4,5,6}};
     /**
-     * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
-     * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
      * 暴力法，遍历数组
      * @param target
      * @param array
-     * @return  是否存在
+     * @return
      */
     public static boolean Find(int target, int [][] array) {
         for (int i=0; i<array.length;i++){
@@ -74,46 +78,4 @@ public class Solution {
         }
         return false;
     }
-
-
-    /**
-     * 请实现一个函数，将一个字符串中的每个空格替换成“%20”。
-     * 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
-     * @param str
-     * @return
-     */
-    public String replaceSpace(StringBuffer str) {
-        return str.toString().replace(" ", "%20");
-    }
-
-
-    /**
-     * 输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
-     */
-    public class ListNode {
-        int val;
-        ListNode next = null;
-        ListNode(int val) {
-         this.val = val;
-        }
-    }
-    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-        ArrayList<Integer> list=new ArrayList<Integer>();
-        ListNode li=listNode;
-        while(li!=null){
-            list.add(0,li.val);
-            li=li.next;
-        }
-        return list;
-    }
-
-
-    public static void main(String[] args) {
-        int[][] a= new int[][]{{1,2,3},{2,3,4},{4,5,6}};
-        System.out.println(Find(6,a));
-        System.out.println(Find2(6,a));
-        System.out.println(Find3(6,a));
-    }
-
-
 }

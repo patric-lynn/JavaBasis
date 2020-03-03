@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="OAClassify">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/OAClassify.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

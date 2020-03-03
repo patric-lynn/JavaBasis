@@ -16,8 +16,6 @@ public class basic {
         System.out.println(bo.length);
     }
 
-
-
     public static void main(String[] args) {
         //流式输入对象
         Scanner in = new Scanner(System.in);

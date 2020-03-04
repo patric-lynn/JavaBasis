@@ -1,22 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class basic {
-
-    //排序函数定义
-    public static void Sort(int[] a) {
-        Arrays.sort(a);
-        Stack<Integer> stack= new Stack<Integer>();
-    }
-
-    //测试数组
-    public static void shuzu(int[] box){
-        int[] bo = box;
-        System.out.println(bo.length);
-    }
-
-    public static void main(String[] args) {
+public class basic{
+    //循环函数测试 2020-3-1
+    public static void xunhuanTest(){
         //流式输入对象
         Scanner in = new Scanner(System.in);
         //流式输出
@@ -34,17 +26,91 @@ public class basic {
             //若满足条件，则跳出整体循环
             if (k > 30) break Label;
         }
-
-        //数组排序实验
+    }
+    //排序函数定义 2020-3-2
+    public static void Sort() {
         int[] a ={5,7,2,6,1,9,3,4,8,0};
-        Sort(a);
+        Arrays.sort(a);
+        Stack<Integer> stack= new Stack<Integer>();
         for (int j:a) {
             System.out.println(a[j]);
         }
+    }
+    //测试数组 2020-3-3
+    public static void shuzu(){
+        int[] a = {1,2,3};
+        int[] bo = a;
+        System.out.println(bo.length);
+    }
 
-        int[] b = {1,2,3};
-        shuzu(b);
-        return;
+    //字符串测试
+    public static void stringTest(){
+        // initialize
+        String s1 = "Hello World";
+        System.out.println("s1 is \"" + s1 + "\"");
+        String s2 = s1;
+        System.out.println("s2 is another reference to s1.");
+        String s3 = new String(s1);
+        System.out.println("s3 is a copy of s1.");
+        // compare using '=='
+        System.out.println("Compared by '==':");
+        // true since string is immutable and s1 is binded to "Hello World"
+        System.out.println("s1 and \"Hello World\": " + (s1 == "Hello World"));
+        // true since s1 and s2 is the reference of the same object
+        System.out.println("s1 and s2: " + (s1 == s2));
+        // false since s3 is refered to another new object
+        System.out.println("s1 and s3: " + (s1 == s3));
+        // compare using 'equals'
+        System.out.println("Compared by 'equals':");
+        System.out.println("s1 and \"Hello World\": " + s1.equals("Hello World"));
+        System.out.println("s1 and s2: " + s1.equals(s2));
+        System.out.println("s1 and s3: " + s1.equals(s3));
+        // compare using 'compareTo'
+        System.out.println("Compared by 'compareTo':");
+        System.out.println("s1 and \"Hello World\": " + (s1.compareTo("Hello World") == 0));
+        System.out.println("s1 and s2: " + (s1.compareTo(s2) == 0));
+        System.out.println("s1 and s3: " + (s1.compareTo(s3) == 0));
+
+        String s4 = "Hello World";
+        char[] c = s4.toCharArray();
+        System.out.println(c);
+        c[5] = ',';
+        System.out.println(c);
+        c.toString();
+
+
+        // 1. concatenate
+        s1 += "!";
+        System.out.println(s1);
+        // 2. find
+        System.out.println("The position of first 'o' is: " + s1.indexOf('o'));
+        System.out.println("The position of last 'o' is: " + s1.lastIndexOf('o'));
+        // 3. get substring
+        System.out.println(s1.substring(6, 11));
+    }
+
+    public static void fileTest() throws FileNotFoundException {
+        File file = new File("fileTest.txt");
+        PrintWriter printWriter=new PrintWriter(file);
+        printWriter.print("happy you");
+        //先输出内容再输出一个回车
+        printWriter.println("bcde");
+        printWriter.close();
+        FileOutputStream fileOutputStream = new FileOutputStream(file);
+        System.out.println(fileOutputStream);
+    }
+
+    public static void main(String[] args) throws Exception {
+
+//        //循环函数测试
+//        xunhuanTest();
+//        //数组排序实验
+//        Sort();
+//        //数组长度测试
+//        shuzu(a);
+//        stringTest();
+        //文件测试
+        fileTest();
     }
 }
 

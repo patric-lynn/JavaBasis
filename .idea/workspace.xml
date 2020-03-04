@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="修改文件格式与内容">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/JavaBasis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fileTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/basic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/reverse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +52,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -57,10 +60,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
@@ -105,8 +108,8 @@
       </method>
     </configuration>
     <configuration name="reverse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reverse" />
-      <module name="java_miner" />
+      <option name="MAIN_CLASS_NAME" value="leetCode.reverse" />
+      <module name="JavaBasis" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -333,7 +336,8 @@
       <workItem from="1582909072012" duration="1911000" />
       <workItem from="1583124666846" duration="1590000" />
       <workItem from="1583156396533" duration="70000" />
-      <workItem from="1583219265449" duration="4749000" />
+      <workItem from="1583219265449" duration="4805000" />
+      <workItem from="1583316454567" duration="2478000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -377,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583221254771</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="修改文件格式与内容">
+      <created>1583238445904</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583238445904</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +408,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1.浮点数直接加的错误显示验证。（3.8.4节）" />
     <MESSAGE value="1.数组排序的结果显示" />
     <MESSAGE value="新增&#10;几种逆序排放字符串的方法" />
@@ -406,10 +418,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改文件格式与内容" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="321" y="104" key="#Project_Structure" timestamp="1583220695253">
+    <state x="321" y="104" key="#Project_Structure" timestamp="1583318372247">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="104" key="#Project_Structure/0.23.1440.829@0.23.1440.829" timestamp="1583220695253" />
+    <state x="321" y="104" key="#Project_Structure/0.23.1440.829@0.23.1440.829" timestamp="1583318372247" />
     <state x="395" y="96" key="#Solution" timestamp="1582909371072">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -446,30 +458,30 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="484" y="327" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.829@0.23.1440.829" timestamp="1583219738175" />
-    <state x="0" y="30" key="CommitChangelistDialog2" timestamp="1583231585808">
+    <state x="0" y="30" key="CommitChangelistDialog2" timestamp="1583318161817">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="30" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583231585808" />
+    <state x="0" y="30" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583318161817" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="159" key="GridCell.Tab.0.bottom" timestamp="1583219826816">
+    <state width="1390" height="188" key="GridCell.Tab.0.bottom" timestamp="1583318762627">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="159" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1583219826816" />
-    <state width="1398" height="159" key="GridCell.Tab.0.center" timestamp="1583219826815">
+    <state width="1390" height="188" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1583318762627" />
+    <state width="1390" height="188" key="GridCell.Tab.0.center" timestamp="1583318762626">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="159" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1583219826815" />
-    <state width="1398" height="159" key="GridCell.Tab.0.left" timestamp="1583219826814">
+    <state width="1390" height="188" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1583318762626" />
+    <state width="1390" height="188" key="GridCell.Tab.0.left" timestamp="1583318762626">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="159" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1583219826814" />
-    <state width="1398" height="159" key="GridCell.Tab.0.right" timestamp="1583219826815">
+    <state width="1390" height="188" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1583318762626" />
+    <state width="1390" height="188" key="GridCell.Tab.0.right" timestamp="1583318762627">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="159" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1583219826815" />
+    <state width="1390" height="188" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1583318762627" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -483,10 +495,10 @@
     </state>
     <state x="221" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1583231578194" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1583231689355">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1583238448154">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1583231689355" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1583238448154" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

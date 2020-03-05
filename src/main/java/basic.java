@@ -1,14 +1,13 @@
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class basic{
+public class basic {
     //循环函数测试 2020-3-1
-    public static void xunhuanTest(){
+    public static void labelTest() {
         //流式输入对象
         Scanner in = new Scanner(System.in);
         //流式输出
@@ -27,24 +26,26 @@ public class basic{
             if (k > 30) break Label;
         }
     }
-    //排序函数定义 2020-3-2
+
+    //排序函数与堆栈的测试 2020-3-2
     public static void Sort() {
-        int[] a ={5,7,2,6,1,9,3,4,8,0};
+        int[] a = {5, 7, 2, 6, 1, 9, 3, 4, 8, 0};
         Arrays.sort(a);
-        Stack<Integer> stack= new Stack<Integer>();
-        for (int j:a) {
+        Stack<Integer> stack = new Stack<Integer>();
+        for (int j : a) {
             System.out.println(a[j]);
         }
     }
+
     //测试数组 2020-3-3
-    public static void shuzu(){
-        int[] a = {1,2,3};
+    public static void Array() {
+        int[] a = {1, 2, 3};
         int[] bo = a;
         System.out.println(bo.length);
     }
 
     //字符串测试
-    public static void stringTest(){
+    public static void stringTest1() {
         // initialize
         String s1 = "Hello World";
         System.out.println("s1 is \"" + s1 + "\"");
@@ -70,16 +71,20 @@ public class basic{
         System.out.println("s1 and \"Hello World\": " + (s1.compareTo("Hello World") == 0));
         System.out.println("s1 and s2: " + (s1.compareTo(s2) == 0));
         System.out.println("s1 and s3: " + (s1.compareTo(s3) == 0));
+    }
 
-        String s4 = "Hello World";
-        char[] c = s4.toCharArray();
-        System.out.println(c);
-        c[5] = ',';
-        System.out.println(c);
-        c.toString();
+    public static void stringTest2() {
+        String s = "Hello ";
+        String s1 = "Hello World";
 
+        //string的连接运算，不算重载，就是直接的字符串相加。
+        int n = 5;
+        for (int i = 0; i < n; i++) {
+            s += "baby ";
+            System.out.println(i + "个字符串已生成");
+        }
 
-        // 1. concatenate
+        // 字符串连接 concatenate以及indexof方法
         s1 += "!";
         System.out.println(s1);
         // 2. find
@@ -87,30 +92,43 @@ public class basic{
         System.out.println("The position of last 'o' is: " + s1.lastIndexOf('o'));
         // 3. get substring
         System.out.println(s1.substring(6, 11));
+
+        //测试string的第一种更改方式
+        char[] c = s.toCharArray();
+        System.out.println(c);
+        c[5] = ',';
+        System.out.println(c);
+
+        //测试string第二种更改方式 借助stringbuffer或者stringbuilder
+        StringBuffer stringBuffer = new StringBuffer(s);
+        stringBuffer.append("happygirl");
+        s = stringBuffer.toString();
+        System.out.println(s);
     }
 
-    public static void fileTest() throws FileNotFoundException {
+    public static void fileTest() throws IOException {
         File file = new File("fileTest.txt");
-        PrintWriter printWriter=new PrintWriter(file);
+        PrintWriter printWriter = new PrintWriter(file);
         printWriter.print("happy you");
         //先输出内容再输出一个回车
         printWriter.println("bcde");
         printWriter.close();
-        FileOutputStream fileOutputStream = new FileOutputStream(file);
-        System.out.println(fileOutputStream);
     }
 
     public static void main(String[] args) throws Exception {
 
 //        //循环函数测试
-//        xunhuanTest();
+//        labelTest();
 //        //数组排序实验
 //        Sort();
 //        //数组长度测试
-//        shuzu(a);
-//        stringTest();
-        //文件测试
-        fileTest();
+//        array(a);
+//        //字符串测试
+//        stringTest1();
+        //字符串测试
+        stringTest2();
+//        //文件测试
+//        fileTest();
     }
 }
 

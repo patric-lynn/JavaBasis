@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="修改文件格式与内容">
-      <change afterPath="$PROJECT_DIR$/.idea/JavaBasis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fileTest.txt" afterDir="false" />
+    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="修改文件格式与新增内容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fileTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/basic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/reverse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="patric-lynn &lt;358812977@163.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
@@ -115,140 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType">
-      <module name="JavaBasis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="JavaBasis" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="JavaBasis" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <module name="JavaBasis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <module name="JavaBasis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="JavaBasis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <module name="JavaBasis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
     </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
@@ -258,52 +133,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="JavaBasis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="JavaBasis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="JavaBasis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.basic" />
@@ -337,7 +166,7 @@
       <workItem from="1583124666846" duration="1590000" />
       <workItem from="1583156396533" duration="70000" />
       <workItem from="1583219265449" duration="4805000" />
-      <workItem from="1583316454567" duration="2478000" />
+      <workItem from="1583316454567" duration="5034000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -388,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583238445904</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修改文件格式与新增内容">
+      <created>1583331113325</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1583331113325</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +251,8 @@
     <MESSAGE value="新增&#10;数组里查找" />
     <MESSAGE value="修改&#10;数组里查找" />
     <MESSAGE value="修改文件格式与内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文件格式与内容" />
+    <MESSAGE value="修改文件格式与新增内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改文件格式与新增内容" />
   </component>
   <component name="WindowStateProjectService">
     <state x="321" y="104" key="#Project_Structure" timestamp="1583318372247">
@@ -458,30 +295,30 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="484" y="327" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.829@0.23.1440.829" timestamp="1583219738175" />
-    <state x="0" y="30" key="CommitChangelistDialog2" timestamp="1583318161817">
+    <state x="0" y="30" key="CommitChangelistDialog2" timestamp="1583380552729">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="30" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583318161817" />
+    <state x="0" y="30" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583380552729" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1390" height="188" key="GridCell.Tab.0.bottom" timestamp="1583318762627">
+    <state width="1390" height="87" key="GridCell.Tab.0.bottom" timestamp="1583379870433">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1390" height="188" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1583318762627" />
-    <state width="1390" height="188" key="GridCell.Tab.0.center" timestamp="1583318762626">
+    <state width="1390" height="87" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1583379870433" />
+    <state width="1390" height="87" key="GridCell.Tab.0.center" timestamp="1583379870432">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1390" height="188" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1583318762626" />
-    <state width="1390" height="188" key="GridCell.Tab.0.left" timestamp="1583318762626">
+    <state width="1390" height="87" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1583379870432" />
+    <state width="1390" height="87" key="GridCell.Tab.0.left" timestamp="1583379870432">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1390" height="188" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1583318762626" />
-    <state width="1390" height="188" key="GridCell.Tab.0.right" timestamp="1583318762627">
+    <state width="1390" height="87" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1583379870432" />
+    <state width="1390" height="87" key="GridCell.Tab.0.right" timestamp="1583379870433">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1390" height="188" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1583318762627" />
+    <state width="1390" height="87" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1583379870433" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -495,10 +332,10 @@
     </state>
     <state x="221" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1583231578194" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1583238448154">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1583331115329">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1583238448154" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1583331115329" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

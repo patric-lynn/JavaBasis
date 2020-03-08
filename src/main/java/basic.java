@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
@@ -73,6 +74,7 @@ public class basic {
         System.out.println("s1 and s3: " + (s1.compareTo(s3) == 0));
     }
 
+    //字符串连接与更改测试
     public static void stringTest2() {
         String s = "Hello ";
         String s1 = "Hello World";
@@ -105,7 +107,43 @@ public class basic {
         s = stringBuffer.toString();
         System.out.println(s);
     }
+    //字符串替换测试
+    public static String replace(StringBuffer str){
+        StringBuffer str1 = new StringBuffer();
+//        String a = null;
+//        StringBuilder builder = null;
+        for(int i=0; i< str.length(); i++){
+            char c = str.charAt(i);
+            if(c==' ') {
+                str1.append("%20");
+            }else { //注意此处必须是二选一的形式!!!!!!!!!!!!!!!!!!!!!!!如果没有else子句，则空格也会被加上!!!!!!!!!!!
+                str1.append(c);
+            }
+        }
+        return str1.toString();
+//        return str.toString().replace(" ", "%20");
+    }
 
+
+    //ArrayList测试
+    public class ListNode {
+        int val;
+        ListNode next = null;
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+    public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+        ArrayList<Integer> list = new ArrayList<>();
+        ListNode li=listNode;
+        while(li!=null){
+            list.add(0,li.val);
+            li=li.next;
+        }
+        return list;
+    }
+
+    //文件处理测试
     public static void fileTest() throws IOException {
         File file = new File("fileTest.txt");
         PrintWriter printWriter = new PrintWriter(file);
@@ -119,16 +157,26 @@ public class basic {
 
 //        //循环函数测试
 //        labelTest();
+
 //        //数组排序实验
 //        Sort();
+
 //        //数组长度测试
 //        array(a);
+
 //        //字符串测试
 //        stringTest1();
-        //字符串测试
-        stringTest2();
+
+//        //字符串测试
+//        stringTest2();
+
+            // replace测试
+//        StringBuffer stringBuffer = new StringBuffer("wo men shi zhong guo ren");
+//        System.out.println(replace(stringBuffer));
+
 //        //文件测试
 //        fileTest();
+
     }
 }
 

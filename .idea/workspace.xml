@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="修改文件格式与新增内容">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetCode/StackRealatedQuestions.java" afterDir="false" />
+    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;StackRelatedQuestions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/reverse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +170,7 @@
       <workItem from="1583380518112" duration="704000" />
       <workItem from="1583678089595" duration="4072000" />
       <workItem from="1583735124470" duration="741000" />
-      <workItem from="1583897516090" duration="996000" />
+      <workItem from="1583897516090" duration="1873000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -247,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583681057245</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="新增&#10;StackRelatedQuestions">
+      <created>1583901113986</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583901113986</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +277,8 @@
     <MESSAGE value="修改&#10;数组里查找" />
     <MESSAGE value="修改文件格式与内容" />
     <MESSAGE value="修改文件格式与新增内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文件格式与新增内容" />
+    <MESSAGE value="新增&#10;StackRelatedQuestions" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增&#10;StackRelatedQuestions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="321" y="104" key="#Project_Structure" timestamp="1583680298942">
@@ -318,10 +321,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="484" y="327" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.829@0.23.1440.829" timestamp="1583219738175" />
-    <state x="0" y="30" key="CommitChangelistDialog2" timestamp="1583681056732">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1583901113577">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="30" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583681056732" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583901113577" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -355,10 +358,10 @@
     </state>
     <state x="221" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1583901015822" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1583681059584">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1583901117317">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1583681059584" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1583901117317" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

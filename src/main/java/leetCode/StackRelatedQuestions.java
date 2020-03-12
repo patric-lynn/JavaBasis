@@ -216,7 +216,6 @@ public class StackRelatedQuestions {
                 }
             }
         }
-
         return list;
     }
 

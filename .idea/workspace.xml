@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;StackRelatedQuestions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" afterDir="false" />
-    </list>
+    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;StackRelatedQuestions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +66,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -180,7 +176,7 @@
       <workItem from="1583678089595" duration="4072000" />
       <workItem from="1583735124470" duration="741000" />
       <workItem from="1583897516090" duration="6509000" />
-      <workItem from="1584010637069" duration="5615000" />
+      <workItem from="1584010637069" duration="5702000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -280,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584010557990</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="新增&#10;StackRelatedQuestions">
+      <created>1584028530465</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584028530465</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,10 +355,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="484" y="327" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.829@0.23.1440.829" timestamp="1583219738175" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584010557628">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584028529903">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584010557628" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584028529903" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -384,15 +387,15 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="432" y="158" width="684" height="552" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1582909138948" />
-    <state x="221" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1583934936465">
+    <state x="221" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584028578152">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="221" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1583934936465" />
+    <state x="221" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584028578152" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584010662938">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584028531984">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584010662938" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584028531984" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

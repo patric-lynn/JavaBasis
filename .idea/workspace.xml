@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;StackRelatedQuestions">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +179,7 @@
       <workItem from="1583380518112" duration="704000" />
       <workItem from="1583678089595" duration="4072000" />
       <workItem from="1583735124470" duration="741000" />
-      <workItem from="1583897516090" duration="4401000" />
+      <workItem from="1583897516090" duration="6477000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -266,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583904592874</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="新增&#10;StackRelatedQuestions">
+      <created>1583936159199</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1583936159199</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,30 +344,30 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="484" y="327" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.829@0.23.1440.829" timestamp="1583219738175" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1583904592516">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1583936158848">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583904592516" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583936158848" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="84" key="GridCell.Tab.0.bottom" timestamp="1583936043005">
+    <state width="1398" height="84" key="GridCell.Tab.0.bottom" timestamp="1583936163399">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="84" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1583936043005" />
-    <state width="1398" height="84" key="GridCell.Tab.0.center" timestamp="1583936043004">
+    <state width="1398" height="84" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1583936163399" />
+    <state width="1398" height="84" key="GridCell.Tab.0.center" timestamp="1583936163399">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="84" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1583936043004" />
-    <state width="1398" height="84" key="GridCell.Tab.0.left" timestamp="1583936043004">
+    <state width="1398" height="84" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1583936163399" />
+    <state width="1398" height="84" key="GridCell.Tab.0.left" timestamp="1583936163398">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="84" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1583936043004" />
-    <state width="1398" height="84" key="GridCell.Tab.0.right" timestamp="1583936043005">
+    <state width="1398" height="84" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1583936163398" />
+    <state width="1398" height="84" key="GridCell.Tab.0.right" timestamp="1583936163399">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="84" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1583936043005" />
+    <state width="1398" height="84" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1583936163399" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

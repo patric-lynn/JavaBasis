@@ -1,6 +1,8 @@
 package leetCode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -34,7 +36,7 @@ public class StackRelatedQuestions {
      * 示例 3:
      * 输入: "(]"
      * 输出: false
-     *
+     * 解法一
      * @param s
      * @return
      */
@@ -110,4 +112,67 @@ public class StackRelatedQuestions {
         // If the stack still contains elements, then it is an invalid expression.
         return stack.isEmpty();
     }
+
+
+
+
+
+    /**
+     * 94. 二叉树的中序遍历
+     * 给定一个二叉树，返回它的中序 遍历。
+     * 示例:
+     *
+     * 输入: [1,null,2,3]
+     *    1
+     *     \
+     *      2
+     *     /
+     *    3
+     *
+     * 输出: [1,3,2]
+     */
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+    List<Integer> list = new ArrayList<>();
+    /**
+     * 解法一：递归法
+     * @param root
+     * @return
+     */
+    public List<Integer> inorderTraversal(TreeNode root) {
+        if(root != null) {
+            if(root.left!=null) inorderTraversal(root.left);
+            list.add(root.val);
+            if(root.right!=null) inorderTraversal(root.right);
+        }
+        return list;
+    }
+
+    /**
+     * 解法二：非递归法
+     * @param root
+     * @return
+     */
+    public List<Integer> inorderTraversal2(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        while(root!=null || !stack.isEmpty()){
+            while(root!=null){
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            list.add(root.val);
+            root = root.right;
+        }
+        return list;
+    }
+
+
 }

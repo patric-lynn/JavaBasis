@@ -2,16 +2,17 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class interview {
     //字符串替换测试
-    public static String replace(StringBuffer str){
+    public static String replace(StringBuffer str) {
         StringBuffer str1 = new StringBuffer();
-        for(int i=0; i< str.length(); i++){
+        for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if(c==' ') {
+            if (c == ' ') {
                 str1.append("%20");
-            }else { //注意此处必须是二选一的形式!!!!!!!!!!!!!!!!!!!!!!!如果没有else子句，则空格也会被加上!!!!!!!!!!!
+            } else { //注意此处必须是二选一的形式!!!!!!!!!!!!!!!!!!!!!!!如果没有else子句，则空格也会被加上!!!!!!!!!!!
                 str1.append(c);
             }
         }
@@ -23,16 +24,18 @@ public class interview {
     public class ListNode {
         int val;
         basic.ListNode next = null;
+
         ListNode(int val) {
             this.val = val;
         }
     }
+
     public static ArrayList<Integer> printListFromTailToHead(basic.ListNode listNode) {
         ArrayList<Integer> list = new ArrayList<>();
-        basic.ListNode li=listNode;
-        while(li!=null){
-            list.add(0,li.val);
-            li=li.next;
+        basic.ListNode li = listNode;
+        while (li != null) {
+            list.add(0, li.val);
+            li = li.next;
         }
         return list;
     }
@@ -47,9 +50,21 @@ public class interview {
         printWriter.close();
     }
 
+    public static void zhongshu() {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int[] c = new int[a];
+        for (int i = 0; i < a; i++) {
+            c[i] = in.nextInt();
+        }
+
+        for (int i = 0; i < a; i++) {
+
+        }
+    }
 
     public static void main(String[] args) {
-        
-
+        zhongshu();
     }
 }

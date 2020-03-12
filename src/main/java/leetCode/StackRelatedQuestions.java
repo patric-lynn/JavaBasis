@@ -17,6 +17,13 @@ public class StackRelatedQuestions {
         String string = "[[{{(())}}]]";
         System.out.println("括号匹配第一种解法的结果：" + isValid(string));
         System.out.println("括号匹配第二种解法的结果：" + isValid2(string));
+
+        TreeNode a = new TreeNode(1);
+        a.left = new TreeNode(2);
+        a.right = new TreeNode(3);
+        System.out.println(inorderTraversal(a));
+        System.out.println(inorderTraversal2(a));
+        System.out.println(inorderTraversal3(a));
     }
 
     /**
@@ -26,7 +33,7 @@ public class StackRelatedQuestions {
      * 左括号必须用相同类型的右括号闭合。
      * 左括号必须以正确的顺序闭合。
      * 注意空字符串可被认为是有效字符串。
-     *
+     * <p>
      * 示例 1:
      * 输入: "()"
      * 输出: true
@@ -37,6 +44,7 @@ public class StackRelatedQuestions {
      * 输入: "(]"
      * 输出: false
      * 解法一
+     *
      * @param s
      * @return
      */
@@ -116,60 +124,97 @@ public class StackRelatedQuestions {
 
 
 
-
     /**
      * 94. 二叉树的中序遍历
      * 给定一个二叉树，返回它的中序 遍历。
      * 示例:
-     *
+     * <p>
      * 输入: [1,null,2,3]
-     *    1
-     *     \
-     *      2
-     *     /
-     *    3
-     *
+     * 1
+     * \
+     * 2
+     * /
+     * 3
+     * <p>
      * 输出: [1,3,2]
      */
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
+
         TreeNode(int x) {
             val = x;
         }
     }
-    List<Integer> list = new ArrayList<>();
+
     /**
      * 解法一：递归法
+     *
      * @param root
      * @return
      */
-    public List<Integer> inorderTraversal(TreeNode root) {
-        if(root != null) {
-            if(root.left!=null) inorderTraversal(root.left);
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root != null) {
+            if (root.left != null) inorderTraversal(root.left);
             list.add(root.val);
-            if(root.right!=null) inorderTraversal(root.right);
+            if (root.right != null) inorderTraversal(root.right);
         }
         return list;
     }
 
     /**
      * 解法二：非递归法
+     *
      * @param root
      * @return
      */
-    public List<Integer> inorderTraversal2(TreeNode root) {
+    public static List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-        while(root!=null || !stack.isEmpty()){
-            while(root!=null){
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
                 stack.push(root);
                 root = root.left;
             }
             root = stack.pop();
             list.add(root.val);
             root = root.right;
+        }
+        return list;
+    }
+
+    /**
+     * 解法三：颜色标记法（非递归，最佳方法）
+     *
+     * @param root
+     * @return
+     */
+    public static List<Integer> inorderTraversal3(TreeNode root) {
+        class ColorNode {
+            TreeNode node;
+            String color;
+
+            ColorNode(TreeNode node, String color) {
+                this.node = node;
+                this.color = color;
+            }
+        }
+        List<Integer> list = new ArrayList<>();
+        Stack<ColorNode> stack = new Stack<>();
+        if (root != null) {
+            stack.push(new ColorNode(root, "white"));
+            while (!stack.empty()) {
+                ColorNode curr = stack.pop();
+                if (curr.color.equals("white")) {
+                    if (curr.node.right != null) stack.push(new ColorNode(curr.node.right, "white"));
+                    stack.push(new ColorNode(curr.node, "gray"));
+                    if (curr.node.left != null) stack.push(new ColorNode(curr.node.left, "white"));
+                } else {
+                    list.add(curr.node.val);
+                }
+            }
         }
         return list;
     }

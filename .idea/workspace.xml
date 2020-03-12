@@ -179,7 +179,8 @@
       <workItem from="1583380518112" duration="704000" />
       <workItem from="1583678089595" duration="4072000" />
       <workItem from="1583735124470" duration="741000" />
-      <workItem from="1583897516090" duration="6477000" />
+      <workItem from="1583897516090" duration="6509000" />
+      <workItem from="1584010637069" duration="5615000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -272,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583936159199</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="新增&#10;StackRelatedQuestions">
+      <created>1584010557990</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1584010557990</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,30 +352,30 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="484" y="327" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.829@0.23.1440.829" timestamp="1583219738175" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1583936158848">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584010557628">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1583936158848" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584010557628" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="84" key="GridCell.Tab.0.bottom" timestamp="1583936163399">
+    <state width="1398" height="166" key="GridCell.Tab.0.bottom" timestamp="1584028493215">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="84" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1583936163399" />
-    <state width="1398" height="84" key="GridCell.Tab.0.center" timestamp="1583936163399">
+    <state width="1398" height="166" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584028493215" />
+    <state width="1398" height="166" key="GridCell.Tab.0.center" timestamp="1584028493214">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="84" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1583936163399" />
-    <state width="1398" height="84" key="GridCell.Tab.0.left" timestamp="1583936163398">
+    <state width="1398" height="166" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584028493214" />
+    <state width="1398" height="166" key="GridCell.Tab.0.left" timestamp="1584028493213">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="84" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1583936163398" />
-    <state width="1398" height="84" key="GridCell.Tab.0.right" timestamp="1583936163399">
+    <state width="1398" height="166" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584028493213" />
+    <state width="1398" height="166" key="GridCell.Tab.0.right" timestamp="1584028493214">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="84" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1583936163399" />
+    <state width="1398" height="166" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584028493214" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -381,10 +389,10 @@
     </state>
     <state x="221" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1583934936465" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1583904594387">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584010662938">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1583904594387" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584010662938" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

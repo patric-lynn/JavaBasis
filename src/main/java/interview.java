@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class interview {
     //字符串替换测试
@@ -50,21 +50,15 @@ public class interview {
         printWriter.close();
     }
 
-    public static void zhongshu() {
-        Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
-        int b = in.nextInt();
-        int[] c = new int[a];
-        for (int i = 0; i < a; i++) {
-            c[i] = in.nextInt();
-        }
-
-        for (int i = 0; i < a; i++) {
-
-        }
+    public static Integer[] sort(){
+        String a = "happy";
+        Integer[] b = {1,2,3,4,5};
+        Arrays.sort(b,(o1,o2)-> o2-o1);
+        System.out.println(b[0]);
+        return b;
     }
 
     public static void main(String[] args) {
-        zhongshu();
+
     }
 }

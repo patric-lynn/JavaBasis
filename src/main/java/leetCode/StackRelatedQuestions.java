@@ -154,8 +154,8 @@ public class StackRelatedQuestions {
      * @param root
      * @return
      */
+    static List<Integer> list = new ArrayList<>();
     public static List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> list = new ArrayList<>();
         if (root != null) {
             if (root.left != null) inorderTraversal(root.left);
             list.add(root.val);

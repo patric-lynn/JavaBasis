@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;HeapRelatedQuestions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetCode/DynamicProgrammingRelatedQuestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetCode/SortRelatedQuestions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +205,7 @@
       <workItem from="1583678089595" duration="4072000" />
       <workItem from="1583735124470" duration="741000" />
       <workItem from="1583897516090" duration="6509000" />
-      <workItem from="1584010637069" duration="13311000" />
+      <workItem from="1584010637069" duration="13756000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -371,6 +367,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="395" y="96" key="#Solution/0.23.1440.829@0.23.1440.829" timestamp="1582909371072" />
+    <state x="395" y="111" key="#SortRelatedQuestions" timestamp="1584114025159">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="395" y="111" key="#SortRelatedQuestions/0.23.1440.829@0.23.1440.829" timestamp="1584114025159" />
     <state x="395" y="99" key="#basic" timestamp="1583219705550">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -379,10 +379,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="184" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.829@0.23.1440.829" timestamp="1583934913700" />
-    <state x="459" y="223" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1584113953037">
+    <state x="459" y="223" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1584114046173">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="459" y="223" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.829@0.23.1440.829" timestamp="1584113953037" />
+    <state x="459" y="223" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.829@0.23.1440.829" timestamp="1584114046173" />
     <state x="457" y="228" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582909363454">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -456,10 +456,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="503" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.829@0.23.1440.829" timestamp="1582909115240" />
-    <state x="500" y="174" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584113979975">
+    <state x="500" y="174" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584114048987">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="500" y="174" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.829@0.23.1440.829" timestamp="1584113979975" />
+    <state x="500" y="174" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.829@0.23.1440.829" timestamp="1584114048987" />
     <state x="385" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1584112397514">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

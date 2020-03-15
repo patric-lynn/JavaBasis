@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;HeapRelatedQuestions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetCode/TreeRelatedQuestions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -68,24 +69,24 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="leetCode" />
       <recent name="jianzhioffer" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
@@ -205,7 +206,9 @@
       <workItem from="1583678089595" duration="4072000" />
       <workItem from="1583735124470" duration="741000" />
       <workItem from="1583897516090" duration="6509000" />
-      <workItem from="1584010637069" duration="13756000" />
+      <workItem from="1584010637069" duration="15379000" />
+      <workItem from="1584267145017" duration="1402000" />
+      <workItem from="1584276047287" duration="1867000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -359,6 +362,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="新增&#10;HeapRelatedQuestions" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="104" key="#Notifications" timestamp="1584280165062">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="320" y="104" key="#Notifications/0.23.1440.829@0.23.1440.829" timestamp="1584280165062" />
     <state x="321" y="104" key="#Project_Structure" timestamp="1584114011619">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -395,14 +402,18 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="281" y="368" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.829@0.23.1440.829" timestamp="1583219736570" />
-    <state x="484" y="303" width="471" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1583219628918">
+    <state x="484" y="303" width="471" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584279594250">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="484" y="303" width="471" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.829@0.23.1440.829" timestamp="1583219628918" />
+    <state x="484" y="303" width="471" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.829@0.23.1440.829" timestamp="1584279594250" />
     <state x="484" y="327" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1583219738175">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="484" y="327" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.829@0.23.1440.829" timestamp="1583219738175" />
+    <state x="237" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584279570085">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="237" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.829@0.23.1440.829" timestamp="1584279570085" />
     <state x="458" y="193" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1584111062701">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -415,22 +426,22 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="165" key="GridCell.Tab.0.bottom" timestamp="1584113395034">
+    <state width="1398" height="165" key="GridCell.Tab.0.bottom" timestamp="1584206717527">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584113395034" />
-    <state width="1398" height="165" key="GridCell.Tab.0.center" timestamp="1584113395033">
+    <state width="1398" height="165" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584206717527" />
+    <state width="1398" height="165" key="GridCell.Tab.0.center" timestamp="1584206717527">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584113395033" />
-    <state width="1398" height="165" key="GridCell.Tab.0.left" timestamp="1584113395032">
+    <state width="1398" height="165" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584206717527" />
+    <state width="1398" height="165" key="GridCell.Tab.0.left" timestamp="1584206717526">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584113395032" />
-    <state width="1398" height="165" key="GridCell.Tab.0.right" timestamp="1584113395033">
+    <state width="1398" height="165" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584206717526" />
+    <state width="1398" height="165" key="GridCell.Tab.0.right" timestamp="1584206717527">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584113395033" />
+    <state width="1398" height="165" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584206717527" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -439,10 +450,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="432" y="158" width="684" height="552" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1582909138948" />
-    <state x="221" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584113566502">
+    <state x="225" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584280210800">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="221" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584113566502" />
+    <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584280210800" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
     <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584113374602">
       <screen x="0" y="23" width="1440" height="829" />
@@ -460,6 +471,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="500" y="174" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.829@0.23.1440.829" timestamp="1584114048987" />
+    <state width="78" height="35" key="documentation.popup.size" timestamp="1584280123318">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state width="78" height="35" key="documentation.popup.size/0.23.1440.829@0.23.1440.829" timestamp="1584280123318" />
     <state x="385" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1584112397514">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

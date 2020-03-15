@@ -61,11 +61,12 @@ class StringRelatedQuestions {
         }
         return s.substring(start, end + 1);
     }
-}
 
-//字符串逆置代码
-class reverse {
+
+
+
     /**
+     * 字符串逆置代码
      * 二分递归地将后面的字符和前面的字符连接起来。
      *
      * @param s

@@ -42,7 +42,7 @@ public class basic {
     public static void Array() {
         int[] a = {1, 2, 3};
         int[] bo = a;
-        System.out.println(bo.length);
+        System.out.println(a.length + bo.length);
     }
 
     //字符串测试
@@ -107,16 +107,17 @@ public class basic {
         s = stringBuffer.toString();
         System.out.println(s);
     }
+
     //字符串替换测试
-    public static String replace(StringBuffer str){
+    public static String replace(StringBuffer str) {
         StringBuffer str1 = new StringBuffer();
 //        String a = null;
 //        StringBuilder builder = null;
-        for(int i=0; i< str.length(); i++){
+        for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if(c==' ') {
+            if (c == ' ') {
                 str1.append("%20");
-            }else { //注意此处必须是二选一的形式!!!!!!!!!!!!!!!!!!!!!!!如果没有else子句，则空格也会被加上!!!!!!!!!!!
+            } else { //注意此处必须是二选一的形式!!!!!!!!!!!!!!!!!!!!!!!如果没有else子句，则空格也会被加上!!!!!!!!!!!
                 str1.append(c);
             }
         }
@@ -133,12 +134,13 @@ public class basic {
             this.val = val;
         }
     }
+
     public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         ArrayList<Integer> list = new ArrayList<>();
-        ListNode li=listNode;
-        while(li!=null){
-            list.add(0,li.val);
-            li=li.next;
+        ListNode li = listNode;
+        while (li != null) {
+            list.add(0, li.val);
+            li = li.next;
         }
         return list;
     }
@@ -170,7 +172,7 @@ public class basic {
 //        //字符串测试
 //        stringTest2();
 
-            // replace测试
+        // replace测试
 //        StringBuffer stringBuffer = new StringBuffer("wo men shi zhong guo ren");
 //        System.out.println(replace(stringBuffer));
 

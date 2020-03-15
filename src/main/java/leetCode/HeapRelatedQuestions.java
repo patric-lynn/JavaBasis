@@ -14,28 +14,6 @@ import java.util.PriorityQueue;
  * @date Created on 2020/3/13 21:43
  */
 public class HeapRelatedQuestions {
-    public static void main(String[] args) {
-        int[] nums = {3, 2, 1, 3, 4, 3, 3, 2, 2, 1, 5, 6, 4};
-        int k = 3;
-        /**
-         * 215. 数组中的第K个最大元素
-         */
-        System.out.println(findKthLargest(nums, k));
-
-        /**
-         * 239. 滑动窗口最大值
-         * 注意，print方法和println方法不能输出数组
-         */
-        for (int i = 0; i < nums.length - k + 1; i++) {
-            System.out.print(maxSlidingWindow(nums, k)[i] + " ");
-        }
-
-        /**
-         * 347. 前 K 个高频元素
-         */
-        System.out.println("\n"+topKFrequent(nums, k));
-    }
-
     /**
      * 215. 数组中的第K个最大元素
      * 在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
@@ -122,6 +100,8 @@ public class HeapRelatedQuestions {
      * 你可以假设给定的 k 总是合理的，且 1 ≤ k ≤ 数组中不相同的元素的个数。
      * 你的算法的时间复杂度必须优于 O(n log n) , n 是数组的大小。
      *
+     * 解法：利用一个hashmap保存当前数与出现次数，然后利用最小堆不断输出最小值
+     * ，剩余的k个元素必定是出现频次最高的K个元素
      * @param nums
      * @param k
      * @return
@@ -149,4 +129,27 @@ public class HeapRelatedQuestions {
         Collections.reverse(list);
         return list;
     }
+
+    public static void main(String[] args) {
+        int[] nums = {3, 2, 1, 3, 4, 3, 3, 2, 2, 1, 5, 6, 4};
+        int k = 3;
+        /**
+         * 215. 数组中的第K个最大元素
+         */
+        System.out.println(findKthLargest(nums, k));
+
+        /**
+         * 239. 滑动窗口最大值
+         * 注意，print方法和println方法不能输出数组
+         */
+        for (int i = 0; i < nums.length - k + 1; i++) {
+            System.out.print(maxSlidingWindow(nums, k)[i] + " ");
+        }
+
+        /**
+         * 347. 前 K 个高频元素
+         */
+        System.out.println("\n"+topKFrequent(nums, k));
+    }
+
 }

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;HeapRelatedQuestions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetCode/TreeRelatedQuestions.java" afterDir="false" />
+    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;TreeRelatedQuestions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/basic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jianzhioffer/ListRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/ListRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/HeapRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/HeapRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/SortRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/SortRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/TreeRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/TreeRelatedQuestions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +75,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -90,9 +96,23 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HeapRelatedQuestions">
+  <component name="RunManager" selected="Application.SortRelatedQuestions">
     <configuration name="HeapRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetCode.HeapRelatedQuestions" />
+      <module name="JavaBasis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetCode.SortRelatedQuestions" />
       <module name="JavaBasis" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -141,14 +161,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="reverse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetCode.reverse" />
-      <module name="JavaBasis" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -167,18 +179,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.basic" />
-      <item itemvalue="Application.reverse" />
       <item itemvalue="Application.StackRelatedQuestions" />
       <item itemvalue="Application.HeapRelatedQuestions" />
       <item itemvalue="Application.interview" />
+      <item itemvalue="Application.SortRelatedQuestions" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SortRelatedQuestions" />
         <item itemvalue="Application.HeapRelatedQuestions" />
         <item itemvalue="Application.interview" />
         <item itemvalue="Application.StackRelatedQuestions" />
         <item itemvalue="Application.basic" />
-        <item itemvalue="Application.reverse" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +220,7 @@
       <workItem from="1583897516090" duration="6509000" />
       <workItem from="1584010637069" duration="15379000" />
       <workItem from="1584267145017" duration="1402000" />
-      <workItem from="1584276047287" duration="1867000" />
+      <workItem from="1584276047287" duration="6060000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -329,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584113372831</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="新增&#10;TreeRelatedQuestions">
+      <created>1584280727685</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1584280727685</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +378,8 @@
     <MESSAGE value="修改文件格式与新增内容" />
     <MESSAGE value="新增&#10;StackRelatedQuestions" />
     <MESSAGE value="新增&#10;HeapRelatedQuestions" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增&#10;HeapRelatedQuestions" />
+    <MESSAGE value="新增&#10;TreeRelatedQuestions" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增&#10;TreeRelatedQuestions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="104" key="#Notifications" timestamp="1584280165062">
@@ -418,30 +438,30 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="458" y="193" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.829@0.23.1440.829" timestamp="1584111062701" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584113372365">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584280727279">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584113372365" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584280727279" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="165" key="GridCell.Tab.0.bottom" timestamp="1584206717527">
+    <state width="1398" height="164" key="GridCell.Tab.0.bottom" timestamp="1584288567018">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584206717527" />
-    <state width="1398" height="165" key="GridCell.Tab.0.center" timestamp="1584206717527">
+    <state width="1398" height="164" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584288567018" />
+    <state width="1398" height="164" key="GridCell.Tab.0.center" timestamp="1584288567017">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584206717527" />
-    <state width="1398" height="165" key="GridCell.Tab.0.left" timestamp="1584206717526">
+    <state width="1398" height="164" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584288567017" />
+    <state width="1398" height="164" key="GridCell.Tab.0.left" timestamp="1584288567016">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584206717526" />
-    <state width="1398" height="165" key="GridCell.Tab.0.right" timestamp="1584206717527">
+    <state width="1398" height="164" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584288567016" />
+    <state width="1398" height="164" key="GridCell.Tab.0.right" timestamp="1584288567017">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="165" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584206717527" />
+    <state width="1398" height="164" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584288567017" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -450,15 +470,15 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="432" y="158" width="684" height="552" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1582909138948" />
-    <state x="225" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584280210800">
+    <state x="225" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584284463372">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584280210800" />
+    <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584284463372" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584113374602">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584281408944">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584113374602" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584281408944" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -475,9 +495,9 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state width="78" height="35" key="documentation.popup.size/0.23.1440.829@0.23.1440.829" timestamp="1584280123318" />
-    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1584112397514">
+    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1584285352916">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1584112397514" />
+    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1584285352916" />
   </component>
 </project>

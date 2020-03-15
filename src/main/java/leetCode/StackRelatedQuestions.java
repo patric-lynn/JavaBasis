@@ -142,7 +142,6 @@ public class StackRelatedQuestions {
         int val;
         TreeNode left;
         TreeNode right;
-
         TreeNode(int x) {
             val = x;
         }
@@ -171,7 +170,6 @@ public class StackRelatedQuestions {
      * @return
      */
     public static List<Integer> inorderTraversal2(TreeNode root) {
-        List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         while (root != null || !stack.isEmpty()) {
             while (root != null) {
@@ -195,7 +193,6 @@ public class StackRelatedQuestions {
         class ColorNode {
             TreeNode node;
             String color;
-
             ColorNode(TreeNode node, String color) {
                 this.node = node;
                 this.color = color;

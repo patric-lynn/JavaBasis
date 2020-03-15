@@ -128,6 +128,11 @@ public class TreeRelatedQuestions {
     }
 
 
+    /**
+     * 解法二：非递归法
+     * @param root
+     * @return
+     */
     public boolean isSymmetric2(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);

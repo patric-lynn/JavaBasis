@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;SortRelatedQuestions">
+    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;DPRelatedQuestions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetCode/GreedyRelatedQuestions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/DynamicProgrammingRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/DynamicProgrammingRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +92,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Sort">
+  <component name="RunManager" selected="Application.GreedyRelatedQuestions">
     <configuration name="DynamicProgrammingRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetCode.DynamicProgrammingRelatedQuestions" />
       <module name="JavaBasis" />
@@ -104,8 +107,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeapRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetCode.HeapRelatedQuestions" />
+    <configuration name="GreedyRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetCode.GreedyRelatedQuestions" />
       <module name="JavaBasis" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -171,19 +174,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.HeapRelatedQuestions" />
       <item itemvalue="Application.interview" />
       <item itemvalue="Application.SortRelatedQuestions" />
       <item itemvalue="Application.DynamicProgrammingRelatedQuestions" />
       <item itemvalue="Application.Sort" />
+      <item itemvalue="Application.GreedyRelatedQuestions" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GreedyRelatedQuestions" />
         <item itemvalue="Application.Sort" />
         <item itemvalue="Application.DynamicProgrammingRelatedQuestions" />
         <item itemvalue="Application.interview" />
         <item itemvalue="Application.SortRelatedQuestions" />
-        <item itemvalue="Application.HeapRelatedQuestions" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +217,7 @@
       <workItem from="1584010637069" duration="15379000" />
       <workItem from="1584267145017" duration="1402000" />
       <workItem from="1584276047287" duration="10249000" />
-      <workItem from="1584349587505" duration="6694000" />
+      <workItem from="1584349587505" duration="8414000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -356,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584451433245</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="新增&#10;DPRelatedQuestions">
+      <created>1584452124580</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1584452124580</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +398,8 @@
     <MESSAGE value="新增&#10;HeapRelatedQuestions" />
     <MESSAGE value="新增&#10;TreeRelatedQuestions" />
     <MESSAGE value="新增&#10;SortRelatedQuestions" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增&#10;SortRelatedQuestions" />
+    <MESSAGE value="新增&#10;DPRelatedQuestions" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增&#10;DPRelatedQuestions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="104" key="#Notifications" timestamp="1584280165062">
@@ -447,30 +458,30 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="458" y="193" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.829@0.23.1440.829" timestamp="1584111062701" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584451432640">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584452124230">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584451432640" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584452124230" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="163" key="GridCell.Tab.0.bottom" timestamp="1584451166298">
+    <state width="1398" height="163" key="GridCell.Tab.0.bottom" timestamp="1584458249173">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="163" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584451166298" />
-    <state width="1398" height="163" key="GridCell.Tab.0.center" timestamp="1584451166297">
+    <state width="1398" height="163" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584458249173" />
+    <state width="1398" height="163" key="GridCell.Tab.0.center" timestamp="1584458249172">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="163" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584451166297" />
-    <state width="1398" height="163" key="GridCell.Tab.0.left" timestamp="1584451166297">
+    <state width="1398" height="163" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584458249172" />
+    <state width="1398" height="163" key="GridCell.Tab.0.left" timestamp="1584458249172">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="163" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584451166297" />
-    <state width="1398" height="163" key="GridCell.Tab.0.right" timestamp="1584451166298">
+    <state width="1398" height="163" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584458249172" />
+    <state width="1398" height="163" key="GridCell.Tab.0.right" timestamp="1584458249173">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="163" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584451166298" />
+    <state width="1398" height="163" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584458249173" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -484,10 +495,10 @@
     </state>
     <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584452108706" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584451436216">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584452127056">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584451436216" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584452127056" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

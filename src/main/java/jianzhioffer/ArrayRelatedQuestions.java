@@ -1,13 +1,19 @@
 package jianzhioffer;
 
-/**
- * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
- * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
- * @return  是否存在
- */
 public class ArrayRelatedQuestions {
+    //测试一维数组属性 2020-3-3
+    public static void Array() {
+        int[] a = {1, 2, 3};
+        int[] bo = a;
+        System.out.println(a.length + bo.length);
+    }
+
+
     int[][] a= new int[][]{{1,2,3},{2,3,4},{4,5,6}};
     /**
+     * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
+     * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
+     *
      * 暴力法，遍历数组
      * @param target
      * @param array

@@ -102,6 +102,84 @@ public class DynamicProgrammingRelatedQuestions {
     }
 
     /**
+     * 63. 不同路径 II
+     * 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
+     * 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。
+     * 现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
+     *说明：m 和 n 的值均不超过 100。
+     *
+     * 示例 1:
+     *
+     * 输入:
+     * [
+     *   [0,0,0],
+     *   [0,1,0],
+     *   [0,0,0]
+     * ]
+     * 输出: 2
+     * @param obstacleGrid
+     * @return
+     */
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        if (obstacleGrid == null || obstacleGrid[0].length == 0) {
+            return 0;
+        }
+        int rol = obstacleGrid.length;
+        int col = obstacleGrid[0].length;
+        for (int i = 0; i < rol; i++) {
+            for (int j = 0; j < col; j++) {
+                // 判断是否有障碍物，若有，当前点对结果贡献为0，直接置0即可。
+                if (obstacleGrid[i][j] == 1) {
+                    obstacleGrid[i][j] = 0;
+                    continue;
+                }
+                if (i == 0 && j == 0) {
+                    obstacleGrid[i][j] = 1; // 将第一个格点赋初始值1；
+                } else if (i == 0) {
+                    obstacleGrid[i][j] = obstacleGrid[i][j - 1]; // 第一行格点值等于左边格点值；
+                } else if (j == 0) {
+                    obstacleGrid[i][j] = obstacleGrid[i - 1][j]; // 第一列格点值等于上边格点值；
+                } else {
+                    obstacleGrid[i][j] = obstacleGrid[i][j - 1] + obstacleGrid[i - 1][j]; // 其他格点值等于左边、上边格点值之和；
+                }
+            }
+        }
+        return obstacleGrid[rol - 1][col - 1];
+    }
+
+    /**
+     * 64. 最小路径和
+     * 给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
+     *
+     * 说明：每次只能向下或者向右移动一步。
+     *
+     * 示例:
+     *
+     * 输入:
+     * [
+     *   [1,3,1],
+     *   [1,5,1],
+     *   [4,2,1]
+     * ]
+     * 输出: 7
+     * 解释: 因为路径 1→3→1→1→1 的总和最小。
+     *
+     * @param grid
+     * @return
+     */
+    public int minPathSum(int[][] grid) {
+        for(int i = 0; i < grid.length; i++) {
+            for(int j = 0; j < grid[0].length; j++) {
+                if(i == 0 && j == 0) continue;
+                else if(i == 0)  grid[i][j] = grid[i][j - 1] + grid[i][j];
+                else if(j == 0)  grid[i][j] = grid[i - 1][j] + grid[i][j];
+                else grid[i][j] = Math.min(grid[i - 1][j], grid[i][j - 1]) + grid[i][j];
+            }
+        }
+        return grid[grid.length - 1][grid[0].length - 1];
+    }
+
+    /**
      * 70. 爬楼梯
      * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
      *

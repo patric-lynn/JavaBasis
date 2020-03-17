@@ -2,9 +2,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class basic {
     //循环函数测试 2020-3-1
@@ -28,15 +26,6 @@ public class basic {
         }
     }
 
-    //排序函数与堆栈的测试 2020-3-2
-    public static void Sort() {
-        int[] a = {5, 7, 2, 6, 1, 9, 3, 4, 8, 0};
-        Arrays.sort(a);
-        Stack<Integer> stack = new Stack<Integer>();
-        for (int j : a) {
-            System.out.println(a[j]);
-        }
-    }
 
     //测试数组 2020-3-3
     public static void Array() {
@@ -111,8 +100,6 @@ public class basic {
     //字符串替换测试
     public static String replace(StringBuffer str) {
         StringBuffer str1 = new StringBuffer();
-//        String a = null;
-//        StringBuilder builder = null;
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
             if (c == ' ') {
@@ -124,7 +111,6 @@ public class basic {
         return str1.toString();
 //        return str.toString().replace(" ", "%20");
     }
-
 
     //ArrayList测试
     public class ListNode {
@@ -157,27 +143,21 @@ public class basic {
 
     public static void main(String[] args) throws Exception {
 
-//        //循环函数测试
-//        labelTest();
+       //循环函数测试
+       labelTest();
 
-//        //数组排序实验
-//        Sort();
+       //字符串测试
+       stringTest1();
 
-//        //数组长度测试
-//        array(a);
+       //字符串测试
+       stringTest2();
 
-//        //字符串测试
-//        stringTest1();
+       //replace测试
+       StringBuffer stringBuffer = new StringBuffer("wo men shi zhong guo ren");
+       System.out.println(replace(stringBuffer));
 
-//        //字符串测试
-//        stringTest2();
-
-        // replace测试
-//        StringBuffer stringBuffer = new StringBuffer("wo men shi zhong guo ren");
-//        System.out.println(replace(stringBuffer));
-
-//        //文件测试
-//        fileTest();
+       //文件测试
+       fileTest();
 
     }
 }

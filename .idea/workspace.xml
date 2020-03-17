@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;TreeRelatedQuestions">
+    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;SortRelatedQuestions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/leetCode/LinkedListRelatedQuestions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/basic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jianzhioffer/ListRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/ListRelatedQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/HeapRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/HeapRelatedQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/SortRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/SortRelatedQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StackRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/DynamicProgrammingRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/DynamicProgrammingRelatedQuestions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/TreeRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/TreeRelatedQuestions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -96,7 +95,21 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SortRelatedQuestions">
+  <component name="RunManager" selected="Application.Sort">
+    <configuration name="DynamicProgrammingRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetCode.DynamicProgrammingRelatedQuestions" />
+      <module name="JavaBasis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HeapRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetCode.HeapRelatedQuestions" />
       <module name="JavaBasis" />
@@ -107,6 +120,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sort" />
+      <module name="JavaBasis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,30 +146,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_221" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="leetCode.StackRelatedQuestions" />
-      <module name="JavaBasis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="basic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="basic" />
-      <module name="JavaBasis" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,19 +177,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.basic" />
-      <item itemvalue="Application.StackRelatedQuestions" />
       <item itemvalue="Application.HeapRelatedQuestions" />
       <item itemvalue="Application.interview" />
       <item itemvalue="Application.SortRelatedQuestions" />
+      <item itemvalue="Application.DynamicProgrammingRelatedQuestions" />
+      <item itemvalue="Application.Sort" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Sort" />
+        <item itemvalue="Application.DynamicProgrammingRelatedQuestions" />
+        <item itemvalue="Application.interview" />
         <item itemvalue="Application.SortRelatedQuestions" />
         <item itemvalue="Application.HeapRelatedQuestions" />
-        <item itemvalue="Application.interview" />
-        <item itemvalue="Application.StackRelatedQuestions" />
-        <item itemvalue="Application.basic" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +219,8 @@
       <workItem from="1583897516090" duration="6509000" />
       <workItem from="1584010637069" duration="15379000" />
       <workItem from="1584267145017" duration="1402000" />
-      <workItem from="1584276047287" duration="6060000" />
+      <workItem from="1584276047287" duration="10249000" />
+      <workItem from="1584349587505" duration="6021000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -348,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584280727685</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="新增&#10;SortRelatedQuestions">
+      <created>1584288688814</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1584288688814</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +386,8 @@
     <MESSAGE value="新增&#10;StackRelatedQuestions" />
     <MESSAGE value="新增&#10;HeapRelatedQuestions" />
     <MESSAGE value="新增&#10;TreeRelatedQuestions" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增&#10;TreeRelatedQuestions" />
+    <MESSAGE value="新增&#10;SortRelatedQuestions" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增&#10;SortRelatedQuestions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="104" key="#Notifications" timestamp="1584280165062">
@@ -446,22 +454,22 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="164" key="GridCell.Tab.0.bottom" timestamp="1584288567018">
+    <state width="1398" height="163" key="GridCell.Tab.0.bottom" timestamp="1584451166298">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="164" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584288567018" />
-    <state width="1398" height="164" key="GridCell.Tab.0.center" timestamp="1584288567017">
+    <state width="1398" height="163" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584451166298" />
+    <state width="1398" height="163" key="GridCell.Tab.0.center" timestamp="1584451166297">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="164" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584288567017" />
-    <state width="1398" height="164" key="GridCell.Tab.0.left" timestamp="1584288567016">
+    <state width="1398" height="163" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584451166297" />
+    <state width="1398" height="163" key="GridCell.Tab.0.left" timestamp="1584451166297">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="164" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584288567016" />
-    <state width="1398" height="164" key="GridCell.Tab.0.right" timestamp="1584288567017">
+    <state width="1398" height="163" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584451166297" />
+    <state width="1398" height="163" key="GridCell.Tab.0.right" timestamp="1584451166298">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="164" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584288567017" />
+    <state width="1398" height="163" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584451166298" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -470,10 +478,10 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="432" y="158" width="684" height="552" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1582909138948" />
-    <state x="225" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584284463372">
+    <state x="225" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584451154502">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584284463372" />
+    <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584451154502" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
     <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584288697268">
       <screen x="0" y="23" width="1440" height="829" />
@@ -495,9 +503,9 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state width="78" height="35" key="documentation.popup.size/0.23.1440.829@0.23.1440.829" timestamp="1584280123318" />
-    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1584285352916">
+    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1584451172876">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1584285352916" />
+    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1584451172876" />
   </component>
 </project>

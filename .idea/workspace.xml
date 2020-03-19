@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;DPRelatedQuestions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/basic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/basic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jianzhioffer/ArrayRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/ArrayRelatedQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jianzhioffer/ListRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/ListRelatedQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jianzhioffer/StringRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/StringRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/LinkedListRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/LinkedListRelatedQuestions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +56,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -212,7 +210,8 @@
       <workItem from="1584010637069" duration="15379000" />
       <workItem from="1584267145017" duration="1402000" />
       <workItem from="1584276047287" duration="10249000" />
-      <workItem from="1584349587505" duration="10323000" />
+      <workItem from="1584349587505" duration="10688000" />
+      <workItem from="1584510733328" duration="884000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -375,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584460088429</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="新增&#10;DPRelatedQuestions">
+      <created>1584461014137</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1584461014137</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,30 +473,30 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="458" y="193" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.829@0.23.1440.829" timestamp="1584111062701" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584460088189">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584461013969">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584460088189" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584461013969" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="247" key="GridCell.Tab.0.bottom" timestamp="1584460436328">
+    <state width="1398" height="141" key="GridCell.Tab.0.bottom" timestamp="1584498078247">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584460436328" />
-    <state width="1398" height="247" key="GridCell.Tab.0.center" timestamp="1584460436328">
+    <state width="1398" height="141" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584498078247" />
+    <state width="1398" height="141" key="GridCell.Tab.0.center" timestamp="1584498078246">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584460436328" />
-    <state width="1398" height="247" key="GridCell.Tab.0.left" timestamp="1584460436327">
+    <state width="1398" height="141" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584498078246" />
+    <state width="1398" height="141" key="GridCell.Tab.0.left" timestamp="1584498078245">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584460436327" />
-    <state width="1398" height="247" key="GridCell.Tab.0.right" timestamp="1584460436328">
+    <state width="1398" height="141" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584498078245" />
+    <state width="1398" height="141" key="GridCell.Tab.0.right" timestamp="1584498078246">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="247" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584460436328" />
+    <state width="1398" height="141" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584498078246" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -499,15 +505,15 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="432" y="158" width="684" height="552" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1582909138948" />
-    <state x="225" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584452108706">
+    <state x="225" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584511065361">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584452108706" />
+    <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584511065361" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584460090972">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584461015862">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584460090972" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584461015862" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

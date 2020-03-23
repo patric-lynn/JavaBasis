@@ -38,6 +38,22 @@ public class basic {
         printWriter.close();
     }
 
+    public static int transfer(String str) {
+        char[] c = str.toCharArray();
+        int num = 0;
+        int num1= Integer.parseInt(str);
+        if (c[0] == '-') {
+            for (int i = 1; i < c.length; i++) {
+                num += c[i] * Math.exp(c.length - i);
+            }
+            num = -1 * num;
+        } else {
+            for (int i = 1; i < c.length; i++) {
+                num += c[i] * (c.length - i);
+            }
+        }
+        return num;
+    }
     public static void main(String[] args) throws Exception {
 
         //循环函数测试
@@ -46,7 +62,8 @@ public class basic {
 
         //文件测试
         fileTest();
-
+        String a = "-358";
+        System.out.println(transfer(a));
     }
 }
 

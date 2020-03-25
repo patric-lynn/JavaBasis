@@ -2,7 +2,6 @@ package leetCode;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Stack;
 
 class StringRelatedQuestions {
     /**
@@ -19,18 +18,21 @@ class StringRelatedQuestions {
      * @return
      */
     public int lengthOfLongestSubstring(String s) {
-        int n = s.length(), ans = 0;
+        int n = s.length(), result = 0;
         Map<Character, Integer> map = new HashMap<>(); // current index of character
         // try to extend the range [i, j]
         for (int j = 0, i = 0; j < n; j++) {
             if (map.containsKey(s.charAt(j))) {
                 i = Math.max(map.get(s.charAt(j)), i);
             }
-            ans = Math.max(ans, j - i + 1);
+            result = Math.max(result, j - i + 1);
             map.put(s.charAt(j), j + 1);
         }
-        return ans;
+        return result;
     }
+
+
+
 
     /**
      * 5. 最长回文子串
@@ -103,6 +105,51 @@ class StringRelatedQuestions {
         return s.substring(start, end + 1);
     }
 
+
+
+
+    /**
+     * 6. Z 字形变换
+     * 将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。
+     *
+     * 比如输入字符串为 "LEETCODEISHIRING" 行数为 3 时，排列如下：
+     *
+     * L   C   I   R
+     * E T O E S I I G
+     * E   D   H   N
+     * 之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："LCIRETOESIIGEDHN"。
+     *
+     * 请你实现这个将字符串进行指定行数变换的函数：
+     *
+     * string convert(string s, int numRows);
+     * 示例 1:
+     *
+     * 输入: s = "LEETCODEISHIRING", numRows = 3
+     * 输出: "LCIRETOESIIGEDHN"
+     *
+     * 思路
+     * 按照与逐行读取 Z 字形图案相同的顺序访问字符串。
+     * 算法
+     * 首先访问 行 0 中的所有字符，接着访问 行 1，然后 行 2，依此类推...
+     * @param s
+     * @param numRows
+     * @return
+     */
+    public String convert(String s, int numRows) {
+        if (numRows == 1) return s;
+        StringBuilder builder = new StringBuilder();
+        int n = s.length();
+        int cycleLen = 2 * numRows - 2;
+
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j + i < n; j += cycleLen) {
+                builder.append(s.charAt(j + i));
+                if (i != 0 && i != numRows - 1 && j + cycleLen - i < n)
+                    builder.append(s.charAt(j + cycleLen - i));
+            }
+        }
+        return builder.toString();
+    }
 
     public static void main(String[] args) {
 

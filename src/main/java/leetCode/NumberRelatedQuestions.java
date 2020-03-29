@@ -41,7 +41,6 @@ public class NumberRelatedQuestions {
     }
 
     public static void main(String[] args) {
-
     }
 
 }

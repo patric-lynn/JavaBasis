@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增&#10;DPRelatedQuestions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/leetCode/NumberRelatedQuestions.java" afterDir="false" />
+    <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增代码">
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview/alibaba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interview/neteaseLeihuo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/NumberRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/NumberRelatedQuestions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,21 +94,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="DynamicProgrammingRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetCode.DynamicProgrammingRelatedQuestions" />
-      <module name="JavaBasis" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.neteaseLeihuo">
     <configuration name="GreedyRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leetCode.GreedyRelatedQuestions" />
       <module name="JavaBasis" />
@@ -128,8 +116,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Sort" />
+    <configuration name="ZhaoHang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ZhaoHang" />
       <module name="JavaBasis" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -146,6 +134,20 @@
       <option name="MAIN_CLASS_NAME" value="basic" />
       <module name="JavaBasis" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="neteaseLeihuo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interview.neteaseLeihuo" />
+      <module name="JavaBasis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interview.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,18 +170,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.DynamicProgrammingRelatedQuestions" />
-      <item itemvalue="Application.Sort" />
       <item itemvalue="Application.GreedyRelatedQuestions" />
       <item itemvalue="Application.basic" />
+      <item itemvalue="Application.ZhaoHang" />
+      <item itemvalue="Application.neteaseLeihuo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.neteaseLeihuo" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ZhaoHang" />
         <item itemvalue="Application.basic" />
         <item itemvalue="Application.GreedyRelatedQuestions" />
-        <item itemvalue="Application.Sort" />
-        <item itemvalue="Application.DynamicProgrammingRelatedQuestions" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +214,9 @@
       <workItem from="1584276047287" duration="10249000" />
       <workItem from="1584349587505" duration="10688000" />
       <workItem from="1584510733328" duration="1289000" />
-      <workItem from="1584671502622" duration="7612000" />
+      <workItem from="1584671502622" duration="8036000" />
+      <workItem from="1585302456151" duration="225000" />
+      <workItem from="1585306458884" duration="8436000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -396,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584981930629</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="新增代码">
+      <created>1585155181531</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1585155181532</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,17 +440,18 @@
     <MESSAGE value="新增&#10;TreeRelatedQuestions" />
     <MESSAGE value="新增&#10;SortRelatedQuestions" />
     <MESSAGE value="新增&#10;DPRelatedQuestions" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增&#10;DPRelatedQuestions" />
+    <MESSAGE value="新增代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增代码" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="104" key="#Notifications" timestamp="1584280165062">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="320" y="104" key="#Notifications/0.23.1440.829@0.23.1440.829" timestamp="1584280165062" />
-    <state x="321" y="104" key="#Project_Structure" timestamp="1584114011619">
+    <state x="321" y="104" key="#Project_Structure" timestamp="1585458373476">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="104" key="#Project_Structure/0.23.1440.829@0.23.1440.829" timestamp="1584114011619" />
+    <state x="321" y="104" key="#Project_Structure/0.23.1440.829@0.23.1440.829" timestamp="1585458373476" />
     <state x="395" y="96" key="#Solution" timestamp="1582909371072">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -488,30 +500,30 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="458" y="193" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.829@0.23.1440.829" timestamp="1584111062701" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1584981930224">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1585155181329">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1584981930224" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1585155181329" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="141" key="GridCell.Tab.0.bottom" timestamp="1584964174069">
+    <state width="1398" height="151" key="GridCell.Tab.0.bottom" timestamp="1585464397971">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="141" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1584964174069" />
-    <state width="1398" height="141" key="GridCell.Tab.0.center" timestamp="1584964174068">
+    <state width="1398" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1585464397971" />
+    <state width="1398" height="151" key="GridCell.Tab.0.center" timestamp="1585464397945">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="141" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1584964174068" />
-    <state width="1398" height="141" key="GridCell.Tab.0.left" timestamp="1584964174067">
+    <state width="1398" height="151" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1585464397945" />
+    <state width="1398" height="151" key="GridCell.Tab.0.left" timestamp="1585464397941">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="141" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1584964174067" />
-    <state width="1398" height="141" key="GridCell.Tab.0.right" timestamp="1584964174068">
+    <state width="1398" height="151" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1585464397941" />
+    <state width="1398" height="151" key="GridCell.Tab.0.right" timestamp="1585464397967">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state width="1398" height="141" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1584964174068" />
+    <state width="1398" height="151" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1585464397967" />
     <state x="262" y="98" key="Maven.ArtifactSearchDialog" timestamp="1583125658642">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -525,10 +537,10 @@
     </state>
     <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584511065361" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1584981938569">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1585155183349">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1584981938569" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1585155183349" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

@@ -214,6 +214,47 @@ class StringRelatedQuestions {
             return first_match && isMatch(text.substring(1), pattern.substring(1));
         }
     }
+
+    /**
+     * 解法二：
+     * 想法
+     *
+     * 因为题目拥有 最优子结构 ，一个自然的想法是将中间结果保存起来。我们通过用
+     * dp(i,j)
+     * dp(i,j) 表示
+     * text[i:]
+     * text[i:] 和
+     * pattern[j:]
+     * pattern[j:] 是否能匹配。我们可以用更短的字符串匹配问题来表示原本的问题。
+     *
+     * 算法
+     *
+     * 我们用 [方法 1] 中同样的回溯方法，除此之外，因为函数 match(text[i:], pattern[j:]) 只会被调用一次，我们用
+     * dp(i, j)
+     * dp(i, j) 来应对剩余相同参数的函数调用，这帮助我们节省了字符串建立操作所需要的时间，也让我们可以将中间结果进行保存。
+     *
+     * @param text
+     * @param pattern
+     * @return
+     */
+    public boolean isMatch2(String text, String pattern) {
+        boolean[][] dp = new boolean[text.length() + 1][pattern.length() + 1];
+        dp[text.length()][pattern.length()] = true;
+
+        for (int i = text.length(); i >= 0; i--){
+            for (int j = pattern.length() - 1; j >= 0; j--){
+                boolean first_match = (i < text.length() &&
+                        (pattern.charAt(j) == text.charAt(i) ||
+                                pattern.charAt(j) == '.'));
+                if (j + 1 < pattern.length() && pattern.charAt(j+1) == '*'){
+                    dp[i][j] = dp[i][j+2] || first_match && dp[i+1][j];
+                } else {
+                    dp[i][j] = first_match && dp[i+1][j+1];
+                }
+            }
+        }
+        return dp[0][0];
+    }
     public static void main(String[] args) {
 
     }

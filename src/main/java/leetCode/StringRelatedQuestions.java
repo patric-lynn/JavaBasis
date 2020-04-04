@@ -3,6 +3,16 @@ package leetCode;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Description
+ * 3. 无重复字符的最长子串
+ * 5. 最长回文子串
+ * 6. Z 字形变换
+ * 10. 正则表达式匹配
+ * 14. 最长公共前缀
+ * @author Lynn-zd
+ * @date Created on 2020/3/16 12:33
+ */
 class StringRelatedQuestions {
     /**
      * 3. 无重复字符的最长子串

@@ -1,5 +1,8 @@
 package leetCode;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 /**
  * Description
  * 2. 两数相加
@@ -157,10 +160,59 @@ public class LinkedListRelatedQuestions {
         // exactly one of l1 and l2 can be non-null at this point, so connect
         // the non-null list to the end of the merged list.
         prev.next = l1 == null ? l2 : l1;
-
         return prehead.next;
     }
 
+
+    /**
+     * 23. 合并K个排序链表
+     * 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。
+     *
+     * 示例:
+     * 输入:
+     * [
+     *   1->4->5,
+     *   1->3->4,
+     *   2->6
+     * ]
+     * 输出: 1->1->2->3->4->4->5->6
+     *
+     * 解法：利用堆做排序
+     * 合并两个链表我们可以用if-else做判断，但是k个链接，用if-else，这就没法写了。
+     * 这时候我们需要一种辅助数据结构-堆，有了堆这个数据结构，难度等级是困难的题目，瞬间变成简单了。
+     * 我们把三个链表一股脑的全放到堆里面,然后由堆根据节点的val自动排好序,
+     * 这是一个小根堆，我们只需要每次输出堆顶的元素，直到整个堆为空即可。
+     *
+     * @param lists
+     * @return
+     */
+    public ListNode mergeKLists(ListNode[] lists) {
+        if(lists==null || lists.length==0) {
+            return null;
+        }
+        //创建一个堆，并设置元素的排序方式
+        PriorityQueue<ListNode> queue = new PriorityQueue(new Comparator<ListNode>() {
+            public int compare(ListNode o1, ListNode o2) {
+                return (o1.val - o2.val);
+            }
+        });
+        //遍历链表数组，然后将每个链表的每个节点都放入堆中
+        for(int i=0;i<lists.length;i++) {
+            while(lists[i] != null) {
+                queue.add(lists[i]);
+                lists[i] = lists[i].next;
+            }
+        }
+        ListNode dummy = new ListNode(-1);
+        ListNode head = dummy;
+        //从堆中不断取出元素，并将取出的元素串联起来
+        while( !queue.isEmpty() ) {
+            dummy.next = queue.poll();
+            dummy = dummy.next;
+        }
+        dummy.next = null;
+        return head.next;
+    }
     public static void main(String[] args) {
 
     }

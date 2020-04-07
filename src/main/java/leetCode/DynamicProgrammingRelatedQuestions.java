@@ -2,7 +2,13 @@ package leetCode;
 
 /**
  * Description
- *
+ * 45. 跳跃游戏 II
+ * 53. 最大子序和
+ * 62. 向下和向右到达有下角的不同路径
+ * 63. 向下和向右到达有下角的不同路径 II 带障碍物
+ * 64. 最小路径和
+ * 70. 青蛙爬楼梯
+ * 121. 买卖股票的最佳时机
  * @author Lynn-zd
  * @date Created on 2020/3/13 23:38
  */
@@ -75,7 +81,7 @@ public class DynamicProgrammingRelatedQuestions {
 
 
     /**
-     * 62. 不同路径
+     * 62. 向下和向右到达有下角的不同路径
      * 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为“Start” ）。
      *
      * 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为“Finish”）。

@@ -13,6 +13,8 @@ import java.util.Map;
  * 10. 正则表达式匹配
  * 14. 最长公共前缀
  * 28. 实现 strStr()
+ * 30. 串联所有单词的子串
+ *
  * @author Lynn-zd
  * @date Created on 2020/3/16 12:33
  */
@@ -457,6 +459,49 @@ class StringRelatedQuestions {
 
         }
         return res;
+    }
+
+
+    /**
+     * 43. 字符串相乘
+     * 给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+     *
+     * 示例 1:
+     *
+     * 输入: num1 = "2", num2 = "3"
+     * 输出: "6"
+     * 注意：不能使用任何标准库的大数类型（比如 BigInteger）或直接将输入转换为整数来处理。
+     * @param num1
+     * @param num2
+     * @return
+     */
+    public String multiply(String num1, String num2) {
+        if (num1.equals("0") || num2.equals("0")) {
+            return "0";
+        }
+        int length1 = num1.length();
+        int length2 = num2.length();
+        StringBuilder str = new StringBuilder();
+
+        int[] arrayInt = new int[length1 + length2];
+
+        for (int i = length1 - 1; i >= 0; i--) {
+            for (int j = length2 - 1; j >= 0; j--) {
+                int number1 = num1.charAt(i) - 48;
+                int number2 = num2.charAt(j) - 48;
+                arrayInt[i + j] += number1 * number2;
+                if (arrayInt[i + j] >= 10 && (i + j) != 0) {
+                    arrayInt[i + j - 1] += arrayInt[i + j] / 10;
+                    arrayInt[i + j] = arrayInt[i + j] % 10;
+                }
+            }
+        }
+
+        for (int i = 0; i <= length1 + length2 - 2; i++) {
+            str.append(arrayInt[i]);
+        }
+
+        return str.toString();
     }
     public static void main(String[] args) {
 

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增代码">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/BinaryTreeRelatedQuestions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/DynamicProgrammingRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/DynamicProgrammingRelatedQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/StringRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jianzhioffer/ArrayRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/ArrayRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jianzhioffer/ListRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/ListRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jianzhioffer/StringRelatedQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jianzhioffer/StringRelatedQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/string.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/string.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +219,7 @@
       <workItem from="1585302456151" duration="225000" />
       <workItem from="1585306458884" duration="12352000" />
       <workItem from="1585924490518" duration="5464000" />
-      <workItem from="1586090766060" duration="7482000" />
+      <workItem from="1586090766060" duration="8516000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -533,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586242729677</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="新增代码">
+      <created>1586273484352</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1586273484352</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,11 +636,11 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="458" y="193" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.829@0.23.1440.829" timestamp="1584111062701" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1586242729386">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1586273483984">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1586238558787" />
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1586242729386" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1586273483984" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
@@ -668,11 +678,11 @@
     </state>
     <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584511065361" />
     <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1586242731284">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1586273485858">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1586238561474" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1586242731284" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1586273485858" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

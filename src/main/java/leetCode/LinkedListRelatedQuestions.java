@@ -8,6 +8,9 @@ import java.util.PriorityQueue;
  * 2. 两数相加
  * 19. 删除链表的倒数第N个节点
  * 21. 合并两个有序链表
+ * 23. 合并K个排序链表
+ * 24. 两两交换链表中的节点
+ *
  * @author Lynn-zd
  * @date Created on 2020/3/16 12:33
  */
@@ -167,7 +170,7 @@ public class LinkedListRelatedQuestions {
     /**
      * 23. 合并K个排序链表
      * 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。
-     *
+     * <p>
      * 示例:
      * 输入:
      * [
@@ -176,7 +179,7 @@ public class LinkedListRelatedQuestions {
      *   2->6
      * ]
      * 输出: 1->1->2->3->4->4->5->6
-     *
+     * <p>
      * 解法：利用堆做排序
      * 合并两个链表我们可以用if-else做判断，但是k个链接，用if-else，这就没法写了。
      * 这时候我们需要一种辅助数据结构-堆，有了堆这个数据结构，难度等级是困难的题目，瞬间变成简单了。
@@ -187,7 +190,7 @@ public class LinkedListRelatedQuestions {
      * @return
      */
     public ListNode mergeKLists(ListNode[] lists) {
-        if(lists==null || lists.length==0) {
+        if (lists == null || lists.length == 0) {
             return null;
         }
         //创建一个堆，并设置元素的排序方式
@@ -197,8 +200,8 @@ public class LinkedListRelatedQuestions {
             }
         });
         //遍历链表数组，然后将每个链表的每个节点都放入堆中
-        for(int i=0;i<lists.length;i++) {
-            while(lists[i] != null) {
+        for (int i = 0; i < lists.length; i++) {
+            while (lists[i] != null) {
                 queue.add(lists[i]);
                 lists[i] = lists[i].next;
             }
@@ -206,12 +209,106 @@ public class LinkedListRelatedQuestions {
         ListNode dummy = new ListNode(-1);
         ListNode head = dummy;
         //从堆中不断取出元素，并将取出的元素串联起来
-        while( !queue.isEmpty() ) {
+        while (!queue.isEmpty()) {
             dummy.next = queue.poll();
             dummy = dummy.next;
         }
         dummy.next = null;
         return head.next;
+    }
+
+
+    /**
+     * 24. 两两交换链表中的节点
+     * 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
+     * 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+     * 示例:
+     * 给定 1->2->3->4, 你应该返回 2->1->4->3.
+     * <p>
+     * 解法一：递归法
+     *
+     * @param head
+     * @return
+     */
+    public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode first = head;
+        ListNode second = head.next;
+        head.next = swapPairs(second.next);
+        second.next = head;
+        return second;
+    }
+
+    /**
+     * 解法二：迭代法
+     *
+     * @param head
+     * @return
+     */
+    public ListNode swapPairs2(ListNode head) {
+        ListNode realhead = new ListNode(0);
+        realhead.next = head;
+        ListNode prev = realhead;
+
+        while (head != null && head.next != null) {
+            ListNode first = head;
+            ListNode second = head.next;
+
+            prev.next = second;
+            first.next = second.next;
+            second.next = first;
+
+            prev = first;
+            head = first.next;
+        }
+        return realhead.next;
+    }
+
+    /**
+     * 25. K 个一组翻转链表
+     * 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
+     * k 是一个正整数，它的值小于或等于链表的长度。
+     * 如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。
+     * 示例：
+     * 给你这个链表：1->2->3->4->5
+     * 当 k = 2 时，应当返回: 2->1->4->3->5
+     * 当 k = 3 时，应当返回: 3->2->1->4->5
+     *
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+
+        ListNode pre = dummy;
+        ListNode end = dummy;
+
+        while (end.next != null) {
+            for (int i = 0; i < k && end != null; i++) end = end.next;
+            if (end == null) break;
+            ListNode start = pre.next;
+            ListNode next = end.next;
+            end.next = null;
+            pre.next = reverse(start);
+            start.next = next;
+            pre = start;
+
+            end = pre;
+        }
+        return dummy.next;
+    }
+    private ListNode reverse(ListNode head) {
+        ListNode pre = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
     }
     public static void main(String[] args) {
 

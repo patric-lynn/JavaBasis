@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增代码">
-      <change afterPath="$PROJECT_DIR$/src/main/java/interview/Huawei.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/interview/Microsoft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interview/Microsoft.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,24 +92,24 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="GreedyRelatedQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetCode.GreedyRelatedQuestions" />
+  <component name="RunManager" selected="Application.Microsoft">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaBasis" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="Microsoft" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interview.Microsoft" />
       <module name="JavaBasis" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interview.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,18 +168,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.GreedyRelatedQuestions" />
       <item itemvalue="Application.basic" />
       <item itemvalue="Application.ZhaoHang" />
       <item itemvalue="Application.neteaseLeihuo" />
+      <item itemvalue="Application.Microsoft" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Microsoft" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.neteaseLeihuo" />
         <item itemvalue="Application.ZhaoHang" />
         <item itemvalue="Application.basic" />
-        <item itemvalue="Application.GreedyRelatedQuestions" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +216,7 @@
       <workItem from="1585302456151" duration="225000" />
       <workItem from="1585306458884" duration="12352000" />
       <workItem from="1585924490518" duration="5464000" />
-      <workItem from="1586090766060" duration="15061000" />
+      <workItem from="1586090766060" duration="16959000" />
     </task>
     <task id="LOCAL-00001" summary="1.浮点数直接加的错误显示验证。（3.8.4节）">
       <created>1568723059466</created>
@@ -555,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586344223629</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="新增代码">
+      <created>1586349187325</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1586349187325</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,35 +654,35 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="458" y="193" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.829@0.23.1440.829" timestamp="1584111062701" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1586344223315">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1586349186918">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1586238558787" />
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1586344223315" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1586349186918" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="156" key="GridCell.Tab.0.bottom" timestamp="1586348053345">
+    <state width="1398" height="156" key="GridCell.Tab.0.bottom" timestamp="1586349608438">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1585464397971" />
-    <state width="1398" height="156" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1586348053345" />
-    <state width="1398" height="156" key="GridCell.Tab.0.center" timestamp="1586348053344">
+    <state width="1398" height="156" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1586349608438" />
+    <state width="1398" height="156" key="GridCell.Tab.0.center" timestamp="1586349608437">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="151" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1585464397945" />
-    <state width="1398" height="156" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1586348053344" />
-    <state width="1398" height="156" key="GridCell.Tab.0.left" timestamp="1586348053343">
+    <state width="1398" height="156" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1586349608437" />
+    <state width="1398" height="156" key="GridCell.Tab.0.left" timestamp="1586349608436">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="151" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1585464397941" />
-    <state width="1398" height="156" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1586348053343" />
-    <state width="1398" height="156" key="GridCell.Tab.0.right" timestamp="1586348053344">
+    <state width="1398" height="156" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1586349608436" />
+    <state width="1398" height="156" key="GridCell.Tab.0.right" timestamp="1586349608437">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="151" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1585464397967" />
-    <state width="1398" height="156" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1586348053344" />
+    <state width="1398" height="156" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1586349608437" />
     <state width="1398" height="188" key="GridCell.Tab.1.bottom" timestamp="1586347756288">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
@@ -701,16 +707,16 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="432" y="158" width="684" height="552" key="MultipleFileMergeDialog/0.23.1440.829@0.23.1440.829" timestamp="1582909138948" />
-    <state x="225" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1584511065361">
-      <screen x="0" y="23" width="1440" height="829" />
+    <state x="221" y="23" width="1024" height="829" key="SettingsEditor" timestamp="1586349593484">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584511065361" />
-    <state x="221" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1582379165834" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1586344225286">
+    <state x="221" y="23" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1586349593484" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1586349189936">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1586238561474" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1586344225286" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1586349189936" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

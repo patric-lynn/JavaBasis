@@ -67,6 +67,11 @@ public class Microsoft {
     }
 
     public static void main(String[] args) {
-
+        String ip = "202.117.54.110";
+        String ip1 = "0.7.54.110";
+        String ip2 = "256.117.54.110";
+        System.out.println(ipToInteger(ip));
+        System.out.println(ipToInteger(ip1));
+        System.out.println(ipToInteger(ip2));
     }
 }

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57285ce5-672e-476e-b609-fd69e476d012" name="Default" comment="新增代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/regex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/regex.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,14 +215,7 @@
       <workItem from="1585302456151" duration="225000" />
       <workItem from="1585306458884" duration="12352000" />
       <workItem from="1585924490518" duration="5464000" />
-      <workItem from="1586090766060" duration="18105000" />
-    </task>
-    <task id="LOCAL-00002" summary="1.数组排序的结果显示">
-      <created>1568904488007</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1568904488007</updated>
+      <workItem from="1586090766060" duration="18455000" />
     </task>
     <task id="LOCAL-00003" summary="新增&#10;几种逆序排放字符串的方法">
       <created>1571208490864</created>
@@ -559,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586354314964</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="新增代码">
+      <created>1586361555655</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1586361555656</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,35 +653,35 @@
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="458" y="193" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.23.1440.829@0.23.1440.829" timestamp="1584111062701" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1586361506313">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1586361555362">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.829@0.23.1440.829" timestamp="1586238558787" />
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1586361506313" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1586361555362" />
     <state x="0" y="84" key="DiffContextDialog" timestamp="1583231430202">
       <screen x="0" y="23" width="1440" height="829" />
     </state>
     <state x="0" y="84" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1583231430202" />
-    <state width="1398" height="156" key="GridCell.Tab.0.bottom" timestamp="1586349608438">
+    <state width="1398" height="156" key="GridCell.Tab.0.bottom" timestamp="1586361566149">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="151" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1585464397971" />
-    <state width="1398" height="156" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1586349608438" />
-    <state width="1398" height="156" key="GridCell.Tab.0.center" timestamp="1586349608437">
+    <state width="1398" height="156" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1586361566149" />
+    <state width="1398" height="156" key="GridCell.Tab.0.center" timestamp="1586361566148">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="151" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1585464397945" />
-    <state width="1398" height="156" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1586349608437" />
-    <state width="1398" height="156" key="GridCell.Tab.0.left" timestamp="1586349608436">
+    <state width="1398" height="156" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1586361566148" />
+    <state width="1398" height="156" key="GridCell.Tab.0.left" timestamp="1586361566147">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="151" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1585464397941" />
-    <state width="1398" height="156" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1586349608436" />
-    <state width="1398" height="156" key="GridCell.Tab.0.right" timestamp="1586349608437">
+    <state width="1398" height="156" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1586361566147" />
+    <state width="1398" height="156" key="GridCell.Tab.0.right" timestamp="1586361566148">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="151" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1585464397967" />
-    <state width="1398" height="156" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1586349608437" />
+    <state width="1398" height="156" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1586361566148" />
     <state width="1398" height="188" key="GridCell.Tab.1.bottom" timestamp="1586347756288">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
@@ -710,11 +711,11 @@
     </state>
     <state x="225" y="23" width="1024" height="829" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1584511065361" />
     <state x="221" y="23" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1586349593484" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1586354316635">
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2" timestamp="1586361557208">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.829@0.23.1440.829" timestamp="1586238561474" />
-    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1586354316635" />
+    <state x="321" y="179" key="Vcs.Push.Dialog.v2/0.23.1440.830@0.23.1440.830" timestamp="1586361557207" />
     <state x="503" y="224" key="chooseDestDirectoryDialog" timestamp="1583219604731">
       <screen x="0" y="23" width="1440" height="829" />
     </state>

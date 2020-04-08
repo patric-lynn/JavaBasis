@@ -11,12 +11,25 @@ import java.util.regex.Pattern;
  */
 public class Microsoft {
     /**
-     * IPv4地址转换为int类型数字
+     * 微软一面：
+     * 写一个将IPv4地址转换为int类型数字的程序，需要考虑各种溢出情况
      *
      */
-    public static int ip2Integer(String ipv4Addr) {
+    /**
+     * 判断是否为ipv4地址
+     *
+     */
+    private static boolean isIPAddress(String ipv4Addr) {
+        String lower = "(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])"; // 0-255的数字
+        String regex = lower + "(\\." + lower + "){3}";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(ipv4Addr);
+        return matcher.matches();
+    }
+
+    public static int ipToInteger(String ipv4Addr) {
         // 判断是否是ip格式的
-        if (!isIPv4Address(ipv4Addr))
+        if (!isIPAddress(ipv4Addr))
             throw new RuntimeException("Invalid ip address");
 
         // 匹配数字
@@ -31,23 +44,13 @@ public class Microsoft {
         return result;
     }
 
-    /**
-     * 判断是否为ipv4地址
-     *
-     */
-    private static boolean isIPv4Address(String ipv4Addr) {
-        String lower = "(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])"; // 0-255的数字
-        String regex = lower + "(\\." + lower + "){3}";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(ipv4Addr);
-        return matcher.matches();
-    }
 
     /**
-     * 将int数字转换成ipv4地址
+     * 扩展题：
+     * 将10进制int数字转换成ipv4地址
      *
      */
-    public static String integer2Ip(int ip) {
+    public static String integerToIp(int ip) {
         StringBuilder sb = new StringBuilder();
         int num = 0;
         boolean needPoint = false; // 是否需要加入'.'

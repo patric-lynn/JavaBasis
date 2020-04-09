@@ -3,6 +3,8 @@ package interview;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static javax.swing.UIManager.getInt;
+
 /**
  * Description
  *
@@ -40,6 +42,7 @@ public class Microsoft {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(ipv4Addr);
         return matcher.matches();
+
     }
 
     /**
@@ -104,6 +107,31 @@ public class Microsoft {
         return sb.toString();
     }
 
+
+
+
+    public static int parseInt(String s) throws Exception{
+        if(s==null) throw new NumberFormatException("null");
+        int result = 0;
+        int flag = 1;
+        char[] chars = s.toCharArray();
+        int length = chars.length;
+        int i = 1;
+        if(chars.length>0){
+            if(chars[0]=='-'){
+                flag = -1;
+            }else if(chars[0]!='+'){
+                throw new NumberFormatException("error");
+            }
+            while(chars[i]>='0' && chars[i]<='9'){
+                result += getInt(chars[i])*10;
+                i++;
+                if(i == length) return result;
+            }
+            throw new NumberFormatException("error");
+        }
+        throw new NumberFormatException("error");
+    }
     public static void main(String[] args) {
         String ip = "202.117.54.110";
         String ip1 = "0.7.54.110";

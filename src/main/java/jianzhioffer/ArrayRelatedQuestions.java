@@ -2,6 +2,11 @@ package jianzhioffer;
 
 import java.util.HashSet;
 
+/**
+ * 面试题03. 数组中重复的数字
+ * 面试题04. 二维数组中的查找
+ * 面试题11. 旋转数组的最小数字
+ */
 public class ArrayRelatedQuestions {
     /**
      * 面试题03. 数组中重复的数字
@@ -102,7 +107,79 @@ public class ArrayRelatedQuestions {
         return false;
     }
 
+    /**
+     * 面试题11. 旋转数组的最小数字
+     * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。  
+     * 示例 1：
+     * 输入：[3,4,5,1,2]
+     * 输出：1
+     * 示例 2：
+     *
+     * 输入：[2,2,2,0,1]
+     * 输出：0
+     * @param numbers
+     * @return
+     */
+    public int minArray(int[] numbers) {
+        if(numbers.length == 1) return numbers[0];
+        int i = 1;
+        if(numbers.length >1){
+            while(numbers[i]>=numbers[i-1]) {
+                int a = i++;
+                while(a == numbers.length-1)
+                    return numbers[0];
+            }
+            return numbers[i];
+        }
+        return -1;
+    }
+
+
+    /**
+     * 面试题12. 矩阵中的路径
+     * 请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。路径可以从矩阵中的任意一格开始，每一步可以在矩阵中向左、右、上、下移动一格。如果一条路径经过了矩阵的某一格，那么该路径不能再次进入该格子。例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字母用加粗标出）。
+     * [["a","b","c","e"],
+     * ["s","f","c","s"],
+     * ["a","d","e","e"]]
+     * 但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。
+     * 示例 1：
+     *
+     * 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+     * 输出：true
+     *
+     * @param board
+     * @param word
+     * @return
+     */
+    public boolean exist(char[][] board, String word) {
+        char[] words = word.toCharArray();
+        for(int i=0; i< board.length; i++)
+            for(int j=0; j< board[0].length; j++){
+                if(dfs(board,words,i,j,0)) return true;
+            }
+        return false;
+    }
+    boolean dfs(char[][] board, char[] words, int i, int j, int k){
+        if(i>=board.length||i<0||j>=board[0].length||j<0||board[i][j]!=words[k] ) return false;
+        if(k == words.length-1) return true;
+        char temp = board[i][j];
+        board[i][j] = '.';   //临时改变值，确保不相等；
+        boolean result = dfs(board,words,i-1,j,k+1)||dfs(board,words,i+1,j,k+1)||dfs(board,words,i,j-1,k+1)||dfs(board,words,i,j+1,k+1);
+        board[i][j] = temp;
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+
     public static void main(String[] args) {
-        int[][] a= new int[][]{{1,2,3},{2,3,4},{4,5,6}};
+        int[][] a= new int[][]{{1,2,3},{2,3,4},{4,5,6}
+        };
     }
 }

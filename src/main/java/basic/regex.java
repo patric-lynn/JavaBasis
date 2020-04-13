@@ -1,3 +1,5 @@
+package basic;
+
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -12,8 +14,6 @@ public class regex {
     public static void patternTest() {
         // 使用Pattern.compile方法编译一个正则表达式，创建一个匹配模式
         Pattern pattern = Pattern.compile("\\?|\\*");
-
-
         // pattern()函数返回正则表达式的字符串形式返回\?\*
         String patternStr = pattern.pattern();
         System.out.println(patternStr);

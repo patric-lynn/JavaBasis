@@ -3,7 +3,7 @@ package leetCode;
 /**
  * Description
  * 26. 删除排序数组中的重复项
- * 27. 移除元素
+ * 27. 移除值为val的元素，并返回移除后数组的新长度
  * 34. 在排序数组中查找元素的第一个和最后一个位置
  * 35. 二分查找搜索插入位置
  * @author Lynn-zd
@@ -38,7 +38,7 @@ public class ArrayRelatedQuestions {
     }
 
     /**
-     * 27. 移除元素
+     * 27. 移除值为val的元素，并返回移除后数组的新长度
      * 给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。
      * 不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。
      * 元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。
@@ -114,12 +114,11 @@ public class ArrayRelatedQuestions {
      *
      * 输入: [1,3,5,6], 2
      * 输出: 1
-     *
      * @param nums
      * @param target
      * @return
      */
-    public int searchInsert(int[] nums, int target) {
+    public int binarySearchInsert(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
         while(left <= right) {
             int mid = (left + right) / 2;
@@ -133,6 +132,7 @@ public class ArrayRelatedQuestions {
         }
         return left;
     }
+
     public static void main(String[] args) {
 
     }

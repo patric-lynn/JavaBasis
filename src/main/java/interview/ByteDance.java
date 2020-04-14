@@ -9,6 +9,11 @@ import java.util.Scanner;
  * @date Created on 2020/4/12 21:13
  */
 public class ByteDance {
+    /**
+     * 笔试题目一：切木块
+     * @param nums
+     * @return
+     */
     public static int breakNum(int[] nums) {
         int ans = 0;
         for (int i = nums.length - 2; i >= 0; i--) {
@@ -30,6 +35,13 @@ public class ByteDance {
         System.out.println(breakNum(nums));
     }
 
+    /**
+     * 笔试题目二：判断是否合理
+     * @param n
+     * @param num1
+     * @param nums2
+     * @return
+     */
     public static boolean judge(int n, int[] num1, int[] nums2) {
         int delta = 0;
         for (int i = 0; i < n; i++) {

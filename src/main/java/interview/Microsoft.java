@@ -3,8 +3,6 @@ package interview;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static javax.swing.UIManager.getInt;
-
 /**
  * Description
  *
@@ -108,36 +106,78 @@ public class Microsoft {
     }
 
 
-
-
-    public static int parseInt(String s) throws Exception{
-        if(s==null) throw new NumberFormatException("null");
+    /**
+     * 实现一个parseInt方法
+     * @param num
+     * @return
+     * @throws Exception
+     */
+    public static int parseInt(String num) {
+        int index = 0;
         int result = 0;
-        int flag = 1;
-        char[] chars = s.toCharArray();
-        int length = chars.length;
-        int i = 1;
-        if(chars.length>0){
-            if(chars[0]=='-'){
-                flag = -1;
-            }else if(chars[0]!='+'){
-                throw new NumberFormatException("error");
-            }
-            while(chars[i]>='0' && chars[i]<='9'){
-                result += getInt(chars[i])*10;
-                i++;
-                if(i == length) return result;
-            }
-            throw new NumberFormatException("error");
+        if (num.startsWith("-")) {
+            index++;
         }
-        throw new NumberFormatException("error");
+        while (index <= num.length() - 1) {
+            int n = num.charAt(index);
+            if (n <= 57 && n >= 48) {
+                result *= 10;
+                result += n - 48;
+            } else {
+                System.err.println("not a integer");
+            }
+            index++;
+        }
+        if (num.startsWith("-")) {
+            result = -result;
+        }
+        return result;
+    }
+
+    /**
+     * 解法二：带上异常处理
+     * @param s
+     * @return
+     * @throws Exception
+     */
+    public static int parseIntWithException(String s) throws Exception{
+        if(s==null) throw new NumberFormatException("null");
+
+        int result = 0;
+        int index = 0;
+
+        if (s.startsWith("-")) {
+            index++;
+        }
+        while (index <= s.length() - 1) {
+            int n = s.charAt(index);
+            if (n <= 57 && n >= 48) {
+                result *= 10;
+                result += n - 48;
+            } else {
+                throw new NumberFormatException("not int error");
+            }
+            index++;
+        }
+        if (s.startsWith("-")) {
+            result = -result;
+        }
+        return result;
     }
     public static void main(String[] args) {
-        String ip = "202.117.54.110";
-        String ip1 = "0.7.54.110";
-        String ip2 = "256.117.54.110";
-        System.out.println(ipToInteger(ip));
-        System.out.println(ipToInteger(ip1));
-        System.out.println(ipToInteger(ip2));
+        // String ip = "202.117.54.110";
+        // String ip1 = "0.7.54.110";
+        // String ip2 = "256.117.54.110";
+        // System.out.println(ipToInteger(ip));
+        // System.out.println(ipToInteger(ip1));
+        // System.out.println(ipToInteger(ip2));
+
+        String s = "-23456";
+        System.out.println(parseInt(s));
+        try {
+            System.out.println(parseIntWithException(s));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

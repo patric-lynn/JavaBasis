@@ -1,5 +1,9 @@
 package jianzhioffer;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -7,6 +11,8 @@ import java.util.Stack;
  * 面试题26. 树的子结构
  * 面试题27. 二叉树的镜像
  * 面试题28. 对称的二叉树
+ * 面试题32 - I. 从上到下打印二叉树
+ * 面试题33. 二叉搜索树的后序遍历序列
  * @author Lynn-zd
  * @date Created on 2020/4/14 13:21
  */
@@ -99,6 +105,106 @@ public class TreeRelatedQuestions {
         if(L == null && R == null) return true;
         if(L == null || R == null || L.val != R.val) return false;
         return recur(L.left, R.right) && recur(L.right, R.left);
+    }
+
+
+    /**
+     * 面试题32 - I. 从上到下打印二叉树
+     * 从上到下打印出二叉树的每个节点，同一层的节点按照从左到右的顺序打印。
+     * 例如:
+     * 给定二叉树: [3,9,20,null,null,15,7],
+     *
+     *     3
+     *    / \
+     *   9  20
+     *     /  \
+     *    15   7
+     * 返回：
+     * [3,9,20,15,7]
+     *
+     * BFS 通常借助 队列 的先入先出特性来实现。
+     * @param root
+     * @return
+     */
+    public int[] levelOrder(TreeNode root) {
+        if(root == null) return new int[0];
+        Queue<TreeNode> queue = new LinkedList<TreeNode>(){{ add(root); }};
+        ArrayList<Integer> ans = new ArrayList<>();
+        while(!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            ans.add(node.val);
+            if(node.left != null) queue.add(node.left);
+            if(node.right != null) queue.add(node.right);
+        }
+        int[] res = new int[ans.size()];
+        for(int i = 0; i < ans.size(); i++)
+            res[i] = ans.get(i);
+        return res;
+    }
+
+
+    /**
+     * 面试题33. 二叉搜索树的后序遍历序列
+     * 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历结果。如果是则返回 true，否则返回 false。假设输入的数组的任意两个数字都互不相同。
+     * 示例 1：
+     * 输入: [1,6,3,2,5]
+     * 输出: false
+     *
+     * 辅助单调栈
+     * @param postorder
+     * @return
+     */
+    public boolean verifyPostorder(int[] postorder) {
+        Stack<Integer> stack = new Stack<>();
+        int root = Integer.MAX_VALUE;
+        for(int i = postorder.length - 1; i >= 0; i--) {
+            if(postorder[i] > root) return false;
+            while(!stack.isEmpty() && stack.peek() > postorder[i])
+                root = stack.pop();
+            stack.add(postorder[i]);
+        }
+        return true;
+    }
+
+
+    /**
+     * 面试题34. 二叉树中和为某一值的路径
+     * 输入一棵二叉树和一个整数，打印出二叉树中节点值的和为输入整数的所有路径。从树的根节点开始往下一直到叶节点所经过的节点形成一条路径。
+     * 示例:
+     * 给定如下二叉树，以及目标和 sum = 22，
+     *
+     *               5
+     *              / \
+     *             4   8
+     *            /   / \
+     *           11  13  4
+     *          /  \    / \
+     *         7    2  5   1
+     * 返回:
+     * [
+     *    [5,4,11,2],
+     *    [5,8,4,5]
+     * ]
+     *
+     * @param root
+     * @param sum
+     * @return
+     */
+    LinkedList<List<Integer>> res = new LinkedList<>();
+    LinkedList<Integer> path = new LinkedList<>();
+    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+        recur(root, sum);
+        return res;
+    }
+    public void recur(TreeNode root, int target) {
+        if(root == null) return;
+        path.add(root.val);
+        target -= root.val;
+        if(target == 0 && root.left == null && root.right == null)
+            res.add(new LinkedList(path));
+        recur(root.left, target);
+        recur(root.right, target);
+        path.removeLast();
     }
 
 }

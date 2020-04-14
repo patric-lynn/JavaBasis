@@ -3,19 +3,16 @@ package leetCode;
 /**
  * Description
  * 45. 跳跃游戏 II
- * 53. 最大子序和
+ * 53. 找到最大和的连续子数组
  * 62. 向下和向右到达有下角的不同路径
  * 63. 向下和向右到达有下角的不同路径 II 带障碍物
- * 64. 最小路径和
+ * 64. 二位数组中最小路径长度
  * 70. 青蛙爬楼梯
  * 121. 买卖股票的最佳时机
  * @author Lynn-zd
  * @date Created on 2020/3/13 23:38
  */
 public class DynamicProgrammingRelatedQuestions {
-
-
-
     /**
      * 45. 跳跃游戏 II
      * 给定一个非负整数数组，你最初位于数组的第一个位置。
@@ -51,7 +48,7 @@ public class DynamicProgrammingRelatedQuestions {
 
 
     /**
-     * 53. 最大子序和
+     * 53. 找到最大和的连续子数组
      * 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
      *
      * 示例:
@@ -156,13 +153,10 @@ public class DynamicProgrammingRelatedQuestions {
     }
 
     /**
-     * 64. 最小路径和
+     * 64. 二位数组中最小路径长度
      * 给定一个包含非负整数的 m x n 网格，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
-     *
      * 说明：每次只能向下或者向右移动一步。
-     *
      * 示例:
-     *
      * 输入:
      * [
      *   [1,3,1],

@@ -30,7 +30,7 @@ public class ListRelatedQuestions {
      */
     public int[] reversePrint(ListNode head) {
         if(head == null) return null;
-        Stack<ListNode> stack = new Stack<ListNode>();
+        Stack<ListNode> stack = new Stack<>();
         ListNode temp = head;
         while (temp != null) {
             stack.push(temp);
@@ -69,7 +69,7 @@ public class ListRelatedQuestions {
         // 虚拟头，用于存放反转结果
         ListNode result = new ListNode(0);
         ListNode item = head;
-        ListNode next;
+        ListNode next = null;
         while(true){
             if(item == null){
                 break;
@@ -90,7 +90,7 @@ public class ListRelatedQuestions {
 
 
     /**
-     * 面试题18. 删除链表的节点
+     * 面试题18. 删除链表的值为val的节点
      * 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
      * 返回删除后的链表的头节点。
      * 注意：此题对比原题有改动

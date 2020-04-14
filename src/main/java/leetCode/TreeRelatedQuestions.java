@@ -5,7 +5,9 @@ import java.util.Queue;
 
 /**
  * Description
- *
+ * 543. 二叉树的直径
+ * 104. 二叉树的最大深度
+ * 101. 对称二叉树
  * @author Lynn-zd
  * @date Created on 2020/3/15 18:14
  */
@@ -126,7 +128,6 @@ public class TreeRelatedQuestions {
         if (root1 == null || root2 == null) return false;
         return (root1.val == root2.val) && isMirror(root1.left, root2.right) && isMirror(root1.right, root2.left);
     }
-
 
     /**
      * 解法二：非递归法

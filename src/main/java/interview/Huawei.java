@@ -9,6 +9,13 @@ import java.util.Scanner;
  * @date Created on 2020/4/8 20:25
  */
 public class Huawei {
+    /**
+     * 笔试题目一：
+     * 二叉操作
+     * @param value
+     * @param string
+     * @return
+     */
     public static String binaryOperation(int value, String string) {
         StringBuffer stringBuffer = new StringBuffer(value);
         char[] temp = string.toCharArray();

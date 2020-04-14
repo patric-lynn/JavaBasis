@@ -41,6 +41,9 @@ public class StackQueueRelatedQuestions {
                 stack2.push(stack1.pop());
             return stack2.pop();
         }
-
     }
+
+
+
+
 }

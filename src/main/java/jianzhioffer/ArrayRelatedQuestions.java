@@ -6,6 +6,8 @@ import java.util.HashSet;
  * 面试题03. 数组中重复的数字
  * 面试题04. 二维数组中的查找
  * 面试题11. 旋转数组的最小数字
+ * 面试题12. 矩阵中的路径
+ * 面试题21. 调整数组顺序使奇数位于偶数前面
  */
 public class ArrayRelatedQuestions {
     /**
@@ -170,16 +172,27 @@ public class ArrayRelatedQuestions {
     }
 
 
-
-
-
-
-
-
-
-
-    public static void main(String[] args) {
-        int[][] a= new int[][]{{1,2,3},{2,3,4},{4,5,6}
-        };
+    /**
+     * 面试题21. 调整数组顺序使奇数位于偶数前面
+     * 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。
+     * 示例：
+     * 输入：nums = [1,2,3,4]
+     * 输出：[1,3,2,4]
+     * 注：[3,1,2,4] 也是正确的答案之一。
+     * @param nums
+     * @return
+     */
+    public int[] exchange(int[] nums) {
+        int i = 0, j = nums.length - 1, tmp;
+        while(i < j) {
+            while(i < j && (nums[i] & 1) == 1) i++;
+            while(i < j && (nums[j] & 1) == 0) j--;
+            tmp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = tmp;
+        }
+        return nums;
     }
+
+
 }

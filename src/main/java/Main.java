@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Main {
     public static int breakNum(int[] nums) {
         int ans = 0;

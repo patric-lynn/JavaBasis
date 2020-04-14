@@ -2,7 +2,10 @@ package jianzhioffer;
 
 /**
  * Description
- *
+ * 面试题10- I. 斐波那契数列
+ * 面试题10- II. 青蛙跳台阶问题
+ * 面试题16. 数值的整数次方
+ * 面试题17. 打印从1到最大的n位数
  * @author Lynn-zd
  * @date Created on 2020/4/14 01:13
  */
@@ -87,7 +90,7 @@ public class NumberRelatedQuestions {
         int res = 0;
         while(n != 0) {
             res += n & 1;
-            n >>>= 1;
+            n >>>= 1; // Java 中无符号右移为 ">>>"
         }
         return res;
     }
@@ -101,5 +104,53 @@ public class NumberRelatedQuestions {
         return res;
     }
 
+
+    /**
+     * 面试题16. 数值的整数次方
+     * 实现函数double Power(double base, int exponent)，求base的exponent次方。不得使用库函数，同时不需要考虑大数问题
+     * 示例 1:
+     * 输入: 2.00000, 10
+     * 输出: 1024.00000
+     *
+     * @param x
+     * @param n
+     * @return
+     */
+    public double myPow(double x, int n) {
+        if(x == 0) return 0;
+        long b = n;
+        double res = 1.0;
+        if(b < 0) {
+            x = 1 / x;
+            b = -b;
+        }
+        while(b > 0) {
+            if((b & 1) == 1) res *= x;
+            x *= x;
+            b >>= 1;
+        }
+        return res;
+    }
+
+
+    /**
+     * 面试题17. 打印从1到最大的n位数
+     * 输入数字 n，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。
+     *
+     * 示例 1:
+     * 输入: n = 1
+     * 输出: [1,2,3,4,5,6,7,8,9]
+     *
+     * @param n
+     * @return
+     */
+    public int[] printNumbers(int n) {
+        int num=(int)Math.pow(10,n);
+        int[] arr=new int[num-1];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=i+1;
+        }
+        return arr;
+    }
 
 }

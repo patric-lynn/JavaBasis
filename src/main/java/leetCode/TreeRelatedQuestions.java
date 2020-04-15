@@ -1,13 +1,18 @@
 package leetCode;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 /**
  * Description
- * 543. 二叉树的直径
- * 104. 二叉树的最大深度
  * 101. 对称二叉树
+ * 104. 二叉树的最大深度
+ * 144. 二叉树的前序遍历
+ * 543. 二叉树的直径
+ *
  * @author Lynn-zd
  * @date Created on 2020/3/15 18:14
  */
@@ -17,7 +22,7 @@ public class TreeRelatedQuestions {
     /**
      * 二叉树定义
      */
-    class TreeNode {
+    static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -27,52 +32,62 @@ public class TreeRelatedQuestions {
         }
     }
 
+
     /**
-     * 543. 二叉树的直径
-     * 给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过根结点。
-     * <p>
-     * 示例 :
-     * 给定二叉树
-     * <p>
+     * 101. 对称二叉树
+     * 给定一个二叉树，检查它是否是镜像对称的。
+     * 例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
      * 1
      * / \
-     * 2   3
-     * / \
-     * 4   5
-     * 返回 3, 它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。
-     * <p>
-     * 注意：两结点之间的路径长度是以它们之间边的数目表示。
+     * 2   2
+     * / \ / \
+     * 3  4 4  3
+     * 解法一：递归法
      *
      * @param root
-     * @return count
+     * @return
      */
-    public static int diameterOfBinaryTree(TreeNode root) {
-        dfs(root);
-        return count;
+    public boolean isSymmetric(TreeNode root) {
+        return isMirror(root, root);
     }
 
-    public static int dfs(TreeNode root) {
-        if (root == null) {
-            return 0;
+    public boolean isMirror(TreeNode root1, TreeNode root2) {
+        if (root1 == null && root2 == null) return true;
+        if (root1 == null || root2 == null) return false;
+        return (root1.val == root2.val) && isMirror(root1.left, root2.right) && isMirror(root1.right, root2.left);
+    }
+
+    /**
+     * 解法二：非递归法
+     *
+     * @param root
+     * @return
+     */
+    public boolean isSymmetricNonRecursive(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.offer(root);
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode left = queue.poll();
+            TreeNode right = queue.poll();
+            if (left == null && right == null) continue;
+            if (left == null || right == null) return false;
+            if (left.val != right.val) return false;
+            queue.offer(left.left);
+            queue.offer(right.right);
+            queue.offer(left.right);
+            queue.offer(right.left);
         }
-        int left = dfs(root.left);
-        int right = dfs(root.right);
-        count = Math.max(count, left + right);
-        return Math.max(left, right) + 1;
+        return true;
     }
 
 
     /**
      * 104. 二叉树的最大深度
      * 给定一个二叉树，找出其最大深度。
-     * <p>
-     * 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
-     * <p>
-     * 说明: 叶子节点是指没有子节点的节点。
-     * <p>
+     * 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。说明: 叶子节点是指没有子节点的节点。
      * 示例：
      * 给定二叉树 [3,9,20,null,null,15,7]，
-     * <p>
      * 3
      * / \
      * 9  20
@@ -93,66 +108,79 @@ public class TreeRelatedQuestions {
 
 
     /**
-     * 101. 对称二叉树
-     * 给定一个二叉树，检查它是否是镜像对称的。
-     * <p>
-     * 例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
-     * <p>
-     * 1
-     * / \
-     * 2   2
-     * / \ / \
-     * 3  4 4  3
-     * 但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
-     * <p>
-     * 1
-     * / \
-     * 2   2
-     * \   \
-     * 3    3
-     * 说明:
-     * <p>
-     * 如果你可以运用递归和迭代两种方法解决这个问题，会很加分。
-     * <p>
-     * 解法一：递归法
-     *
+     * 144. 二叉树的前序遍历
+     * 递归解法
+     * @param root
+     */
+    static List<Integer> listPreOrder = new ArrayList<>();
+    public static List<Integer> preOrderRecur(TreeNode root) {
+        if (root == null) {
+            return listPreOrder;
+        }
+        listPreOrder.add(root.val);
+        preOrderRecur(root.left);
+        preOrderRecur(root.right);
+        return listPreOrder;
+    }
+    /**
+     * 非递归解法
      * @param root
      * @return
      */
-    public boolean isSymmetric(TreeNode root) {
-        return isMirror(root, root);
+    public static List<Integer> preOrderNonRecur(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if (root == null) return list;
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode temp = stack.pop();
+            list.add(temp.val);
+            if (temp.right != null) {
+                stack.push(temp.right);
+            }
+            if (temp.left != null) {
+                stack.push(temp.left);
+            }
+        }
+        return list;
     }
 
-    public boolean isMirror(TreeNode root1, TreeNode root2) {
-        if (root1 == null && root2 == null) return true;
-        if (root1 == null || root2 == null) return false;
-        return (root1.val == root2.val) && isMirror(root1.left, root2.right) && isMirror(root1.right, root2.left);
-    }
 
     /**
-     * 解法二：非递归法
+     * 543. 二叉树的直径
+     * 给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过根结点。
+     * 给定二叉树
+     * 1
+     * / \
+     * 2   3
+     * / \
+     * 4   5
+     * 返回 3, 它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]。
+     * 注意：两结点之间的路径长度是以它们之间边的数目表示。
+     *
      * @param root
-     * @return
+     * @return count
      */
-    public boolean isSymmetric2(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        queue.offer(root);
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            TreeNode left = queue.poll();
-            TreeNode right = queue.poll();
-            if (left == null && right == null) continue;
-            if (left == null || right == null) return false;
-            if (left.val != right.val) return false;
-            queue.offer(left.left);
-            queue.offer(right.right);
-            queue.offer(left.right);
-            queue.offer(right.left);
+    public static int diameterOfBinaryTree(TreeNode root) {
+        dfs(root);
+        return count;
+    }
+
+    public static int dfs(TreeNode root) {
+        if (root == null) {
+            return 0;
         }
-        return true;
+        int left = dfs(root.left);
+        int right = dfs(root.right);
+        count = Math.max(count, left + right);
+        return Math.max(left, right) + 1;
     }
 
     public static void main(String[] args) {
-
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.right.left = new TreeNode(3);
+        System.out.println(preOrderRecur(root));
+        System.out.println(preOrderNonRecur(root));
     }
 }

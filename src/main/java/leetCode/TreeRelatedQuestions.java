@@ -146,6 +146,78 @@ public class TreeRelatedQuestions {
     }
 
 
+
+    /**
+     * 94. 二叉树的中序遍历
+     * 给定一个二叉树，返回它的中序 遍历。
+     * 示例:
+     * 输入: [1,null,2,3]
+     * 输出: [1,3,2]
+     *
+     * 解法一：递归法
+     */
+    static List<Integer> list = new ArrayList<>();
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        if (root != null) {
+            if (root.left != null) inorderTraversal(root.left);
+            list.add(root.val);
+            if (root.right != null) inorderTraversal(root.right);
+        }
+        return list;
+    }
+    /**
+     * 解法二：非递归法
+     *
+     * @param root
+     * @return
+     */
+    public static List<Integer> inorderTraversal2(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            list.add(root.val);
+            root = root.right;
+        }
+        return list;
+    }
+    /**
+     * 解法三：颜色标记法（非递归，最佳方法）
+     *
+     * @param root
+     * @return
+     */
+    public static List<Integer> inorderTraversal3(TreeNode root) {
+        class ColorNode {
+            TreeNode node;
+            String color;
+            ColorNode(TreeNode node, String color) {
+                this.node = node;
+                this.color = color;
+            }
+        }
+        List<Integer> list = new ArrayList<>();
+        Stack<ColorNode> stack = new Stack<>();
+        if (root != null) {
+            stack.push(new ColorNode(root, "white"));
+            while (!stack.empty()) {
+                ColorNode curr = stack.pop();
+                if (curr.color.equals("white")) {
+                    if (curr.node.right != null) stack.push(new ColorNode(curr.node.right, "white"));
+                    stack.push(new ColorNode(curr.node, "gray"));
+                    if (curr.node.left != null) stack.push(new ColorNode(curr.node.left, "white"));
+                } else {
+                    list.add(curr.node.val);
+                }
+            }
+        }
+        return list;
+    }
+    
+
     /**
      * 543. 二叉树的直径
      * 给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过根结点。

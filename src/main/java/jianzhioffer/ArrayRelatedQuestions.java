@@ -1,6 +1,8 @@
 package jianzhioffer;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  * 面试题03. 找到数组中重复的数字
@@ -9,6 +11,7 @@ import java.util.HashSet;
  * 面试题12. 矩阵中的路径
  * 面试题21. 调整数组顺序使奇数位于偶数前面
  * 面试题29. 顺时针打印矩阵
+ * 面试题45. 把数组排成最小的数
  */
 public class ArrayRelatedQuestions {
     /**
@@ -223,4 +226,28 @@ public class ArrayRelatedQuestions {
         return res;
     }
 
+
+    /**
+     * 面试题45. 把数组排成最小的数
+     * 输入一个正整数数组，把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。
+     * 示例 1:
+     * 输入: [10,2]
+     * 输出: "102"
+     * 解法：
+     * 通过在排序时传入一个自定义的 Comparator 实现，重新定义 String 列表内的排序方法，若拼接 s1 + s2 > s2 + s1，那么显然应该把 s2 在拼接时放在前面，以此类推，将整个 String 列表排序后再拼接起来。
+     * @param nums
+     * @return
+     */
+    public String minNumber(int[] nums) {
+        List<String> strList = new ArrayList<>();
+        for (int num : nums) {
+            strList.add(String.valueOf(num));
+        }
+        strList.sort((s1, s2) -> (s1 + s2).compareTo(s2 + s1));
+        StringBuilder sb = new StringBuilder();
+        for (String str : strList) {
+            sb.append(str);
+        }
+        return sb.toString();
+    }
 }

@@ -2,7 +2,7 @@ package jianzhioffer;
 
 /**
  * Description
- *
+ * 面试题42. 连续子数组的最大和
  * @author Lynn-zd
  * @date Created on 2020/4/14 13:53
  */

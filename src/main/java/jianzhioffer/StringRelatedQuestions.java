@@ -1,5 +1,6 @@
 package jianzhioffer;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -90,6 +91,7 @@ public class StringRelatedQuestions {
      * s = ""
      * 返回 " "
      *
+     * LinkedHashMap方法
      * @param s
      * @return
      */
@@ -101,6 +103,16 @@ public class StringRelatedQuestions {
         for(Map.Entry<Character, Boolean> d : dic.entrySet()){
             if(d.getValue()) return d.getKey();
         }
+        return ' ';
+    }
+    //Hahmap方法
+    public char firstUniqChar2(String s) {
+        HashMap<Character, Boolean> dic = new HashMap<>();
+        char[] sc = s.toCharArray();
+        for(char c : sc)
+            dic.put(c, !dic.containsKey(c));
+        for(char c : sc)
+            if(dic.get(c)) return c;
         return ' ';
     }
 

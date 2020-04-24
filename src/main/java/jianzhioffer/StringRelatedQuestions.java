@@ -1,8 +1,12 @@
 package jianzhioffer;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /**
  * 面试题05. 替换空格
  * 面试题20. 表示数值的字符串
+ * 面试题50. 第一个只出现一次的字符
  */
 public class StringRelatedQuestions {
     /**
@@ -76,7 +80,29 @@ public class StringRelatedQuestions {
     }
 
 
-
+    /**
+     * 面试题50. 第一个只出现一次的字符
+     * 在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。
+     * 示例:
+     * s = "abaccdeff"
+     * 返回 "b"
+     *
+     * s = ""
+     * 返回 " "
+     *
+     * @param s
+     * @return
+     */
+    public char firstUniqChar(String s) {
+        Map<Character, Boolean> dic = new LinkedHashMap<>();
+        char[] sc = s.toCharArray();
+        for(char c : sc)
+            dic.put(c, !dic.containsKey(c));
+        for(Map.Entry<Character, Boolean> d : dic.entrySet()){
+            if(d.getValue()) return d.getKey();
+        }
+        return ' ';
+    }
 
 
 }

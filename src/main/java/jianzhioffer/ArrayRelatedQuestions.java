@@ -266,8 +266,8 @@ public class ArrayRelatedQuestions {
     }
 
     int merge(int[] arr, int start, int end) {
-        if (start == end) return 0;
-        int mid = (start + end) / 2;
+        if (start >= end) return 0;
+        int mid = start + (end - start) / 2;
         int count = merge(arr, start, mid) + merge(arr, mid + 1, end);
 
         int[] temp = new int[end - start + 1];

@@ -9,13 +9,11 @@ import java.io.IOException;
 
 public class Main {
 
-    //jlkdfjd
     /**
      *
      * @param args
      */
     public static void main(String[] args) throws IOException {
-        int a = 4;
         System.out.println("hello world");
     }
 }

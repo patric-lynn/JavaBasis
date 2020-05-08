@@ -20,7 +20,12 @@ public class StringRelatedQuestions {
     public String replaceSpace(StringBuffer str) {
         return str.toString().replace(" ", "%20");
     }
-    //字符串替换测试
+
+    /**
+     * 字符串替换测试
+     * @param str
+     * @return
+     */
     public static String replaceSpace(String str) {
         StringBuffer stringBuffer = new StringBuffer(str);
         StringBuffer buffer = new StringBuffer();
@@ -67,7 +72,7 @@ public class StringRelatedQuestions {
                     return false;
                 }
                 eSeen = true;
-                numSeen = false;//重置numSeen，排除123e或者123e+的情况,确保e之后也出现数
+                numSeen = false; //重置numSeen，排除123e或者123e+的情况,确保e之后也出现数
             }else if(str[i] == '-' || str[i] == '+'){
                 //+-出现在0位置或者e/E的后面第一个位置才是合法的
                 if(i != 0 && str[i-1] != 'e' && str[i-1] != 'E'){

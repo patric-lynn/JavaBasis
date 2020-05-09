@@ -1,4 +1,4 @@
-package interview;
+package interview.alibaba;
 
 import java.util.Scanner;
 
@@ -40,3 +40,4 @@ public class alibaba {
         System.out.println(countDuiwu(n));
     }
 }
+

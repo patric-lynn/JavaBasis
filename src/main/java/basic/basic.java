@@ -1,12 +1,11 @@
 package basic;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class basic {
-    //循环函数学习测试
+    /**
+     * 循环函数学习测试
+     */
     public static void labelTest() {
         //流式输入对象
         Scanner in = new Scanner(System.in);
@@ -20,34 +19,17 @@ public class basic {
         for (int n = i; n != 100; n += 1) {
             k += 1;
             //若满足条件，则跳过本次循环
-            if (k < 5) continue;
-            System.out.println("This is " + k + " time try");
+            if (k < 15) continue;
             //若满足条件，则跳出整体循环
             if (k > 30) break Label;
+            System.out.println("This is " + k + " time try");
         }
-    }
-
-
-
-
-
-    //文件处理测试
-    public static void fileTest() throws IOException {
-        File file = new File("fileTest.txt");
-        PrintWriter printWriter = new PrintWriter(file);
-        printWriter.print("happy you");
-        //先输出内容再输出一个回车
-        printWriter.println("bcde");
-        printWriter.close();
+        System.out.println("15到30之间输出完毕");
     }
 
 
     public static void main(String[] args) throws Exception {
-
-        //循环函数测试
         labelTest();
-        //文件测试
-        fileTest();
     }
 }
 

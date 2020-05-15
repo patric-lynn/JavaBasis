@@ -3,7 +3,6 @@ package basic;
 import java.time.Clock;
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Stack;
 
 /**
  * Description
@@ -11,7 +10,7 @@ import java.util.Stack;
  * @author Lynn-zd
  * @date Created on 2020/3/16 17:12
  */
-public class sort {
+public class Sort {
     /**
      * 获取一个打乱的数组
      * @param arr
@@ -25,12 +24,11 @@ public class sort {
 
 
     /**
-     * arrays排序函数与堆栈的测试 2020-3-2
+     * Java arrays自带的排序函数测试 2020-3-2
      */
     public static void arraysort() {
         int[] a = {5, 7, 2, 6, 1, 9, 3, 4, 8, 0};
         Arrays.sort(a);
-        Stack<Integer> stack = new Stack<Integer>();
         for (int j : a) {
             System.out.println(a[j]);
         }
@@ -63,7 +61,7 @@ public class sort {
     public static void maopaosortPlus(int[] arr){
         if(arr != null && arr.length > 1){
             for(int i = 0; i < arr.length - 1; i++){
-                // 初始化一个布尔值，每次循环时重新赋值
+                // 初始化一个布尔值，每次循环时重新赋值,如果某一趟没有发生任何交换，直接结束循环
                 boolean flag = true;
                 for(int j = 0; j < arr.length - i - 1 ; j++){
                     if(arr[j] > arr[j+1]){
@@ -88,8 +86,8 @@ public class sort {
      * 三个参数，空返回值
      *
      * @param array
-     * @param start
-     * @param end
+     * @param start 起始下标
+     * @param end 终止下标
      */
     public static void quickSort(int[] array, int start ,int end){
         int a = start;

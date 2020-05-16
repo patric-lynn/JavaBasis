@@ -4,6 +4,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * 笔试题目：
+ * 1)实现一个KV型的LRU（最近最少使用）Cache，支持get和put方法；要求实现时间复杂度，O(1);
+ * 2)如果要求get,put方法线程安全且性能较好，该如何支持？请用代码实现，并说明如此实现的性能优缺点，注意根据读写频度不同的场景实现方式可以有多种，答案不唯一，语言不限；
+ *
  * 继承LinkedHashMap实现的LRUCache，在类中我自定义了一个类LRULinedHashMap继承自LinkedHashMap，
  * 并重写了其removeEldestEntry方法。get()和put()的时间复杂度均是O(1)。空间复杂度是O(n)，其中n为待缓存的键数。
  */

@@ -164,6 +164,7 @@ public class Microsoft {
         }
         return result;
     }
+
     public static void main(String[] args) {
         // String ip = "202.117.54.110";
         // String ip1 = "0.7.54.110";

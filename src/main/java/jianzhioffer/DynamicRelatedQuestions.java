@@ -3,6 +3,7 @@ package jianzhioffer;
 /**
  * Description
  * 面试题42. 连续子数组的最大和
+ *
  * @author Lynn-zd
  * @date Created on 2020/4/14 13:53
  */
@@ -20,7 +21,7 @@ public class DynamicRelatedQuestions {
      */
     public int maxSubArray(int[] nums) {
         int res = nums[0];
-        for(int i = 1; i < nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {
             nums[i] = nums[i] + Math.max(nums[i - 1], 0);
             res = Math.max(res, nums[i]);
         }

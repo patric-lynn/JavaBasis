@@ -9,6 +9,7 @@ import java.util.Queue;
  * 27. 移除值为val的元素，并返回移除后数组的新长度
  * 34. 在排序数组中查找元素的第一个和最后一个位置
  * 35. 二分查找搜索插入位置
+ * 40. 最小的k个数
  * @author Lynn-zd
  * @date Created on 2020/4/7 13:54
  */

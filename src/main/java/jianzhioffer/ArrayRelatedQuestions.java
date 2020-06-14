@@ -29,9 +29,9 @@ public class ArrayRelatedQuestions {
     public int findRepeatNumber(int[] nums) {
         int result = -1;
         HashSet<Integer> set = new HashSet<>();
-        for(int i=0; i<nums.length; i++){
+        for (int i = 0; i < nums.length; i++) {
             Boolean flag = set.add(nums[i]);
-            if(!flag) {
+            if (!flag) {
                 result = nums[i];
                 break;
             }
@@ -44,70 +44,73 @@ public class ArrayRelatedQuestions {
      * 面试题04. 二维数组中的查找
      * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
      * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
-     *
+     * <p>
      * 暴力法，遍历数组
+     *
      * @param target
      * @param array
      * @return
      */
-    public static boolean Find(int target, int [][] array) {
-        for (int i=0; i<array.length;i++){
-            for (int j=0;j<array[0].length;j++){
-                if(array[i][j]==target){
+    public static boolean Find(int target, int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                if (array[i][j] == target) {
                     return true;
                 }
             }
         }
         return false;
     }
+
     /**
      * 从左下角找
      */
-    public static boolean Find2(int target, int [][] array) {
+    public static boolean Find2(int target, int[][] array) {
         int rows = array.length;
-        if(rows == 0){
+        if (rows == 0) {
             return false;
         }
         int cols = array[0].length;
-        if(cols==0){
+        if (cols == 0) {
             return false;
         }
-        int row=rows-1;
+        int row = rows - 1;
         int col = 0;
-        while (row>=0 && col<cols){
-            if(array[row][col]<target){
+        while (row >= 0 && col < cols) {
+            if (array[row][col] < target) {
                 col++;
-            }
-            else if(array[row][col]>target){
+            } else if (array[row][col] > target) {
                 row--;
-            }else{
+            } else {
                 return true;
             }
         }
         return false;
     }
+
     /**
      * 从右上角找
+     *
      * @param
      */
-    public static boolean Find3(int target, int [][] array) {
+    public static boolean Find3(int target, int[][] array) {
         int rows = array.length;
-        if(rows == 0){
+        if (rows == 0) {
             return false;
         }
         int cols = array[0].length;
-        if(cols == 0){
+        if (cols == 0) {
             return false;
         }
         // 右上
         int row = 0;   //注意
-        int col = cols-1;    //注意
-        while(row<rows && col>=0){    //注意
-            if(array[row][col] < target){
+        int col = cols - 1;    //注意
+        while (row < rows && col >= 0) {    //注意
+            if (array[row][col] < target) {
                 row++;        //注意
-            }else if(array[row][col] > target){
+            } else if (array[row][col] > target) {
                 col--;      //注意
-            }else{
+            } else {
                 return true;
             }
         }
@@ -121,19 +124,20 @@ public class ArrayRelatedQuestions {
      * 输入：[3,4,5,1,2]
      * 输出：1
      * 示例 2：
-     *
+     * <p>
      * 输入：[2,2,2,0,1]
      * 输出：0
+     *
      * @param numbers
      * @return
      */
     public int minArray(int[] numbers) {
-        if(numbers.length == 1) return numbers[0];
+        if (numbers.length == 1) return numbers[0];
         int i = 1;
-        if(numbers.length >1){
-            while(numbers[i]>=numbers[i-1]) {
+        if (numbers.length > 1) {
+            while (numbers[i] >= numbers[i - 1]) {
                 int a = i++;
-                while(a == numbers.length-1)
+                while (a == numbers.length - 1)
                     return numbers[0];
             }
             return numbers[i];
@@ -150,7 +154,7 @@ public class ArrayRelatedQuestions {
      * ["a","d","e","e"]]
      * 但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。
      * 示例 1：
-     *
+     * <p>
      * 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
      * 输出：true
      *
@@ -160,22 +164,23 @@ public class ArrayRelatedQuestions {
      */
     public boolean exist(char[][] board, String word) {
         char[] words = word.toCharArray();
-        for(int i=0; i< board.length; i++) {
-            for(int j=0; j< board[0].length; j++){
-                if(dfs(board,words,i,j,0)) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (dfs(board, words, i, j, 0)) {
                     return true;
                 }
             }
         }
         return false;
     }
-    boolean dfs(char[][] board, char[] words, int i, int j, int k){
-        if(i>=board.length||i<0||j>=board[0].length||j<0||board[i][j]!=words[k] ) return false;
-        if(k == words.length-1) return true;
+
+    boolean dfs(char[][] board, char[] words, int i, int j, int k) {
+        if (i >= board.length || i < 0 || j >= board[0].length || j < 0 || board[i][j] != words[k]) return false;
+        if (k == words.length - 1) return true;
         char temp = board[i][j];
         //临时改变值，确保不相等；
         board[i][j] = '.';
-        boolean result = dfs(board,words,i-1,j,k+1)||dfs(board,words,i+1,j,k+1)||dfs(board,words,i,j-1,k+1)||dfs(board,words,i,j+1,k+1);
+        boolean result = dfs(board, words, i - 1, j, k + 1) || dfs(board, words, i + 1, j, k + 1) || dfs(board, words, i, j - 1, k + 1) || dfs(board, words, i, j + 1, k + 1);
         board[i][j] = temp;
         return result;
     }
@@ -188,14 +193,15 @@ public class ArrayRelatedQuestions {
      * 输入：nums = [1,2,3,4]
      * 输出：[1,3,2,4]
      * 注：[3,1,2,4] 也是正确的答案之一。
+     *
      * @param nums
      * @return
      */
     public int[] exchange(int[] nums) {
         int i = 0, j = nums.length - 1, tmp;
-        while(i < j) {
-            while(i < j && (nums[i] & 1) == 1) i++;
-            while(i < j && (nums[j] & 1) == 0) j--;
+        while (i < j) {
+            while (i < j && (nums[i] & 1) == 1) i++;
+            while (i < j && (nums[j] & 1) == 0) j--;
             tmp = nums[i];
             nums[i] = nums[j];
             nums[j] = tmp;
@@ -215,18 +221,18 @@ public class ArrayRelatedQuestions {
      * @return
      */
     public int[] spiralOrder(int[][] matrix) {
-        if(matrix.length == 0) return new int[0];
+        if (matrix.length == 0) return new int[0];
         int l = 0, r = matrix[0].length - 1, t = 0, b = matrix.length - 1, x = 0;
         int[] res = new int[(r + 1) * (b + 1)];
-        while(true) {
-            for(int i = l; i <= r; i++) res[x++] = matrix[t][i]; // left to right.
-            if(++t > b) break;
-            for(int i = t; i <= b; i++) res[x++] = matrix[i][r]; // top to bottom.
-            if(l > --r) break;
-            for(int i = r; i >= l; i--) res[x++] = matrix[b][i]; // right to left.
-            if(t > --b) break;
-            for(int i = b; i >= t; i--) res[x++] = matrix[i][l]; // bottom to top.
-            if(++l > r) break;
+        while (true) {
+            for (int i = l; i <= r; i++) res[x++] = matrix[t][i]; // left to right.
+            if (++t > b) break;
+            for (int i = t; i <= b; i++) res[x++] = matrix[i][r]; // top to bottom.
+            if (l > --r) break;
+            for (int i = r; i >= l; i--) res[x++] = matrix[b][i]; // right to left.
+            if (t > --b) break;
+            for (int i = b; i >= t; i--) res[x++] = matrix[i][l]; // bottom to top.
+            if (++l > r) break;
         }
         return res;
     }
@@ -240,6 +246,7 @@ public class ArrayRelatedQuestions {
      * 输出: "102"
      * 解法：
      * 通过在排序时传入一个自定义的 Comparator 实现，重新定义 String 列表内的排序方法，若拼接 s1 + s2 > s2 + s1，那么显然应该把 s2 在拼接时放在前面，以此类推，将整个 String 列表排序后再拼接起来。
+     *
      * @param nums
      * @return
      */
@@ -262,6 +269,7 @@ public class ArrayRelatedQuestions {
      * 示例 1:
      * 输入: [7,5,6,4]
      * 输出: 5
+     *
      * @param nums
      * @return
      */

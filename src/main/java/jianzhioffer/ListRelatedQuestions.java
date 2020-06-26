@@ -2,34 +2,26 @@ package jianzhioffer;
 
 import java.util.LinkedList;
 import java.util.Stack;
+
 /**
  * Description
  * 面试题06. 从尾到头打印链表   面试题24. 反转链表
  * 面试题18. 删除链表的节点
  * 面试题22. 链表中倒数第k个节点
+ *
  * @author Lynn-zd
  * @date Created on 2020/4/14 01:13
  */
 public class ListRelatedQuestions {
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 面试题06. 从尾到头打印链表   面试题24. 反转链表
      * 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
      * 示例 1：
      * 输入：head = [1,3,2]
      * 输出：[2,3,1]
-     *
      */
     public int[] reversePrint(ListNode head) {
-        if(head == null) return null;
+        if (head == null) return null;
         Stack<ListNode> stack = new Stack<>();
         ListNode temp = head;
         while (temp != null) {
@@ -43,6 +35,7 @@ public class ListRelatedQuestions {
         }
         return result;
     }
+
     /**
      * 输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
      */
@@ -62,6 +55,7 @@ public class ListRelatedQuestions {
      * 示例:
      * 输入: 1->2->3->4->5->NULL
      * 输出: 5->4->3->2->1->NULL
+     *
      * @param head
      * @return
      */
@@ -70,8 +64,8 @@ public class ListRelatedQuestions {
         ListNode result = new ListNode(0);
         ListNode item = head;
         ListNode next = null;
-        while(true){
-            if(item == null){
+        while (true) {
+            if (item == null) {
                 break;
             }
             // 为了保证循环正常后移，先把下一个元素临时取出来
@@ -88,7 +82,6 @@ public class ListRelatedQuestions {
 
     }
 
-
     /**
      * 面试题18. 删除链表的值为val的节点
      * 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
@@ -98,21 +91,21 @@ public class ListRelatedQuestions {
      * 输入: head = [4,5,1,9], val = 5
      * 输出: [4,1,9]
      * 解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -> 1 -> 9.
+     *
      * @param head
      * @param val
      * @return
      */
     public ListNode deleteNode(ListNode head, int val) {
-        if(head.val == val) return head.next;
+        if (head.val == val) return head.next;
         ListNode pre = head, cur = head.next;
-        while(cur != null && cur.val != val) {
+        while (cur != null && cur.val != val) {
             pre = cur;
             cur = cur.next;
         }
-        if(cur != null) pre.next = cur.next;
+        if (cur != null) pre.next = cur.next;
         return head;
     }
-
 
     /**
      * 面试题22. 链表中倒数第k个节点
@@ -121,18 +114,28 @@ public class ListRelatedQuestions {
      * 示例：
      * 给定一个链表: 1->2->3->4->5, 和 k = 2.
      * 返回链表 4->5.
+     *
      * @param head
      * @param k
      * @return
      */
     public ListNode getKthFromEnd(ListNode head, int k) {
         ListNode former = head, latter = head;
-        for(int i = 0; i < k; i++)
+        for (int i = 0; i < k; i++)
             former = former.next;
-        while(former != null) {
+        while (former != null) {
             former = former.next;
             latter = latter.next;
         }
         return latter;
+    }
+
+    class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 }

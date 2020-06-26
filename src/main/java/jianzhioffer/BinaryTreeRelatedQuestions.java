@@ -10,20 +10,6 @@ import java.util.HashMap;
  */
 public class BinaryTreeRelatedQuestions {
     /**
-     * TreeNode定义
-     */
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
-
-    /**
      * 面试题07. 重建二叉树
      * 输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
      * 例如，给出
@@ -57,6 +43,19 @@ public class BinaryTreeRelatedQuestions {
         root.left = recursive(pre_root + 1, in_left, i - 1);
         root.right = recursive(pre_root + i + 1 - in_left, i + 1, in_right);
         return root;
+    }
+
+    /**
+     * TreeNode定义
+     */
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 
 }

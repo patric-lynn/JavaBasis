@@ -16,31 +16,6 @@ import java.util.List;
  */
 public class ArrayRelatedQuestions {
     /**
-     * 面试题03. 数组中重复的数字
-     * 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。
-     * 示例 1：
-     * 输入：
-     * [2, 3, 1, 0, 2, 5, 3]
-     * 输出：2 或 3
-     *
-     * @param nums
-     * @return
-     */
-    public int findRepeatNumber(int[] nums) {
-        int result = -1;
-        HashSet<Integer> set = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            Boolean flag = set.add(nums[i]);
-            if (!flag) {
-                result = nums[i];
-                break;
-            }
-        }
-        return result;
-    }
-
-
-    /**
      * 面试题04. 二维数组中的查找
      * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
      * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
@@ -115,6 +90,30 @@ public class ArrayRelatedQuestions {
             }
         }
         return false;
+    }
+
+    /**
+     * 面试题03. 数组中重复的数字
+     * 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。
+     * 示例 1：
+     * 输入：
+     * [2, 3, 1, 0, 2, 5, 3]
+     * 输出：2 或 3
+     *
+     * @param nums
+     * @return
+     */
+    public int findRepeatNumber(int[] nums) {
+        int result = -1;
+        HashSet<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            Boolean flag = set.add(nums[i]);
+            if (!flag) {
+                result = nums[i];
+                break;
+            }
+        }
+        return result;
     }
 
     /**

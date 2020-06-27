@@ -14,7 +14,7 @@ import java.util.List;
  * 面试题45. 把数组排成最小的数
  * 面试题51. 数组中的逆序对
  */
-public class ArrayRelatedQuestions {
+public class ArrayMatrixRelatedQuestions {
     /**
      * 面试题03. 数组中重复的数字
      * 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。
@@ -77,7 +77,7 @@ public class ArrayRelatedQuestions {
         }
         int row = rows - 1;
         int col = 0;
-        //
+        //注意限定范围，对于0起的是大于等于，到上限的是小于
         while (row >= 0 && col < cols) {
             if (array[row][col] < target) {
                 col++;
@@ -122,12 +122,14 @@ public class ArrayRelatedQuestions {
 
     /**
      * 面试题11. 旋转数组的最小数字
-     * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。  
+     * 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
+     * 输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。
+     * 例如，数组 [3,4,5,1,2] 为 [1,2,3,4,5] 的一个旋转，该数组的最小值为1。  
      * 示例 1：
      * 输入：[3,4,5,1,2]
      * 输出：1
      * 示例 2：
-     * <p>
+     *
      * 输入：[2,2,2,0,1]
      * 输出：0
      *
@@ -148,6 +150,21 @@ public class ArrayRelatedQuestions {
         return -1;
     }
 
+    /**
+     * 二分法 解决，其可将遍历法的 线性级别 时间复杂度降低至 对数级别 。
+     * @param numbers
+     * @return
+     */
+    public int minArray2(int[] numbers) {
+        int i = 0, j = numbers.length - 1;
+        while (i < j) {
+            int m = (i + j) / 2;
+            if (numbers[m] > numbers[j]) i = m + 1;
+            else if (numbers[m] < numbers[j]) j = m;
+            else j--;
+        }
+        return numbers[i];
+    }
 
     /**
      * 面试题12. 矩阵中的路径

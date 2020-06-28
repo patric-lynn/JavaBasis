@@ -45,7 +45,7 @@ public class ArrayMatrixRelatedQuestions {
      * 面试题04. 二维数组中的查找
      * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
      * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
-     *
+     * <p>
      * 暴力法，遍历数组[不推荐]
      *
      * @param target
@@ -129,7 +129,7 @@ public class ArrayMatrixRelatedQuestions {
      * 输入：[3,4,5,1,2]
      * 输出：1
      * 示例 2：
-     *
+     * <p>
      * 输入：[2,2,2,0,1]
      * 输出：0
      *
@@ -152,6 +152,7 @@ public class ArrayMatrixRelatedQuestions {
 
     /**
      * 二分法 解决，其可将遍历法的 线性级别 时间复杂度降低至 对数级别 。
+     *
      * @param numbers
      * @return
      */
@@ -164,6 +165,21 @@ public class ArrayMatrixRelatedQuestions {
             else j--;
         }
         return numbers[i];
+    }
+
+    public int minArray3(int[] arrays) {
+        int i = 0, j = arrays.length - 1;
+        while (i < j) {
+            int m = (i + j) / 2;
+            if (arrays[m] > arrays[j]) {
+                i = m + 1;
+            } else if (arrays[m] < arrays[j]) {
+                j = m;
+            } else {
+                j--;
+            }
+        }
+        return arrays[i];
     }
 
     /**

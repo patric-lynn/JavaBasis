@@ -8,9 +8,9 @@ import java.util.List;
  * 面试题03. 找到数组中重复的数字：请找出一个长度为 n 的数组 nums 数组中任意一个重复的数字。[HashSet]
  * 面试题04. 二维数组中查找某一数：输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。[快慢指针]
  * 面试题11. 旋转数组的最小数字：输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。[二分法or线性遍历]
- * 面试题12. 矩阵中的路径：查找字符矩阵中是否存在一个特定路径[DFS]
+ * 面试题12. 矩阵中的路径：查找字符矩阵中是否存在一个特定路径,如果存在则返回true，否则返回false。[DFS]
  * 面试题21. 调整数组顺序使奇数位于偶数前面：使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。[双指针法]
- * 面试题29. 顺时针打印矩阵
+ * 面试题29. 顺时针打印矩阵：输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。[边界遍历]
  * 面试题45. 把数组排成最小的数
  * 面试题51. 数组中的逆序对
  */
@@ -41,11 +41,12 @@ public class ArrayMatrixRelatedQuestions {
         return result;
     }
 
+
     /**
      * 面试题04. 二维数组中的查找
      * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
      * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
-     *
+     * <p>
      * 解法一：暴力法，遍历数组[不推荐]
      *
      * @param target
@@ -91,7 +92,7 @@ public class ArrayMatrixRelatedQuestions {
     }
 
     /**
-     *  面试题04.解法三：从右上角找
+     * 面试题04.解法三：从右上角找
      *
      * @param
      */
@@ -132,6 +133,7 @@ public class ArrayMatrixRelatedQuestions {
      * 输入：[2,2,2,0,1]
      * 输出：0
      * 解法一：线性遍历法
+     *
      * @param numbers
      * @return
      */
@@ -170,6 +172,7 @@ public class ArrayMatrixRelatedQuestions {
         return arrays[i];
     }
 
+
     /**
      * 面试题12. 矩阵中的路径
      * 请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。
@@ -184,6 +187,7 @@ public class ArrayMatrixRelatedQuestions {
      * 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
      * 输出：true
      * 解法一：DFS
+     *
      * @param board
      * @param word
      * @return
@@ -202,6 +206,7 @@ public class ArrayMatrixRelatedQuestions {
 
     /**
      * 面试题12. 矩阵中的路径-深度搜索函数
+     *
      * @param board
      * @param words
      * @param i
@@ -229,8 +234,9 @@ public class ArrayMatrixRelatedQuestions {
      * 输入：nums = [1,2,3,4]
      * 输出：[1,3,2,4]
      * 注：[3,1,2,4] 也是正确的答案之一。
-     *
+     * <p>
      * 解法一：前后双指针法
+     *
      * @param nums
      * @return
      */
@@ -248,6 +254,7 @@ public class ArrayMatrixRelatedQuestions {
 
     /**
      * 面试题21 解法二：快慢双指针法
+     *
      * @param nums
      * @return
      */
@@ -266,6 +273,7 @@ public class ArrayMatrixRelatedQuestions {
         }
         return nums;
     }
+
 
     /**
      * 面试题29. 顺时针打印矩阵
@@ -319,6 +327,7 @@ public class ArrayMatrixRelatedQuestions {
         }
         return sb.toString();
     }
+
 
     /**
      * 面试题51. 数组中的逆序对

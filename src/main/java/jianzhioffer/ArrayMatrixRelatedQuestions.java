@@ -5,11 +5,11 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * 面试题03. 找到数组中重复的数字:请找出一个长度为 n 的数组 nums 数组中任意一个重复的数字。[HashSet]
- * 面试题04. 二维数组中查找某一数
- * 面试题11. 旋转数组的最小数字
- * 面试题12. 矩阵中的路径
- * 面试题21. 调整数组顺序使奇数位于偶数前面
+ * 面试题03. 找到数组中重复的数字：请找出一个长度为 n 的数组 nums 数组中任意一个重复的数字。[HashSet]
+ * 面试题04. 二维数组中查找某一数：输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。[快慢指针]
+ * 面试题11. 旋转数组的最小数字：输入一个递增排序的数组的一个旋转，输出旋转数组的最小元素。[二分法or线性遍历]
+ * 面试题12. 矩阵中的路径：查找字符矩阵中是否存在一个特定路径[DFS]
+ * 面试题21. 调整数组顺序使奇数位于偶数前面：使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。[双指针法]
  * 面试题29. 顺时针打印矩阵
  * 面试题45. 把数组排成最小的数
  * 面试题51. 数组中的逆序对
@@ -45,8 +45,8 @@ public class ArrayMatrixRelatedQuestions {
      * 面试题04. 二维数组中的查找
      * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
      * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
-     * <p>
-     * 暴力法，遍历数组[不推荐]
+     *
+     * 解法一：暴力法，遍历数组[不推荐]
      *
      * @param target
      * @param array
@@ -64,7 +64,7 @@ public class ArrayMatrixRelatedQuestions {
     }
 
     /**
-     * 从左下角找
+     * 面试题04.解法二：从左下角找
      */
     public static boolean findNumberIn2DArray2(int target, int[][] array) {
         int rows = array.length;
@@ -91,7 +91,7 @@ public class ArrayMatrixRelatedQuestions {
     }
 
     /**
-     * 从右上角找
+     *  面试题04.解法三：从右上角找
      *
      * @param
      */
@@ -129,10 +129,9 @@ public class ArrayMatrixRelatedQuestions {
      * 输入：[3,4,5,1,2]
      * 输出：1
      * 示例 2：
-     * <p>
      * 输入：[2,2,2,0,1]
      * 输出：0
-     *
+     * 解法一：线性遍历法
      * @param numbers
      * @return
      */
@@ -151,23 +150,12 @@ public class ArrayMatrixRelatedQuestions {
     }
 
     /**
-     * 二分法 解决，其可将遍历法的 线性级别 时间复杂度降低至 对数级别 。
+     * 面试题11.解法二：二分法。其可将遍历法的 线性级别 时间复杂度降低至 对数级别 。
      *
-     * @param numbers
+     * @param arrays
      * @return
      */
-    public int minArray2(int[] numbers) {
-        int i = 0, j = numbers.length - 1;
-        while (i < j) {
-            int m = (i + j) / 2;
-            if (numbers[m] > numbers[j]) i = m + 1;
-            else if (numbers[m] < numbers[j]) j = m;
-            else j--;
-        }
-        return numbers[i];
-    }
-
-    public int minArray3(int[] arrays) {
+    public int minArray2(int[] arrays) {
         int i = 0, j = arrays.length - 1;
         while (i < j) {
             int m = (i + j) / 2;
@@ -184,16 +172,18 @@ public class ArrayMatrixRelatedQuestions {
 
     /**
      * 面试题12. 矩阵中的路径
-     * 请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。路径可以从矩阵中的任意一格开始，每一步可以在矩阵中向左、右、上、下移动一格。如果一条路径经过了矩阵的某一格，那么该路径不能再次进入该格子。例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字母用加粗标出）。
+     * 请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。
+     * 路径可以从矩阵中的任意一格开始，每一步可以在矩阵中向左、右、上、下移动一格。
+     * 如果一条路径经过了矩阵的某一格，那么该路径不能再次进入该格子。
+     * 例如，在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字母用加粗标出）。
      * [["a","b","c","e"],
      * ["s","f","c","s"],
      * ["a","d","e","e"]]
      * 但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。
      * 示例 1：
-     * <p>
      * 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
      * 输出：true
-     *
+     * 解法一：DFS
      * @param board
      * @param word
      * @return
@@ -210,6 +200,15 @@ public class ArrayMatrixRelatedQuestions {
         return false;
     }
 
+    /**
+     * 面试题12. 矩阵中的路径-深度搜索函数
+     * @param board
+     * @param words
+     * @param i
+     * @param j
+     * @param k
+     * @return
+     */
     boolean dfs(char[][] board, char[] words, int i, int j, int k) {
         if (i >= board.length || i < 0 || j >= board[0].length || j < 0 || board[i][j] != words[k]) return false;
         if (k == words.length - 1) return true;
@@ -224,12 +223,14 @@ public class ArrayMatrixRelatedQuestions {
 
     /**
      * 面试题21. 调整数组顺序使奇数位于偶数前面
-     * 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。
+     * 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，
+     * 使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。
      * 示例：
      * 输入：nums = [1,2,3,4]
      * 输出：[1,3,2,4]
      * 注：[3,1,2,4] 也是正确的答案之一。
      *
+     * 解法一：前后双指针法
      * @param nums
      * @return
      */
@@ -245,6 +246,26 @@ public class ArrayMatrixRelatedQuestions {
         return nums;
     }
 
+    /**
+     * 面试题21 解法二：快慢双指针法
+     * @param nums
+     * @return
+     */
+    public int[] exchange2(int[] nums) {
+        int slow = 0, fast = 0;
+        while (fast < nums.length) {
+            if ((nums[fast] & 1) == 1) {//奇数
+                if (slow != fast) {
+                    nums[slow] ^= nums[fast];
+                    nums[fast] ^= nums[slow];
+                    nums[slow] ^= nums[fast];
+                }
+                slow++;
+            }
+            fast++;
+        }
+        return nums;
+    }
 
     /**
      * 面试题29. 顺时针打印矩阵

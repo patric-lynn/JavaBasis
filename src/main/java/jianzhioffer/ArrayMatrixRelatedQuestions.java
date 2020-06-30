@@ -1,6 +1,7 @@
 package jianzhioffer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -311,24 +312,71 @@ public class ArrayMatrixRelatedQuestions {
      * 示例 1:
      * 输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]
      * 输出: 2
-     *
+     * <p>
      * 本题常见解法如下：
      * 1.哈希表统计法: 遍历数组nums，用 HashMap 统计各数字的数量，最终超过数组长度一半的数字则为众数。此方法时间和空间复杂度均为O(N)
      * 2.数组排序法: 将数组nums排序，由于众数的数量超过数组长度一半，因此 数组中点的元素 一定为众数。此方法时间复杂度O(Nlog2N)
      * 3.摩尔投票法: 核心理念为“正负抵消”; 时间和空间复杂度分别为O(N)和O(1); 是本题的最佳解法。
+     *
      * @param nums
      * @return
      */
     public int majorityElement(int[] nums) {
         int x = 0, votes = 0, count = 0;
-        for(int num : nums){
-            if(votes == 0) x = num;
+        for (int num : nums) {
+            if (votes == 0) x = num;
             votes += num == x ? 1 : -1;
         }
         // 验证 x 是否为众数
-        for(int num : nums)
-            if(num == x) count++;
+        for (int num : nums)
+            if (num == x) count++;
         return count > nums.length / 2 ? x : 0; // 当无众数时返回 0
+    }
+
+    /**
+     * 面试题 39.解法二：哈希表法
+     * @param nums
+     * @return
+     */
+    public int majorityElement2(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int length = nums.length / 2;
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                //这里不能直接map.get(nums[i])++;需要先判断是否存在
+                map.put(nums[i], map.get(nums[i]) + 1);
+            } else {
+                map.put(nums[i], 1);
+            }
+            //注意：这里if不能放在第一个if中，否则会在数组长度为1时出错，无法返回正确的nums[i]的值
+            //这里i>=length，之所以带等号，也是为了满足长度为1的情况，因为i从0开始
+            //按照题目要求，必须众数次数超过长度的一半，则有第一个判断条件，相当于剪枝，当然下面的第一个判断条件也可以不加
+            if (i >= length && map.get(nums[i]) > length) return nums[i];
+        }
+        return 0;//当不存在满足要求的数字或者数组长度为0时
+    }
+
+
+    /**
+     * 面试题42. 连续子数组的最大和
+     * 输入一个整型数组，数组里有正数也有负数。数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。
+     * 示例1:
+     * 输入: nums = [-2,1,-3,4,-1,2,1,-5,4]
+     * 输出: 6
+     * 解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
+     *
+     * @param nums
+     * @return
+     */
+    public int maxSubArray(int[] nums) {
+        int res = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            //当前值总是不小于nums[i]
+            nums[i] = nums[i] + Math.max(nums[i - 1], 0);
+            //res的值为上一步的res与当前nums[i]中较大的
+            res = Math.max(res, nums[i]);
+        }
+        return res;
     }
 
 

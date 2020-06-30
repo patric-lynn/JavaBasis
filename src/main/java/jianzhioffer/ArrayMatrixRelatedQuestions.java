@@ -13,6 +13,7 @@ import java.util.List;
  * 面试题21. 调整数组顺序使奇数位于偶数前面: 使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。[双指针法]
  * 面试题29. 顺时针打印矩阵: 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。[边界遍历]
  * 面试题39. 数组中出现次数超过一半的数字: 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。[哈希统计；数组排序；摩尔计数]
+ * 面试题42. 连续子数组的最大和: 求所有子数组的和的最大值。[动态规划法；递推法]
  * 面试题45. 把数组排成最小的数: 把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。[Comparator]
  * 面试题51. 数组中的逆序对: 输入一个数组，求出这个数组中的逆序对的总数。[比较法]
  */
@@ -359,7 +360,8 @@ public class ArrayMatrixRelatedQuestions {
 
     /**
      * 面试题42. 连续子数组的最大和
-     * 输入一个整型数组，数组里有正数也有负数。数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。
+     * 输入一个整型数组，数组里有正数也有负数。数组中的一个或连续多个整数组成一个子数组。
+     * 求所有子数组的和的最大值。
      * 示例1:
      * 输入: nums = [-2,1,-3,4,-1,2,1,-5,4]
      * 输出: 6
@@ -416,31 +418,91 @@ public class ArrayMatrixRelatedQuestions {
      * 输入: [7,5,6,4]
      * 输出: 5
      *
+     * 分治思想：在第 1 个子区间元素归并回去的时候，计算逆序对的个数。
      * @param nums
      * @return
      */
     public int reversePairs(int[] nums) {
-        return merge(nums, 0, nums.length - 1);
+        int len = nums.length;
+
+        if (len < 2) {
+            return 0;
+        }
+
+        int[] copy = new int[len];
+        for (int i = 0; i < len; i++) {
+            copy[i] = nums[i];
+        }
+
+        int[] temp = new int[len];
+        return reversePairs(copy, 0, len - 1, temp);
     }
 
-    int merge(int[] arr, int start, int end) {
-        if (start >= end) return 0;
-        int mid = start + (end - start) / 2;
-        int count = merge(arr, start, mid) + merge(arr, mid + 1, end);
+    /**
+     * nums[left..right] 计算逆序对个数并且排序
+     *
+     * @param nums
+     * @param left
+     * @param right
+     * @param temp
+     * @return
+     */
+    private int reversePairs(int[] nums, int left, int right, int[] temp) {
+        if (left == right) {
+            return 0;
+        }
 
-        int[] temp = new int[end - start + 1];
-        int i = start, j = mid + 1, k = 0;
-        while (i <= mid && j <= end) {
-            count += arr[i] <= arr[j] ? j - (mid + 1) : 0;
-            temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
+        int mid = left + (right - left) / 2;
+        int leftPairs = reversePairs(nums, left, mid, temp);
+        int rightPairs = reversePairs(nums, mid + 1, right, temp);
+
+        if (nums[mid] <= nums[mid + 1]) {
+            return leftPairs + rightPairs;
         }
-        while (i <= mid) {
-            count += j - (mid + 1);
-            temp[k++] = arr[i++];
+
+        int crossPairs = mergeAndCount(nums, left, mid, right, temp);
+        return leftPairs + rightPairs + crossPairs;
+    }
+
+    /**
+     * nums[left..mid] 有序，nums[mid + 1..right] 有序
+     *
+     * @param nums
+     * @param left
+     * @param mid
+     * @param right
+     * @param temp
+     * @return
+     */
+    private int mergeAndCount(int[] nums, int left, int mid, int right, int[] temp) {
+        for (int i = left; i <= right; i++) {
+            temp[i] = nums[i];
         }
-        while (j <= end)
-            temp[k++] = arr[j++];
-        System.arraycopy(temp, 0, arr, start, end - start + 1);
+
+        int i = left;
+        int j = mid + 1;
+
+        int count = 0;
+        for (int k = left; k <= right; k++) {
+
+            if (i == mid + 1) {
+                nums[k] = temp[j];
+                j++;
+            } else if (j == right + 1) {
+                nums[k] = temp[i];
+                i++;
+
+                count += (right - mid);
+            } else if (temp[i] <= temp[j]) {
+                nums[k] = temp[i];
+                i++;
+
+                count += (j - mid - 1);
+            } else {
+                nums[k] = temp[j];
+                j++;
+            }
+        }
         return count;
     }
 }

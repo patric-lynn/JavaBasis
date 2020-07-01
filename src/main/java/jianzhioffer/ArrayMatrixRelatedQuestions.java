@@ -16,6 +16,8 @@ import java.util.List;
  * 面试题42. 连续子数组的最大和: 求所有子数组的和的最大值。[动态规划法；递推法]
  * 面试题45. 把数组排成最小的数: 把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。[Comparator]
  * 面试题51. 数组中的逆序对: 输入一个数组，求出这个数组中的逆序对的总数。[比较法]
+ * 面试题53. I.在排序数组中查找数字: 统计一个数字在排序数组中出现的次数。[二分法]
+ * 面试题53. II. 0～n-1中缺失的数字: 在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，请找出这个数字。[二分法]
  */
 public class ArrayMatrixRelatedQuestions {
     /**
@@ -49,9 +51,8 @@ public class ArrayMatrixRelatedQuestions {
      * 面试题04. 二维数组中的查找
      * 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
      * 请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
-     * <p>
-     * 解法一：暴力法，遍历数组[不推荐]
      *
+     * 解法一：暴力法，遍历数组[不推荐]
      * @param target
      * @param array
      * @return
@@ -189,8 +190,8 @@ public class ArrayMatrixRelatedQuestions {
      * 示例 1：
      * 输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
      * 输出：true
-     * 解法一：DFS
      *
+     * 解法一：DFS
      * @param board
      * @param word
      * @return
@@ -237,7 +238,7 @@ public class ArrayMatrixRelatedQuestions {
      * 输入：nums = [1,2,3,4]
      * 输出：[1,3,2,4]
      * 注：[3,1,2,4] 也是正确的答案之一。
-     * <p>
+     *
      * 解法一：前后双指针法
      *
      * @param nums
@@ -313,12 +314,11 @@ public class ArrayMatrixRelatedQuestions {
      * 示例 1:
      * 输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]
      * 输出: 2
-     * <p>
+     *
      * 本题常见解法如下：
      * 1.哈希表统计法: 遍历数组nums，用 HashMap 统计各数字的数量，最终超过数组长度一半的数字则为众数。此方法时间和空间复杂度均为O(N)
      * 2.数组排序法: 将数组nums排序，由于众数的数量超过数组长度一半，因此 数组中点的元素 一定为众数。此方法时间复杂度O(Nlog2N)
      * 3.摩尔投票法: 核心理念为“正负抵消”; 时间和空间复杂度分别为O(N)和O(1); 是本题的最佳解法。
-     *
      * @param nums
      * @return
      */
@@ -336,6 +336,7 @@ public class ArrayMatrixRelatedQuestions {
 
     /**
      * 面试题 39.解法二：哈希表法
+     *
      * @param nums
      * @return
      */
@@ -419,6 +420,7 @@ public class ArrayMatrixRelatedQuestions {
      * 输出: 5
      *
      * 分治思想：在第 1 个子区间元素归并回去的时候，计算逆序对的个数。
+     *
      * @param nums
      * @return
      */
@@ -505,4 +507,86 @@ public class ArrayMatrixRelatedQuestions {
         }
         return count;
     }
+
+
+    /**
+     * 面试题 53 - I. 在排序数组中查找数字
+     * 统计一个数字在排序数组中出现的次数。
+     * 示例 1:
+     * 输入: nums = [5,7,7,8,8,10], target = 8
+     * 输出: 2
+     *
+     * 解法一：二分法（中间值法）因为参数是整形，
+     * 可以用二分查找 k-0.5、k+0.5 两数应该插入的位置，相减即次数。
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int search(int[] nums, int target) {
+        return binarySearch(nums, target + 0.5) - binarySearch(nums, target - 0.5);
+    }
+
+    private int binarySearch(int[] nums, double target) {
+        int left = 0, right = nums.length - 1;
+        while (left <= right) {
+            int mid = (right + left) >>> 1;
+            if (nums[mid] < target) {
+                left = mid + 1;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
+            }
+        }
+        return left;
+    }
+
+    /**
+     * 解法二：二分法:将二分查找右边界 rightright 的代码 封装至函数 helper()
+     * 由于数组 numsnums 中元素都为整数，因此可以分别二分查找 targettarget 和
+     * target - 1target−1 的右边界，将两结果相减并返回即可。
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int search2(int[] nums, int target) {
+        return helper(nums, target) - helper(nums, target - 1);
+    }
+
+    int helper(int[] nums, int tar) {
+        int i = 0, j = nums.length - 1;
+        while (i <= j) {
+            int m = (i + j) / 2;
+            if (nums[m] <= tar) i = m + 1;
+            else j = m - 1;
+        }
+        return i;
+    }
+
+
+    /**
+     * 面试题53. II. 0～n-1中缺失的数字
+     * 一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0～n-1之内。
+     * 在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，请找出这个数字。
+     *
+     * 示例 1:
+     * 输入: [0,1,3]
+     * 输出: 2
+     *
+     * 时间复杂度 O(log N)O(logN)： 二分法为对数级别复杂度。
+     * 空间复杂度 O(1)O(1)： 几个变量使用常数大小的额外空间。
+     *
+     * @param nums
+     * @return
+     */
+    public int missingNumber(int[] nums) {
+        int i = 0, j = nums.length - 1;
+        while (i <= j) {
+            int m = (i + j) / 2;
+            if (nums[m] == m) i = m + 1;
+            else j = m - 1;
+        }
+        return i;
+    }
+
 }

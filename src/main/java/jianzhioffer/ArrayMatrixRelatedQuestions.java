@@ -211,12 +211,6 @@ public class ArrayMatrixRelatedQuestions {
     /**
      * 面试题12. 矩阵中的路径-深度搜索函数
      *
-     * @param board
-     * @param words
-     * @param i
-     * @param j
-     * @param k
-     * @return
      */
     boolean dfs(char[][] board, char[] words, int i, int j, int k) {
         if (i >= board.length || i < 0 || j >= board[0].length || j < 0 || board[i][j] != words[k]) return false;
@@ -224,7 +218,8 @@ public class ArrayMatrixRelatedQuestions {
         char temp = board[i][j];
         //临时改变值，确保不相等；
         board[i][j] = '.';
-        boolean result = dfs(board, words, i - 1, j, k + 1) || dfs(board, words, i + 1, j, k + 1) || dfs(board, words, i, j - 1, k + 1) || dfs(board, words, i, j + 1, k + 1);
+        boolean result = dfs(board, words, i - 1, j, k + 1) || dfs(board, words, i + 1, j, k + 1) ||
+                         dfs(board, words, i, j - 1, k + 1) || dfs(board, words, i, j + 1, k + 1);
         board[i][j] = temp;
         return result;
     }

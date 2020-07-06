@@ -1,11 +1,13 @@
 package jianzhioffer;
 
 import java.util.HashMap;
+import java.util.Stack;
 
 /**
  * Description
  * 剑指 Offer 07. 重建二叉树: 输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。[递归]
  * 剑指 Offer 26. 树的子结构: 输入两棵二叉树A和B，判断B是不是A的子结构。[递归]
+ * 剑指 Offer 27. 二叉树的镜像: 请完成一个函数，输入一个二叉树，该函数输出它的镜像。[递归与非递归]
  * @author Lynn-zd
  * @date Created on 2020/4/7 23:49
  */
@@ -80,6 +82,46 @@ public class BinaryTreeRelatedQuestions {
         if(B == null) return true;
         if(A == null || A.val != B.val) return false;
         return recur(A.left, B.left) && recur(A.right, B.right);
+    }
+
+
+    /**
+     * 剑指 Offer 27. 二叉树的镜像
+     * 请完成一个函数，输入一个二叉树，该函数输出它的镜像。
+     *
+     * 示例 1：
+     * 输入：root = [4,2,7,1,3,6,9]
+     * 输出：[4,7,2,9,6,3,1]
+     *
+     * 递归法：考虑递归遍历（dfs）二叉树，交换每个节点的左 / 右子节点，即可生成二叉树的镜像。
+     * @param root
+     * @return
+     */
+    public TreeNode mirrorTree(TreeNode root) {
+        if(root == null) return null;
+        TreeNode tmp = root.left;
+        root.left = mirrorTree(root.right);
+        root.right = mirrorTree(tmp);
+        return root;
+    }
+
+    /**
+     * 非递归法：利用栈（或队列）遍历树的所有节点 nodenode ，并交换每个 nodenode 的左 / 右子节点。
+     * @param root
+     * @return
+     */
+    public TreeNode mirrorTree2(TreeNode root) {
+        if(root == null) return null;
+        Stack<TreeNode> stack = new Stack<>() {{ add(root); }};
+        while(!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if(node.left != null) stack.add(node.left);
+            if(node.right != null) stack.add(node.right);
+            TreeNode tmp = node.left;
+            node.left = node.right;
+            node.right = tmp;
+        }
+        return root;
     }
 
 

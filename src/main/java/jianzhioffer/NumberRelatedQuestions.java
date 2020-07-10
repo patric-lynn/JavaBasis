@@ -1,5 +1,8 @@
 package jianzhioffer;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  * Description
  * 面试题10- I. 斐波那契数列
@@ -15,7 +18,6 @@ public class NumberRelatedQuestions {
     /**
      * 面试题10- I. 斐波那契数列
      * 写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项。斐波那契数列的定义如下：
-     * <p>
      * F(0) = 0,   F(1) = 1
      * F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
      * 斐波那契数列由 0 和 1 开始，之后的斐波那契数就是由之前的两数相加而得出。
@@ -156,6 +158,60 @@ public class NumberRelatedQuestions {
             arr[i] = i + 1;
         }
         return arr;
+    }
+
+
+    /**
+     * 剑指 Offer 40. 最小的k个数
+     * 输入整数数组 arr ，找出其中最小的 k 个数。例如，输入4、5、1、6、2、7、3、8这8个数字，则最小的4个数字是1、2、3、4。
+     * 示例 1：
+     * 输入：arr = [3,2,1], k = 2
+     * 输出：[1,2] 或者 [2,1]
+     *
+     * 大根堆(前 K 小) / 小根堆（前 K 大),Java中有现成的 PriorityQueue，实现起来最简单：O(NlogK)O(NlogK)
+     * @param arr
+     * @param k
+     * @return
+     */
+    public int[] getLeastNumbers(int[] arr, int k) {
+        if (k == 0 || arr.length == 0) {
+            return new int[0];
+        }
+        // TreeMap的key是数字, value是该数字的个数。
+        // cnt表示当前map总共存了多少个数字。
+        TreeMap<Integer, Integer> map = new TreeMap<>();
+        int cnt = 0;
+        for (int num: arr) {
+            // 1. 遍历数组，若当前map中的数字个数小于k，则map中当前数字对应个数+1
+            if (cnt < k) {
+                map.put(num, map.getOrDefault(num, 0) + 1);
+                cnt++;
+                continue;
+            }
+            // 2. 否则，取出map中最大的Key（即最大的数字), 判断当前数字与map中最大数字的大小关系：
+            //    若当前数字比map中最大的数字还大，就直接忽略；
+            //    若当前数字比map中最大的数字小，则将当前数字加入map中，并将map中的最大数字的个数-1。
+            Map.Entry<Integer, Integer> entry = map.lastEntry();
+            if (entry.getKey() > num) {
+                map.put(num, map.getOrDefault(num, 0) + 1);
+                if (entry.getValue() == 1) {
+                    map.pollLastEntry();
+                } else {
+                    map.put(entry.getKey(), entry.getValue() - 1);
+                }
+            }
+
+        }
+        // 最后返回map中的元素
+        int[] res = new int[k];
+        int idx = 0;
+        for (Map.Entry<Integer, Integer> entry: map.entrySet()) {
+            int freq = entry.getValue();
+            while (freq-- > 0) {
+                res[idx++] = entry.getKey();
+            }
+        }
+        return res;
     }
 
 

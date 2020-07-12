@@ -2,7 +2,7 @@ package jianzhioffer;
 
 /**
  * Description
- * 面试题42. 连续子数组的最大和
+ * 面试题42. 连续子数组的最大和:求所有子数组的和的最大值。[递推与动态规划]
  *
  * @author Lynn-zd
  * @date Created on 2020/4/14 13:53

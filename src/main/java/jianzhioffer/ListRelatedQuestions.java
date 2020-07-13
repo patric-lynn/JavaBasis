@@ -5,14 +5,23 @@ import java.util.Stack;
 
 /**
  * Description
- * 面试题06. 从尾到头打印链表   面试题24. 反转链表
- * 面试题18. 删除链表的节点
- * 面试题22. 链表中倒数第k个节点
+ * 面试题06. 从尾到头打印链表: 从尾到头反过来返回每个节点的值。[堆栈法]
+ * 面试题24. 反转链表: 输入一个链表的头节点，反转该链表并输出反转后链表的头节点。[头插法]
+ * 面试题18. 删除链表的节点: 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。[双指针法]
+ * 面试题22. 链表中倒数第k个节点: 输出该链表中倒数第k个节点。[双指针法]
  *
  * @author Lynn-zd
  * @date Created on 2020/4/14 01:13
  */
 public class ListRelatedQuestions {
+    class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
     /**
      * 面试题06. 从尾到头打印链表   面试题24. 反转链表
      * 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
@@ -79,7 +88,6 @@ public class ListRelatedQuestions {
         }
         // 由于我们使用的虚拟头，第一个元素是无效的，直接取下一个节点就行了
         return result.next;
-
     }
 
     /**
@@ -128,14 +136,5 @@ public class ListRelatedQuestions {
             latter = latter.next;
         }
         return latter;
-    }
-
-    class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
     }
 }

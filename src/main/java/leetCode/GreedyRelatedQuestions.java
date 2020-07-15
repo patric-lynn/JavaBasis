@@ -2,8 +2,9 @@ package leetCode;
 
 /**
  * Description
- * 45. 跳跃游戏 II
- * 55. 跳跃游戏
+ * 45. 跳跃游戏 II: 使用最少的跳跃次数到达数组的最后一个位置。[贪心算法]
+ * 55. 跳跃游戏: 判断你是否能够到达最后一个位置。[贪心算法]
+ *
  * @author Lynn-zd
  * @date Created on 2020/3/17 22:37
  */
@@ -23,6 +24,7 @@ public class GreedyRelatedQuestions {
      * 假设你总是可以到达数组的最后一个位置。
      *
      * 解法介绍：首先是循环体结束位置为length-1，因为step加一了
+     *
      * @param nums
      * @return
      */
@@ -30,9 +32,9 @@ public class GreedyRelatedQuestions {
         int step = 0;
         int maxPosition = 0;
         int end = 0;
-        for(int i=0; i<nums.length-1; i++){
-            maxPosition = Math.max(maxPosition, nums[i]+i);
-            if(i==end){
+        for (int i = 0; i < nums.length - 1; i++) {
+            maxPosition = Math.max(maxPosition, nums[i] + i);
+            if (i == end) {
                 end = maxPosition;
                 step++;
             }
@@ -68,7 +70,7 @@ public class GreedyRelatedQuestions {
     }
 
     public static void main(String[] args) {
-        int[] a={2,1,1,3,4,2,1,1};
+        int[] a = {2, 1, 1, 3, 4, 2, 1, 1};
         System.out.println(jump(a));
     }
 }

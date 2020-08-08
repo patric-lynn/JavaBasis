@@ -82,8 +82,10 @@ public class DynamicRelatedQuestions {
      * @return
      */
     public int jump(int[] nums) {
+        //如果数组为空或长度为0则立即返回，否则新建动态规划所需的整型数组
         if (nums == null || nums.length == 0) return 0;
         int[] dp = new int[nums.length];
+        // 数组初始化
         dp[0] = 0;
         for (int i = 1; i < nums.length; i++) {
             dp[i] = Integer.MAX_VALUE;

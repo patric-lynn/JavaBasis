@@ -2,8 +2,8 @@ package leetCode;
 
 /**
  * Description
- * 5. 最长回文子串
- * 45. 跳跃游戏 II
+ * 5. 最长回文子串: 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。[求最长公共子串与判断]
+ * 45. 跳跃游戏 II: 使用最少的跳跃次数到达数组的最后一个位置。[贪心算法或动规]
  * 53. 找到最大和的连续子数组
  * 62. 向下和向右到达有下角的不同路径
  * 63. 向下和向右到达有下角的不同路径 II 带障碍物
@@ -313,7 +313,13 @@ public class DynamicRelatedQuestions {
     }
 
     public static void main(String[] args) {
-        System.out.println(climbStairs(30));
+        DynamicRelatedQuestions dynamicRelatedQuestions = new DynamicRelatedQuestions();
+
+        String s = "ababcdedcbef";
+
+
+        System.out.println(dynamicRelatedQuestions.climbStairs(30));
+        System.out.println(dynamicRelatedQuestions.longestPalindrome(s));
 
     }
 }

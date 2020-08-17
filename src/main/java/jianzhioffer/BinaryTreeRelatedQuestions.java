@@ -117,7 +117,7 @@ public class BinaryTreeRelatedQuestions {
      */
     public TreeNode mirrorTree2(TreeNode root) {
         if (root == null) return null;
-        Stack<TreeNode> stack = new Stack<>() {{
+        Stack<TreeNode> stack = new Stack<TreeNode>() {{
             add(root);
         }};
         while (!stack.isEmpty()) {

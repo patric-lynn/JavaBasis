@@ -12,7 +12,6 @@ public class TreeRelatedQuestionsTest {
         int val;
         TreeNode left;
         TreeNode right;
-
         TreeNode(int val) {
             this.val = val;
         }
@@ -31,7 +30,6 @@ public class TreeRelatedQuestionsTest {
         if (root == null) return list;
 
         stack.push(root);
-
         while (!stack.isEmpty()) {
             TreeNode tmp = stack.pop();
             list.add(tmp.val);

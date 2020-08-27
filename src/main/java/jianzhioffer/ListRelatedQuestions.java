@@ -14,7 +14,7 @@ import java.util.Stack;
  * @date Created on 2020/4/14 01:13
  */
 public class ListRelatedQuestions {
-    class ListNode {
+    static class ListNode {
         int val;
         ListNode next;
 
@@ -22,6 +22,7 @@ public class ListRelatedQuestions {
             val = x;
         }
     }
+
     /**
      * 面试题06. 从尾到头打印链表   面试题24. 反转链表
      * 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
@@ -29,7 +30,7 @@ public class ListRelatedQuestions {
      * 输入：head = [1,3,2]
      * 输出：[2,3,1]
      */
-    public int[] reversePrint(ListNode head) {
+    public static int[] reversePrint(ListNode head) {
         if (head == null) return null;
         Stack<ListNode> stack = new Stack<>();
         ListNode temp = head;
@@ -48,7 +49,7 @@ public class ListRelatedQuestions {
     /**
      * 输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
      */
-    public LinkedList<Integer> printListFromTailToHead(ListNode listNode) {
+    public static LinkedList<Integer> printListFromTailToHead(ListNode listNode) {
         LinkedList<Integer> linkedList = new LinkedList<>();
         ListNode node = listNode;
         while (node != null) {
@@ -68,7 +69,7 @@ public class ListRelatedQuestions {
      * @param head
      * @return
      */
-    public ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
         // 虚拟头，用于存放反转结果
         ListNode result = new ListNode(0);
         ListNode item = head;
@@ -104,7 +105,7 @@ public class ListRelatedQuestions {
      * @param val
      * @return
      */
-    public ListNode deleteNode(ListNode head, int val) {
+    public static ListNode deleteNode(ListNode head, int val) {
         if (head.val == val) return head.next;
         ListNode pre = head, cur = head.next;
         while (cur != null && cur.val != val) {
@@ -127,7 +128,7 @@ public class ListRelatedQuestions {
      * @param k
      * @return
      */
-    public ListNode getKthFromEnd(ListNode head, int k) {
+    public static int getKthFromEnd(ListNode head, int k) {
         ListNode former = head, latter = head;
         for (int i = 0; i < k; i++)
             former = former.next;
@@ -135,6 +136,20 @@ public class ListRelatedQuestions {
             former = former.next;
             latter = latter.next;
         }
-        return latter;
+        return latter.val;
+    }
+
+    public static void main(String[] args) {
+        ListNode root = new ListNode(1);
+        root.next = new ListNode(2);
+        root.next.next = new ListNode(2);
+        root.next.next.next = new ListNode(3);
+        root.next.next.next.next = new ListNode(4);
+
+        System.out.println("倒数第K个节点的值为 " + getKthFromEnd(root, 3));
+        System.out.println(reverseList(root));
+        System.out.println(reversePrint(root));
+        System.out.println(printListFromTailToHead(root));
+        System.out.println(deleteNode(root, 2));
     }
 }

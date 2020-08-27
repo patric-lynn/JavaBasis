@@ -1,4 +1,4 @@
-package interview;
+package interview.OnlineTest;
 
 import java.util.Scanner;
 

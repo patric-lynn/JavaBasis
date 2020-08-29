@@ -48,6 +48,7 @@ public class ListRelatedQuestions {
 
     /**
      * 输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
+     * 头插法
      */
     public static LinkedList<Integer> printListFromTailToHead(ListNode listNode) {
         LinkedList<Integer> linkedList = new LinkedList<>();
@@ -71,13 +72,10 @@ public class ListRelatedQuestions {
      */
     public static ListNode reverseList(ListNode head) {
         // 虚拟头，用于存放反转结果
-        ListNode result = new ListNode(0);
+        ListNode result = new ListNode(-1);
         ListNode item = head;
         ListNode next = null;
-        while (true) {
-            if (item == null) {
-                break;
-            }
+        while (item != null) {
             // 为了保证循环正常后移，先把下一个元素临时取出来
             next = item.next;
             // 因为需要移动到result链表中最前一个，所以我们需要把result的next节点，赋值给最新元素的item

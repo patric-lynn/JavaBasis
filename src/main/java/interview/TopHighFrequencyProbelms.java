@@ -12,6 +12,27 @@ import java.util.Map;
  */
 public class TopHighFrequencyProbelms {
     /**
+     * LRU缓存问题辅助类：基于有序哈希map的LRUCache实现类
+     */
+    class LRUCache extends LinkedHashMap<Integer, Integer> {
+        int capacity;
+        public LRUCache(int capacity){
+            super(capacity, 0.75f, true);
+            this.capacity = capacity;
+        }
+        public int get(int key){
+            return super.getOrDefault(key, -1);
+        }
+        public void put(int key, int val){
+            super.put(key, val);
+        }
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest){
+            return size() > capacity;
+        }
+    }
+
+    /**
      * 1.设计LRU缓存结构，该结构在构造时确定大小，假设大小为K，并有如下两个功能:
      * set(key, value)：将记录(key, value)插入该结构
      * get(key)：返回key对应的value值
@@ -50,30 +71,39 @@ public class TopHighFrequencyProbelms {
         return result;
     }
 
+    /**
+     * 链表问题辅助类
+     */
+    public class ListNode {
+        int val;
+        ListNode next = null;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+    /**
+     * 反转链表
+     * @param head
+     * @return
+     */
+    public ListNode ReverseList(ListNode head) {
+        ListNode newHead = null;
+        ListNode tmp = null;
+        while(head != null){
+            tmp = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = tmp;
+        }
+        return newHead;
+    }
+
     public static void main(String[] args) {
 
     }
 
 }
 
-/**
- * LRU缓存问题辅助类：基于有序哈希map的LRUCache实现类
- */
-class LRUCache extends LinkedHashMap<Integer, Integer> {
-    int capacity;
-    public LRUCache(int capacity){
-        super(capacity, 0.75f, true);
-        this.capacity = capacity;
-    }
-    public int get(int key){
-        return super.getOrDefault(key, -1);
-    }
-    public void put(int key, int val){
-        super.put(key, val);
-    }
-    @Override
-    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest){
-        return size() > capacity;
-    }
-}
 

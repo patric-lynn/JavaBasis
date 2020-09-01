@@ -100,6 +100,44 @@ public class TopHighFrequencyProbelms {
         return newHead;
     }
 
+    /**
+     * 判断给定的链表中是否有环
+     * @param head
+     * @return
+     */
+    public boolean hasCycle(ListNode head) {
+        ListNode fast = head;
+        ListNode low = head;
+        while(fast != null && low != null && fast.next != null){
+            low = low.next;
+            fast = fast.next.next;
+            if(low == fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 将两个有序的链表合并为一个新链表，要求新的链表是通过拼接两个链表的节点来生成的。
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode mergeTwoLists (ListNode l1, ListNode l2) {
+        // write code here
+        if (l1 == null) {
+            return l2;
+        } else if (l2 == null) {
+            return l1;
+        } else if (l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
+        }
+    }
     public static void main(String[] args) {
 
     }

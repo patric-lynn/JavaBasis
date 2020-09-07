@@ -11,6 +11,7 @@ import java.util.Stack;
  * 101. 对称二叉树
  * 104. 二叉树的最大深度
  * 144. 二叉树的前序遍历
+ * 94. 二叉树的中序遍历
  * 543. 二叉树的直径
  *
  * @author Lynn-zd
@@ -216,7 +217,37 @@ public class TreeRelatedQuestions {
         }
         return list;
     }
-    
+
+
+    /**
+     * 后续遍历非递归
+     *
+     * @param root
+     * @return
+     */
+    public static List<Integer> postOrder(TreeRelatedQuestionsTest.TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        Stack<TreeRelatedQuestionsTest.TreeNode> stack = new Stack<>();
+
+        if (root == null) {
+            return list;
+        }
+
+        TreeRelatedQuestionsTest.TreeNode cur = root;
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeRelatedQuestionsTest.TreeNode tmp = stack.peek();
+            if (tmp.left != null && tmp.left != cur && tmp.right != cur) {
+                stack.push(tmp.left);
+            }else if(tmp.right!=null && tmp.right!=cur){
+                stack.push(tmp.right);
+            }else {
+                list.add(stack.pop().val);
+                cur = tmp;
+            }
+        }
+        return list;
+    }
 
     /**
      * 543. 二叉树的直径

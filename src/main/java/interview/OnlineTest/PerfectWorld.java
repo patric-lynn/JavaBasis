@@ -1,4 +1,4 @@
-package interview;
+package interview.OnlineTest;
 
 import java.io.BufferedReader;
 import java.io.IOException;

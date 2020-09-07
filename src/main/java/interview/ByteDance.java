@@ -1,86 +1,45 @@
 package interview;
 
-import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * Description
  *
  * @author Lynn-zd
- * @date Created on 2020/4/12 21:13
+ * @date Created on 2020/9/3 00:29
  */
 public class ByteDance {
     /**
-     * 笔试题目一：切木块
-     * @param nums
+     * 文件路径简化
+     * $ cd /a/
+     * $ pwd
+     * /a
+     * @param path
      * @return
      */
-    public static int breakNum(int[] nums) {
-        int ans = 0;
-        for (int i = nums.length - 2; i >= 0; i--) {
-            if (nums[i + 1] >= nums[i]) continue;
-            int t = (nums[i] - 1) / nums[i + 1];
-            ans += t;
-            nums[i] /= (t + 1);
-        }
-        return ans;
-    }
+    public static String simplifyFilePath(String path) {
+        String[] s = path.split("/");
+        Stack<String> stack = new Stack<>();
 
-    public static void breakNumExec() {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int[] nums = new int[n];
-        for (int i = 0; i < n; i++) {
-            nums[i] = in.nextInt();
-        }
-        System.out.println(breakNum(nums));
-    }
-
-    /**
-     * 笔试题目二：判断是否合理
-     * @param n
-     * @param num1
-     * @param nums2
-     * @return
-     */
-    public static boolean judge(int n, int[] num1, int[] nums2) {
-        int delta = 0;
-        for (int i = 0; i < n; i++) {
-            if (delta == 0 && (num1[i] - nums2[i]) == 0) {
-                continue;
-            } else if (delta == 0 && (num1[i] - nums2[i]) != delta) {
-                delta = num1[i] - nums2[i];
-            } else if (delta != 0 && (num1[i] - nums2[i]) == 0) {
-                continue;
-            } else {
-                return false;
+        for (int i = 0; i < s.length; i++) {
+            if (!stack.isEmpty() && s[i].equals("..")) {
+                stack.pop();
+            } else if (!s[i].equals("") && !s[i].equals(".")) {
+                stack.push(s[i]);
             }
         }
-        return true;
-    }
+        if (stack.isEmpty()) return "/";
 
-    public static void judgeExec() {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        boolean[] booleans = new boolean[n];
-        for (int i = 0; i < n; i++) {
-            int m = in.nextInt();
-            int[] nums1 = new int[m];
-            int[] nums2 = new int[m];
-            for (int j = 0; j < m; j++) {
-                nums1[j] = in.nextInt();
-            }
-            for (int k = 0; k < m; k++) {
-                nums2[k] = in.nextInt();
-            }
-            booleans[i] = judge(m, nums1, nums2);
+        StringBuffer result = new StringBuffer();
+        for (int i = 0; i < stack.size(); i++) {
+            result.append("/" + stack.get(i));
         }
-        for (int i = 0; i < n; i++) {
-            System.out.println(booleans[i]);
-        }
+
+        return result.toString();
     }
 
     public static void main(String[] args) {
-        breakNumExec();
-        judgeExec();
+        String s = "/////a/////b";
+        System.out.println(simplifyFilePath(s));
     }
 }

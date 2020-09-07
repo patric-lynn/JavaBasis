@@ -14,7 +14,7 @@ import java.util.Map;
  * 14. 最长公共前缀
  * 28. 实现 strStr()
  * 30. 串联所有单词的子串
- *
+ * 58. 最后一个单词的长度
  * @author Lynn-zd
  * @date Created on 2020/3/16 12:33
  */
@@ -503,6 +503,23 @@ class StringRelatedQuestions {
 
         return str.toString();
     }
+
+
+    /**
+     * 58. 最后一个单词的长度
+     * 给定一个仅包含大小写字母和空格 ' ' 的字符串 s，返回其最后一个单词的长度。如果字符串从左向右滚动显示，那么最后一个单词就是最后出现的单词。
+     * @param s
+     * @return
+     */
+    public int lengthOfLastWord(String s) {
+        int end = s.length() - 1;
+        while(end >= 0 && s.charAt(end) == ' ') end--;
+        if(end < 0) return 0;
+        int start = end;
+        while(start >= 0 && s.charAt(start) != ' ') start--;
+        return end - start;
+    }
+
     public static void main(String[] args) {
 
     }

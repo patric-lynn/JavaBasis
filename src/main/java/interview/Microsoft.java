@@ -14,7 +14,7 @@ public class Microsoft {
      * 微软一面：
      * 写一个将IPv4地址转换为int类型数字的程序，需要考虑各种溢出情况
      */
-    public static int ipToInteger(String ipv4Addr) {
+    public static int IpToInteger(String ipv4Addr) {
         // 判断是否是ip格式的
         if (!isIPAddress(ipv4Addr))
             throw new RuntimeException("Invalid ip address");
@@ -46,7 +46,7 @@ public class Microsoft {
     /**
      * 将10进制int数字转换成ipv4地址
      */
-    public static String integerToIp(int ip) {
+    public static String IntegerToIp(int ip) {
         StringBuilder sb = new StringBuilder();
         int num = 0;
         boolean needPoint = false; // 是否需要加入'.'
@@ -164,6 +164,7 @@ public class Microsoft {
         }
         return result;
     }
+
     public static void main(String[] args) {
         // String ip = "202.117.54.110";
         // String ip1 = "0.7.54.110";

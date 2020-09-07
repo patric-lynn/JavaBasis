@@ -1,4 +1,4 @@
-package interview.alibaba;
+package interview.OnlineTest.alibaba;
 
 import java.util.Scanner;
 

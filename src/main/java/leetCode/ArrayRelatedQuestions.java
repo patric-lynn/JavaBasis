@@ -5,10 +5,11 @@ import java.util.Queue;
 
 /**
  * Description
- * 26. 删除排序数组中的重复项
+ * 26. 删除排序数组中的重复项: i,j两处循环值，当相同时i不走，将不同的i值进行累加。
  * 27. 移除值为val的元素，并返回移除后数组的新长度
  * 34. 在排序数组中查找元素的第一个和最后一个位置
  * 35. 二分查找搜索插入位置
+ * 40. 最小的k个数
  * @author Lynn-zd
  * @date Created on 2020/4/7 13:54
  */
@@ -59,7 +60,7 @@ public class ArrayRelatedQuestions {
         for (int j = 0; j < nums.length; j++) {
             if (nums[j] != val) {
                 nums[i] = nums[j];
-                i++;
+                i++; //注意此i的位置
             }
         }
         return i;
@@ -173,6 +174,12 @@ public class ArrayRelatedQuestions {
     }
 
     public static void main(String[] args) {
+        int[] arr1 = new int[]{1,1,2,3,4,4};
+        int[] arr2 = new int[]{1,1};
 
+        ArrayRelatedQuestions arrayRelatedQuestions = new ArrayRelatedQuestions();
+
+        System.out.println(arrayRelatedQuestions.removeDuplicates(arr1));
+        System.out.println(arrayRelatedQuestions.removeElement(arr2,1));
     }
 }

@@ -27,7 +27,7 @@ public class MultiThreadArray implements Runnable {
         }
     }
 
-    public static void multiThreadPrint(String[] input) {
+    public static synchronized void multiThreadPrint(String[] input) {
         setArray(input);
         for (int i = 0; i < n; i++) {
             new Thread(new MultiThreadArray(),"线程"+i).start();

@@ -19,9 +19,13 @@ public class basic {
         for (int n = i; n != 100; n += 1) {
             k += 1;
             //若满足条件，则跳过本次循环
-            if (k < 15) continue;
+            if (k < 15) {
+                continue;
+            }
             //若满足条件，则跳出整体循环
-            if (k > 30) break Label;
+            if (k > 30) {
+                break Label;
+            }
             System.out.println("This is " + k + " time try");
         }
         System.out.println("15到30之间输出完毕");

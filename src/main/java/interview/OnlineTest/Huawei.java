@@ -55,6 +55,15 @@ public class Huawei {
     }
 
 
+    public static void main(String[] args) {
+        findRegularExec();
+        binaryOperationExec();
+    }
+
+
+    /**
+     * 寻找关联特征值的笔试题目
+     */
     public static void findRegularExec() {
         Scanner in = new Scanner(System.in);
         int count = 0;
@@ -97,37 +106,12 @@ public class Huawei {
 
     public static String getCode(String s, int key) {
         int length = s.length();
-        StringBuffer result = new StringBuffer();
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < length; i++) {
             if (Integer.parseInt(String.valueOf(s.charAt(i))) < key) {
                 result.append(s.charAt(i));
             }
         }
         return result.toString();
-    }
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        getNum(in.next());
-    }
-
-
-    public static String getNum(String s) {
-        String[] tmp = s.split(";");
-        String s1 = tmp[0];
-        String s2 = tmp[1];
-        int result = 0;
-        int length = s1.length() > s2.length() ? s1.length() : s2.length();
-        String[] c1 = s1.split(" ");
-        String[] c2 = s1.split(" ");
-        for (int i = 0; i < length; i++) {
-            if (c1[i] != null && c2[i] != null) {
-                if (c1[i] == c2[i]) {
-
-                }
-            }
-
-        }
-        return "(" + result + ",5)";
     }
 }

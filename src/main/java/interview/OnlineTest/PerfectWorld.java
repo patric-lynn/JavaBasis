@@ -13,14 +13,18 @@ import java.util.Scanner;
  * @date Created on 2020/4/14 19:53
  */
 public class PerfectWorld {
-    public static void countExec(String[] args) throws IOException
-    {
+    /**
+     * 数船的数目
+     *
+     * @param args
+     * @throws IOException
+     */
+    public static void countExec(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s = br.readLine();
         String[] str1 = s.split(" ");
         int[] weights = new int[str1.length];
-        for(int i = 0; i<str1.length; i++)
-        {
+        for (int i = 0; i < str1.length; i++) {
             weights[i] = Integer.parseInt(str1[i]);
 
         }
@@ -29,14 +33,14 @@ public class PerfectWorld {
         System.out.println(count);
     }
 
-    public static int countLeastBoat(int[] weights, int maxLoad)
-    {
+    public static int countLeastBoat(int[] weights, int maxLoad) {
         Arrays.sort(weights);
         int result = 0;
         int m = 0;
-        int n = weights.length-1;;
-        while(m<n) {
-            if(weights[m]+weights[n] <= maxLoad) {
+        int n = weights.length - 1;
+        ;
+        while (m < n) {
+            if (weights[m] + weights[n] <= maxLoad) {
                 m++;
                 n--;
             } else {
@@ -44,25 +48,18 @@ public class PerfectWorld {
             }
             result++;
         }
-        if(n == m){
+        if (n == m) {
             result += 1;
         }
         return result;
     }
 
 
+    public static void main(String[] args) {
+        //countExec();
 
-
-
-    public static int method(int diamondCount, int knapsackCapacity, int[] weights, int[] values) {
-        int[] dp = new int[knapsackCapacity + 1];
-        for (int i = 1; i < diamondCount + 1; i++) {
-            for (int j = knapsackCapacity; j >= weights[i-1] ; j--) {
-                dp[j] = Math.max(dp[j-weights[i-1]]+values[i-1],dp[j]);
-            }
-        }
-        return dp[knapsackCapacity];
     }
+
 
     public static void methodExec(String[] args) {
 
@@ -85,10 +82,18 @@ public class PerfectWorld {
             values[i] = Integer.parseInt(valuesStr[i].trim());
 
         }
-
         System.out.println(method(diamondCount, knapsackCapacity, weights, values));
-
         input.close();
-
     }
+
+    public static int method(int diamondCount, int knapsackCapacity, int[] weights, int[] values) {
+        int[] dp = new int[knapsackCapacity + 1];
+        for (int i = 1; i < diamondCount + 1; i++) {
+            for (int j = knapsackCapacity; j >= weights[i - 1]; j--) {
+                dp[j] = Math.max(dp[j - weights[i - 1]] + values[i - 1], dp[j]);
+            }
+        }
+        return dp[knapsackCapacity];
+    }
+
 }

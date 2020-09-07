@@ -10,7 +10,7 @@ import java.util.Stack;
  */
 public class ByteDance {
     /**
-     * 文件路径简化
+     * 文件路径简化问题：利用堆栈模拟路径的上溯与下探
      * $ cd /a/
      * $ pwd
      * /a
@@ -21,18 +21,20 @@ public class ByteDance {
         String[] s = path.split("/");
         Stack<String> stack = new Stack<>();
 
-        for (int i = 0; i < s.length; i++) {
-            if (!stack.isEmpty() && s[i].equals("..")) {
+        for (String value : s) {
+            if (!stack.isEmpty() && "..".equals(value)) {
                 stack.pop();
-            } else if (!s[i].equals("") && !s[i].equals(".")) {
-                stack.push(s[i]);
+            } else if (!"".equals(value) && !".".equals(value)) {
+                stack.push(value);
             }
         }
-        if (stack.isEmpty()) return "/";
+        if (stack.isEmpty()) {
+            return "/";
+        }
 
-        StringBuffer result = new StringBuffer();
-        for (int i = 0; i < stack.size(); i++) {
-            result.append("/" + stack.get(i));
+        StringBuilder result = new StringBuilder();
+        for (String value : stack) {
+            result.append("/").append(value);
         }
 
         return result.toString();

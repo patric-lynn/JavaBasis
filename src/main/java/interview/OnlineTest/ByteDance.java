@@ -1,5 +1,6 @@
 package interview.OnlineTest;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -11,6 +12,7 @@ import java.util.Scanner;
 public class ByteDance {
     /**
      * 笔试题目一：切木块
+     *
      * @param nums
      * @return
      */
@@ -37,6 +39,7 @@ public class ByteDance {
 
     /**
      * 笔试题目二：判断是否合理
+     *
      * @param n
      * @param num1
      * @param nums2
@@ -79,8 +82,70 @@ public class ByteDance {
         }
     }
 
+
+    /**
+     * 获取合适的数字，已完成
+     */
+    public static int getNum(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        return n * (n - 1) + 1;
+    }
+
+    public static void getNumExec() {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        System.out.println(getNum(n));
+    }
+
+    /**
+     * 解码语句，未完成
+     *
+     * @param strings
+     * @return
+     */
+    public static String decode(String[] strings) {
+        StringBuffer result = new StringBuffer();
+        String[][] strings1 = new String[strings.length][20];
+        HashMap<String, String> map = new HashMap<>();
+        for (int i = 0; i < strings.length; i++) {
+            strings1[i] = strings[i].split("");
+            for (int j = 0; j < strings[i].length(); j++) {
+                result.append(strings1[i][j]);
+            }
+        }
+        return result.toString();
+    }
+
+    public static void decodeExec() {
+        Scanner in = new Scanner(System.in);
+        String[] result = new String[100];
+        int j = 0;
+        while (true) {
+            int n = in.nextInt();
+            String[] strings = new String[80];
+            if (n == 0) {
+                break;
+            }
+            for (int i = 0; i <= n; i++) {
+                strings[i] = in.next();
+            }
+            result[j] = decode(strings);
+            j++;
+        }
+        for (String s : result) {
+            if (s != null) {
+                System.out.println(s);
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
         breakNumExec();
         judgeExec();
+        getNumExec();
+        decodeExec();
     }
 }

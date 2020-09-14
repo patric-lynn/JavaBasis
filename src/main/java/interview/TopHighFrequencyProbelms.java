@@ -7,27 +7,59 @@ import java.util.Map;
 /**
  * Description
  * 1.设计LRU缓存结构,大小为k,支持两种操作。[有序链表]
+ * 2.反转链表。[原地逆置]
+ * 3.判断给定的链表中是否有环。[双指针]
+ * 4.将两个有序的链表合并为一个新链表，要求新的链表是通过拼接两个链表的节点来生成的。[递归]
+ * 5.分别按照二叉树先序，中序和后序打印所有的节点。
+ *
  * @author Lynn-zd
  * @date Created on 2020/8/27 21:36
  */
 public class TopHighFrequencyProbelms {
     /**
+     * 链表问题辅助类
+     */
+    public class ListNode {
+        int val;
+        ListNode next = null;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+    /**
+     * 二叉树问题辅助类
+     */
+    public class TreeNode {
+        int val = 0;
+        TreeNode left = null;
+        TreeNode right = null;
+    }
+
+
+    /**
+     * NC93
      * LRU缓存问题辅助类：基于有序哈希map的LRUCache实现类
      */
     class LRUCache extends LinkedHashMap<Integer, Integer> {
         int capacity;
-        public LRUCache(int capacity){
+
+        public LRUCache(int capacity) {
             super(capacity, 0.75f, true);
             this.capacity = capacity;
         }
-        public int get(int key){
+
+        public int get(int key) {
             return super.getOrDefault(key, -1);
         }
-        public void put(int key, int val){
+
+        public void put(int key, int val) {
             super.put(key, val);
         }
+
         @Override
-        protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest){
+        protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
             return size() > capacity;
         }
     }
@@ -48,50 +80,43 @@ public class TopHighFrequencyProbelms {
      * [[1,1,1],[1,2,2],[1,3,2],[2,1],[1,4,4],[2,2]],3
      * 输出
      * [1,-1]
+     *
      * @param operators
      * @param k
      * @return
      */
-    public int[] LRU (int[][] operators, int k) {
+    public int[] LRU(int[][] operators, int k) {
         ArrayList<Integer> list = new ArrayList<Integer>();
         LRUCache cache = new LRUCache(k);
-        for(int[] operator : operators){
-            if(operator[0] == 1){
+        for (int[] operator : operators) {
+            if (operator[0] == 1) {
                 cache.put(operator[1], operator[2]);
-            }else if(operator[0] == 2){
+            } else if (operator[0] == 2) {
                 int val = cache.get(operator[1]);
-                list.add(val);;
+                list.add(val);
+                ;
             }
         }
 
         int[] result = new int[list.size()];
-        for(int i=0; i<list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             result[i] = list.get(i);
         }
         return result;
     }
 
-    /**
-     * 链表问题辅助类
-     */
-    public class ListNode {
-        int val;
-        ListNode next = null;
-
-        ListNode(int val) {
-            this.val = val;
-        }
-    }
 
     /**
-     * 反转链表
+     * NC78
+     * 2.反转链表
+     *
      * @param head
      * @return
      */
     public ListNode ReverseList(ListNode head) {
         ListNode newHead = null;
         ListNode tmp = null;
-        while(head != null){
+        while (head != null) {
             tmp = head.next;
             head.next = newHead;
             newHead = head;
@@ -101,17 +126,19 @@ public class TopHighFrequencyProbelms {
     }
 
     /**
-     * 判断给定的链表中是否有环
+     * NC4
+     * 3.判断给定的链表中是否有环
+     *
      * @param head
      * @return
      */
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
         ListNode low = head;
-        while(fast != null && low != null && fast.next != null){
+        while (fast != null && low != null && fast.next != null) {
             low = low.next;
             fast = fast.next.next;
-            if(low == fast){
+            if (low == fast) {
                 return true;
             }
         }
@@ -119,12 +146,14 @@ public class TopHighFrequencyProbelms {
     }
 
     /**
-     * 将两个有序的链表合并为一个新链表，要求新的链表是通过拼接两个链表的节点来生成的。
+     * NC33
+     * 4.将两个有序的链表合并为一个新链表，要求新的链表是通过拼接两个链表的节点来生成的。
+     *
      * @param l1
      * @param l2
      * @return
      */
-    public ListNode mergeTwoLists (ListNode l1, ListNode l2) {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // write code here
         if (l1 == null) {
             return l2;
@@ -138,6 +167,40 @@ public class TopHighFrequencyProbelms {
             return l2;
         }
     }
+
+
+    /**
+     * NC45
+     * 5.分别按照二叉树先序，中序和后序打印所有的节点。
+     */
+    private int preIndex = 0, inIndex = 0, postIndex = 0;
+
+    public int[][] threeOrders(TreeNode root) {
+        // write code here
+        int n = count(root);
+        int[][] res = new int[3][n];
+        orders(root, res);
+        return res;
+    }
+
+    public int count(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return 1 + count(root.left) + count(root.right);
+    }
+
+    public void orders(TreeNode root, int[][] res) {
+        if (root == null) {
+            return;
+        }
+        res[0][preIndex++] = root.val;
+        orders(root.left, res);
+        res[1][inIndex++] = root.val;
+        orders(root.right, res);
+        res[2][postIndex++] = root.val;
+    }
+
     public static void main(String[] args) {
 
     }

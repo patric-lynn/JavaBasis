@@ -142,10 +142,82 @@ public class ByteDance {
     }
 
 
+    /**
+     * 笔试三：实现一个小型计算器
+     */
+    public static void Calculator() {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        long p = 1000000007;
+        long[] result = new long[n];
+        for (int i = 0; i < n; i++) {
+            int a = in.nextInt();
+            int b = in.nextInt();
+            String op = in.next();
+            switch (op) {
+                case "+":
+                    result[i] = (a + b) % p;
+                    break;
+                case "-":
+                    result[i] = (a - b) % p;
+                    break;
+                case "*":
+                    result[i] = ((a % p) * (b % p)) % p;
+                    break;
+                case "^":
+                    long tmp = (long) (Math.pow(a, b));
+                    result[i] = tmp % p;
+                    break;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(result[i]);
+        }
+    }
+
+    /**
+     * KMP求最小循环子串
+     */
+    public static void loopExec() {
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
+        System.out.println(loop(s));
+    }
+
+    public static String loop(String s) {
+        String str = s + s;
+        String result = s;
+        boolean flag = str.substring(1, str.length() - 1).contains(s);
+        if (!flag) {
+            return s;
+        } else {
+            for (int i = 1; i < s.length(); i++) {
+                if (s.length() % i == 0) {
+                    String tmp = s.substring(0, i);
+                    for (int j = i; j + i <= s.length(); j += i) {
+                        if (!tmp.equals(s.substring(j, j + i))) {
+                            break;
+                        }
+                        if (j + i == s.length()) {
+                            result = tmp;
+                            break;
+                        }
+                    }
+                }
+                if (result != s) {
+                    break;
+                }
+            }
+            return result;
+        }
+    }
+
     public static void main(String[] args) {
         breakNumExec();
         judgeExec();
         getNumExec();
         decodeExec();
+        loopExec();
+        Calculator();
     }
 }

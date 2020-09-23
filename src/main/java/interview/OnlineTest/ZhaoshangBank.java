@@ -1,5 +1,6 @@
 package interview.OnlineTest;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -35,9 +36,7 @@ public class ZhaoshangBank {
     }
 
 
-    public static void main(String[] args) {
-        wazi();
-    }
+
 
     /**
      * 题目描述
@@ -84,5 +83,94 @@ public class ZhaoshangBank {
         for (int i : result) {
             System.out.println(i);
         }
+    }
+
+
+    /**
+     * 输入n组数，求每组数能够构成正方形和长方形的最大个数(m, n)，其中以构成正方形更多为优先目标
+     * 如：3 6 3 6 9 9 6 6
+     * 构成：1 1
+     */
+    public static void rectangularNumExec() {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[][] result = new int[n][2];
+        for (int i = 0; i < n; i++) {
+            int num = in.nextInt();
+            int[] value = new int[num];
+            for (int j = 0; j < num; j++) {
+                value[j] = in.nextInt();
+            }
+            result[i][0] = rectangularNum(num, value)[0];
+            result[i][1] = rectangularNum(num, value)[1];
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.println(result[i][0] + " " + result[i][1]);
+        }
+    }
+
+    public static int[] rectangularNum(int n, int[] value) {
+        int[] result = new int[2];
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            map.put(value[i], map.getOrDefault(value[i], 0) + 1);
+        }
+        int zheng = 0, chang = 0, chang_tmp = 0;
+        for (Integer len : map.keySet()) {
+            int nums = map.get(len);
+            zheng += nums / 4;
+            nums = nums % 4;
+            if (nums >= 2) {
+                chang_tmp++;
+            }
+        }
+        chang = chang_tmp / 2;
+        result[0] = zheng;
+        result[1] = chang;
+        return result;
+    }
+
+    /**
+     * 奇数偶数对数
+     */
+    public static void getAnsExec() {
+        Scanner in = new Scanner(System.in);
+        int N = in.nextInt();
+        for (int i = 0; i < N; i++) {
+            int n = in.nextInt();
+            int[] nums = new int[n];
+            for (int j = 0; j < n; j++) {
+                nums[j] = in.nextInt();
+            }
+            System.out.println(getAns(n, nums));
+        }
+    }
+
+    public static int getAns(int n, int[] nums) {
+        int jishu = 0;
+        int oushu = 0;
+        for (int i = 1; i <= n; i++) {
+            if (nums[i - 1] % 2 != i % 2) {
+                if (i % 2 == 0) {
+                    oushu++;
+                } else {
+                    jishu++;
+                }
+            }
+        }
+        if (jishu == 0 && oushu == 0) {
+            return 0;
+        }
+        if (jishu == oushu) {
+            return jishu;
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        cost();
+        rectangularNumExec();
+        getAnsExec();
+        wazi();
     }
 }

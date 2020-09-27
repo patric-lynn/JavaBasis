@@ -30,13 +30,9 @@ public class ListRelatedQuestions {
     /**
      * 2. 两数相加
      * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
-     * <p>
      * 如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。
-     * <p>
      * 您可以假设除了数字 0 之外，这两个数都不会以 0 开头。
-     * <p>
      * 示例：
-     * <p>
      * 输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
      * 输出：7 -> 0 -> 8
      * 原因：342 + 465 = 807
@@ -69,11 +65,9 @@ public class ListRelatedQuestions {
     /**
      * 19. 删除链表的倒数第N个节点
      * 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
-     * <p>
      * 示例：
      * 给定一个链表: 1->2->3->4->5, 和 n = 2.
      * 当删除了倒数第二个节点后，链表变为 1->2->3->5.
-     * <p>
      * 解法一：整体思路是让前面的指针先移动n步，之后前后指针共同移动直到前面的指针到尾部为止
      * 首先设立预先指针 pre，预先指针是一个小技巧，在第2题中进行了讲解
      * 设预先指针 pre 的下一个节点指向 head，设前指针为 start，后指针为 end，二者都等于 pre
@@ -111,6 +105,7 @@ public class ListRelatedQuestions {
      * 输入：1->2->4, 1->3->4
      * 输出：1->1->2->3->4->4
      * 解法一：递归算法 O(n+m)的时间和空间复杂度
+     *
      * @param l1
      * @param l2
      * @return
@@ -167,16 +162,12 @@ public class ListRelatedQuestions {
     /**
      * 23. 合并K个排序链表
      * 合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。
-     * <p>
      * 示例:
      * 输入:
-     * [
-     *   1->4->5,
+     * [  1->4->5,
      *   1->3->4,
-     *   2->6
-     * ]
+     *   2->6]
      * 输出: 1->1->2->3->4->4->5->6
-     * <p>
      * 解法：利用堆做排序
      * 合并两个链表我们可以用if-else做判断，但是k个链接，用if-else，这就没法写了。
      * 这时候我们需要一种辅助数据结构-堆，有了堆这个数据结构，难度等级是困难的题目，瞬间变成简单了。
@@ -296,6 +287,7 @@ public class ListRelatedQuestions {
         }
         return dummy.next;
     }
+
     private ListNode reverse(ListNode head) {
         ListNode pre = null;
         ListNode curr = head;
@@ -307,6 +299,7 @@ public class ListRelatedQuestions {
         }
         return pre;
     }
+
     public static void main(String[] args) {
 
     }

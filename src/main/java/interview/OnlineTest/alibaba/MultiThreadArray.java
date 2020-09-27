@@ -21,7 +21,7 @@ public class MultiThreadArray implements Runnable {
     }
 
     @Override
-    public void run() {
+    public synchronized void run() {
         if (i < array.length) {
             System.out.println(Thread.currentThread().getName() + " 输出字符串 " + array[i++]);
         }

@@ -213,11 +213,11 @@ public class ByteDance {
     }
 
     public static void main(String[] args) {
-        breakNumExec();
-        judgeExec();
-        getNumExec();
-        decodeExec();
-        loopExec();
+//        breakNumExec();
+//        judgeExec();
+//        getNumExec();
+//        decodeExec();
+//        loopExec();
         Calculator();
     }
 }

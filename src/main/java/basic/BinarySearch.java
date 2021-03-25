@@ -89,4 +89,17 @@ public class BinarySearch {
         }
         return n + 1;
     }
+
+    public static void run() {
+        int[] a = new int[]{1,2,3,3,4,4,4,4,4,5,5,8,10,12};
+        int b = 3;
+        int pos = findBinary(14, b, a);
+        int count = 0;
+        while (a[pos-1] == b){
+            count++;
+            pos++;
+        }
+        System.out.println(count);
+     }
+     
 }
